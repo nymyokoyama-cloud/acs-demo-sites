@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯店（仮）｜デモサイト雛形</title>
+<meta name="description" content="ご提案用デモサイトの雛形。9セクション・スマホ幅対応・CSS変数。名称・連絡先・写真はすべて仮。">
+<style>
+:root{--main:#1f5f4a;--main-l:#e6f1ec;--accent:#e8742c;--ink:#22272e;--ink-2:#4b5563;--line:#e3e7ec;--bg:#fbfaf7;--radius:14px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.35;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.2em;color:var(--main);font-weight:700;margin-bottom:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}.logo{font-weight:800;color:var(--main);text-decoration:none}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600}
+.hero{background:linear-gradient(135deg,#f3efe4,#e6f1ec);padding:56px 0}.hero h1{font-size:clamp(28px,4.6vw,46px)}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.visual{aspect-ratio:4/3;border-radius:20px;background:linear-gradient(160deg,#2f7a62,#174a3a);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px;font-size:14px}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit}
+footer{background:#13302a;color:#b9cfc6;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line)}.sticky .btn{width:100%}
+@media(min-width:800px){.nav ul{display:flex}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】募集文の情報だけで構成した見本です。名称・連絡先・料金・写真はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top">◯◯店（仮）</a><ul><li><a href="#reason">選ばれる理由</a></li><li><a href="#service">サービス・料金</a></li><li><a href="#flow">流れ</a></li><li><a href="#access">アクセス</a></li><li><a href="#contact">お問い合わせ</a></li></ul></div></header>
+<main id="top">
+<!-- 1 ヒーロー -->
+<section class="hero"><div class="wrap"><h1>見出し（お客様の得られる結果）</h1><p class="lead" style="text-align:left;margin:0 0 20px">サブコピー。誰のための、どんなサービスかを1〜2文で。</p><a class="btn" href="#contact">主CTA</a></div></section>
+<!-- 2 お悩み -->
+<section id="worry"><div class="wrap"><h2><small>TROUBLES</small>こんなお悩みはありませんか？</h2><div class="grid grid-2"><div class="card">悩み1</div><div class="card">悩み2</div><div class="card">悩み3</div><div class="card">悩み4</div></div></div></section>
+<!-- 3 サービス -->
+<section id="service" style="background:#fff"><div class="wrap"><h2><small>SERVICE</small>サービス内容</h2><div class="grid grid-3"><div class="card"><h3>サービス1</h3><p>説明</p></div><div class="card"><h3>サービス2</h3><p>説明</p></div><div class="card"><h3>サービス3</h3><p>説明</p></div></div></div></section>
+<!-- 4 選ばれる理由 -->
+<section id="reason"><div class="wrap"><h2><small>REASON</small>選ばれる理由</h2><div class="grid grid-3"><div class="card"><h3>理由1</h3><p>説明</p></div><div class="card"><h3>理由2</h3><p>説明</p></div><div class="card"><h3>理由3</h3><p>説明</p></div></div></div></section>
+<!-- 5 流れ -->
+<section id="flow" style="background:#fff"><div class="wrap"><h2><small>FLOW</small>ご利用の流れ</h2><div class="grid grid-3"><div class="card"><h3>1. お問い合わせ</h3></div><div class="card"><h3>2. ご相談・ご提案</h3></div><div class="card"><h3>3. ご利用開始</h3></div></div></div></section>
+<!-- 6 料金 -->
+<section id="price"><div class="wrap"><h2><small>PRICE</small>料金（例）</h2><div class="grid grid-3"><div class="card"><h3>プランA</h3><p>◯,◯◯◯円（仮）</p></div><div class="card"><h3>プランB</h3><p>◯,◯◯◯円（仮）</p></div><div class="card"><h3>プランC</h3><p>◯,◯◯◯円（仮）</p></div></div></div></section>
+<!-- 7 お客様の声 / FAQ -->
+<section id="faq" style="background:#fff"><div class="wrap"><h2><small>FAQ</small>よくある質問</h2><details open><summary>質問1</summary><p>回答</p></details><details><summary>質問2</summary><p>回答</p></details></div></section>
+<!-- 8 アクセス / 会社概要 -->
+<section id="access"><div class="wrap"><h2><small>ACCESS</small>アクセス・店舗情報</h2><div class="grid grid-2"><div class="card">名称：◯◯店（仮）<br>所在地：サンプル市◯◯ 0-0-0（仮）<br>電話：000-0000-0000（仮）</div><div class="visual">地図（本制作で埋め込み）</div></div></div></section>
+<!-- 9 お問い合わせ -->
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#cfe6da">CONTACT</small>お問い合わせ</h2><form class="form" style="color:var(--ink)" onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');"><label>お名前</label><input type="text"><label>連絡先</label><input type="text"><label>ご相談内容</label><textarea></textarea><button class="btn" type="submit" style="width:100%;margin-top:18px">送信する</button></form></div></section>
+</main>
+<footer><div class="wrap">◯◯店（仮）｜このページはご提案用のデモサイトです。実在の店舗・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn" href="#contact">お問い合わせ</a></div>
+</body>
+</html>

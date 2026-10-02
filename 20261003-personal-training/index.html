@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>サンプル市の出張パーソナルトレーニング｜◯◯パーソナル（仮）デモサイト</title>
+<meta name="description" content="ご提案用デモサイト。募集文の情報だけで構成した見本です。名称・地域・連絡先・料金はすべて仮です。">
+<style>
+:root{
+  --green:#1f5f4a;--green-d:#174a3a;--green-l:#e6f1ec;
+  --orange:#e8742c;--orange-d:#cf6220;
+  --ink:#22272e;--ink-2:#4b5563;--line:#e3e7ec;--bg:#fbfaf7;--card:#ffffff;
+  --radius:14px;--max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{line-height:1.35;margin:0 0 .5em;font-feature-settings:"palt"}
+h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.2em;color:var(--green);font-weight:700;margin-bottom:8px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;font-size:17px;border:2px solid transparent;transition:.15s;min-height:56px}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(232,116,44,.3)}
+.btn-primary:hover{background:var(--orange-d)}
+.btn-line{background:#06c755;color:#fff}
+.btn-outline{border-color:var(--green);color:var(--green);background:#fff}
+.btn-outline:hover{background:var(--green-l)}
+.note{font-size:13px;color:var(--ink-2)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px;border-bottom:1px solid #f3d9b4}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:18px;color:var(--green);text-decoration:none;letter-spacing:.02em}
+.logo span{display:block;font-size:11px;color:var(--ink-2);font-weight:500;letter-spacing:.1em}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}
+.nav ul a{text-decoration:none;font-size:15px;font-weight:600}
+.nav .tel{display:none;text-align:right;line-height:1.3}
+.nav .tel b{font-size:20px;color:var(--green)}
+.nav .tel small{font-size:12px;color:var(--ink-2)}
+/* hero */
+.hero{background:linear-gradient(135deg,#f3efe4 0%,#e6f1ec 60%,#d7e8df 100%);padding:48px 0 60px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-80px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(31,95,74,.14),transparent 70%)}
+.hero-grid{display:grid;gap:28px;align-items:center;position:relative}
+.hero .tag{display:inline-block;background:var(--green);color:#fff;font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:14px;letter-spacing:.05em}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--green);border-bottom:6px solid rgba(232,116,44,.45)}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--ink-2);margin-bottom:22px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badges span{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13px;font-weight:600;color:var(--green-d)}
+.hero-visual{aspect-ratio:4/3;border-radius:20px;background:
+  radial-gradient(circle at 30% 30%,rgba(255,255,255,.7),transparent 40%),
+  linear-gradient(160deg,#2f7a62,#1f5f4a 55%,#173f33);
+  display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px;position:relative;box-shadow:0 20px 40px rgba(23,74,58,.25)}
+.hero-visual .ph{font-size:14px;opacity:.9;line-height:1.6}
+.hero-visual .ph b{display:block;font-size:18px;margin-bottom:6px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:40px;position:relative}
+.stat{background:#fff;border-radius:var(--radius);padding:18px 14px;text-align:center;border:1px solid var(--line)}
+.stat b{display:block;font-size:30px;color:var(--green);line-height:1.1}
+.stat small{font-size:13px;color:var(--ink-2)}
+/* grids */
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card h3{font-size:19px;color:var(--green-d)}
+.icon{width:48px;height:48px;border-radius:12px;background:var(--green-l);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--green)}
+.icon svg{width:26px;height:26px}
+.num{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-right:10px;font-size:15px}
+/* worries */
+.worry{background:#fff;border-radius:12px;padding:18px 18px 18px 54px;position:relative;border:1px solid var(--line);font-weight:600}
+.worry::before{content:"";position:absolute;left:18px;top:22px;width:22px;height:22px;border-radius:50%;background:var(--orange);mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/></svg>") center/contain no-repeat;-webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/></svg>") center/contain no-repeat}
+.answer{text-align:center;margin-top:34px;font-size:clamp(18px,2.4vw,24px);font-weight:800;color:var(--green-d)}
+/* compare table */
+.table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:15px}
+.table th,.table td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.table th{background:#f3f5f7;text-align:left;font-size:14px}
+.table thead th:last-child{background:var(--green);color:#fff}
+.table td:last-child{background:var(--green-l);font-weight:700;color:var(--green-d)}
+.table tr:last-child td,.table tr:last-child th{border-bottom:0}
+/* trainer */
+.trainer{display:grid;gap:26px;align-items:center}
+.trainer-visual{aspect-ratio:3/4;border-radius:20px;background:linear-gradient(160deg,#e9e3d3,#cfd9d3);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink-2);padding:20px;font-size:14px;max-width:360px;margin:0 auto}
+.trainer ul{padding-left:20px;margin:0 0 16px}
+/* price */
+.plans{display:grid;gap:18px}
+.plan{background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:26px 22px;text-align:center;position:relative}
+.plan.rec{border-color:var(--orange)}
+.plan.rec::before{content:"おすすめ";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:12px;font-weight:700;padding:4px 14px;border-radius:999px}
+.plan h3{font-size:18px}
+.plan .price{font-size:34px;font-weight:800;color:var(--green);line-height:1.1;margin:8px 0 4px}
+.plan .price small{font-size:14px;font-weight:600;color:var(--ink-2)}
+.plan ul{list-style:none;padding:0;margin:14px 0 0;font-size:15px;text-align:left}
+.plan li{padding:6px 0;border-top:1px dashed var(--line)}
+/* flow */
+.flow{display:grid;gap:14px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 18px 18px 64px;position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+.step b{display:block;font-size:17px;margin-bottom:4px}
+.step p{margin:0;font-size:15px;color:var(--ink-2)}
+/* voice */
+.voice{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;font-size:15px}
+.voice .who{font-weight:700;color:var(--green);margin-bottom:6px}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-bottom:10px}
+summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;position:relative;padding-right:30px}
+summary::after{content:"+";position:absolute;right:0;top:12px;font-size:24px;color:var(--green)}
+details[open] summary::after{content:"−"}
+details p{padding-bottom:16px;margin:0;color:var(--ink-2);font-size:15px}
+/* area / company */
+.two{display:grid;gap:22px}
+.map{aspect-ratio:16/10;border-radius:var(--radius);background:repeating-linear-gradient(45deg,#e9eef2 0 12px,#f3f6f8 12px 24px);display:flex;align-items:center;justify-content:center;color:var(--ink-2);font-size:14px;text-align:center;padding:16px}
+dl.company{display:grid;grid-template-columns:120px 1fr;gap:10px 14px;margin:0;font-size:15px}
+dl.company dt{font-weight:700;color:var(--green-d)}
+dl.company dd{margin:0}
+/* contact */
+.contact{background:linear-gradient(160deg,var(--green-d),var(--green));color:#fff}
+.contact h2 small{color:#cfe6da}
+.contact .lead{color:#dfeee6}
+.form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}
+.form label i{font-style:normal;background:var(--orange);color:#fff;font-size:11px;padding:2px 7px;border-radius:4px;margin-left:8px;vertical-align:middle}
+.form input,.form select,.form textarea{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit;background:#fbfbfb}
+.form textarea{min-height:110px}
+.form .btn{width:100%;margin-top:18px}
+.contact-alt{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+.contact-alt .btn{background:#fff;color:var(--green-d)}
+footer{background:#13302a;color:#b9cfc6;font-size:13px;padding:30px 0 100px;text-align:center}
+footer a{color:#fff}
+/* sticky cta mobile */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+.sticky .btn{padding:12px 10px;font-size:15px;min-height:50px}
+@media(min-width:800px){
+  .nav ul{display:flex}.nav .tel{display:block}
+  .hero-grid{grid-template-columns:1.15fr 1fr}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}
+  .trainer{grid-template-columns:360px 1fr}
+  .plans{grid-template-columns:repeat(3,1fr)}
+  .two{grid-template-columns:1fr 1fr}
+  .sticky{display:none}
+  footer{padding-bottom:30px}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】募集文の情報だけで構成した見本です。名称・地域・電話番号・料金・写真はすべて仮で、お申込みはできません。</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">◯◯パーソナル（仮）<span>サンプル市の出張パーソナルトレーニング</span></a>
+    <ul>
+      <li><a href="#reason">選ばれる理由</a></li>
+      <li><a href="#service">サービス・料金</a></li>
+      <li><a href="#flow">ご利用の流れ</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+      <li><a href="#company">会社概要</a></li>
+    </ul>
+    <div class="tel"><b>000-0000-0000</b><br><small>受付 10:00〜19:00（仮）</small></div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="tag">サンプル市内は出張費・入会金 0円（仮）</span>
+        <h1>ジムに通わなくても、<br><em>ご自宅で</em>体の痛みと<br>体力の不安を解消。</h1>
+        <p class="sub">腰痛・膝痛・五十肩・体力低下。40代からシニアの方まで、医療系の運動処方資格を持つトレーナーがご自宅へ伺い、お一人おひとりに合わせて丁寧に指導します。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">体験トレーニングを申し込む</a>
+          <a class="btn btn-line" href="#contact">LINEでまず相談する</a>
+        </div>
+        <p class="note">体験後の強引な勧誘はいたしません。ご家族からのご相談も歓迎です。</p>
+        <div class="badges">
+          <span>国際認定の運動処方資格（仮）</span><span>指導歴 ◯◯年（仮）</span><span>60代・70代の指導実績多数（仮）</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="ph"><b>写真（ご提供いただく予定）</b>ご自宅で指導中のトレーナーと<br>お客様の笑顔の写真が入ります</div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>25<small style="font-size:16px">年</small></b><small>パーソナル指導歴（仮）</small></div>
+      <div class="stat"><b>0<small style="font-size:16px">円</small></b><small>出張費・入会金（仮）</small></div>
+      <div class="stat"><b>60<small style="font-size:16px">分</small></b><small>1回の指導時間（仮）</small></div>
+      <div class="stat"><b>1対1</b><small>完全個別指導</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="worry">
+  <div class="wrap">
+    <h2><small>SUCH TROUBLES</small>こんなお悩みはありませんか？</h2>
+    <p class="lead">「運動した方がいい」と分かっていても、何から始めればいいか分からない。そんな方のためのサービスです。</p>
+    <div class="grid grid-2">
+      <div class="worry">朝起きると腰や膝が痛い。病院では「運動しなさい」と言われた</div>
+      <div class="worry">肩が上がりにくい、歩く力が落ちて外出がおっくうになった</div>
+      <div class="worry">近くにジムがない。あっても通い続けられる自信がない</div>
+      <div class="worry">大きなマシンや若い人ばかりのジムは気後れしてしまう</div>
+      <div class="worry">コロナ以降に落ちた体力を、無理なく取り戻したい</div>
+      <div class="worry">離れて暮らす親の体力低下が心配（ご家族から）</div>
+    </div>
+    <p class="answer">その不安、専門資格を持つトレーナーの<br class="sp">「ご自宅での個別指導」で解決できます。</p>
+  </div>
+</section>
+
+<section id="reason" style="background:#fff">
+  <div class="wrap">
+    <h2><small>REASON</small>◯◯パーソナル（仮）が選ばれる4つの理由</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>1. 医療系の運動処方ができる専門資格</h3>
+        <p>一般的なダイエット指導だけでなく、腰痛・膝痛・術後の体力回復など、体の状態に合わせた運動処方ができる国際資格を保持（仮）。「痛みがあるから運動が怖い」という方こそお任せください。</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/></svg></div>
+        <h3>2. ご自宅・ご指定の場所へ出張</h3>
+        <p>器具はトレーナーが持参します。移動も準備も不要で、ご自分の空間でご自分のペースで続けられます。会社や施設へのグループ指導にも対応（仮）。</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+        <h3>3. 一人ひとりに専用メニュー</h3>
+        <p>年齢や体力レベルに関わらず、「いつでも、どこでも」無理なく続けられる専用プログラムをご提案。ストレッチや整体的なケアも組み合わせます（仮）。</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>4. 食事・生活面もLINEでサポート</h3>
+        <p>栄養やリバウンド防止、ストレス対策までトレーニング以外もサポート。質問や相談はLINEで気軽にできます（仮）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="safe">
+  <div class="wrap">
+    <h2><small>PEACE OF MIND</small>「自宅に来てもらう」不安にお応えします</h2>
+    <p class="lead">ご自宅に伺うサービスだからこそ、安心してお任せいただける仕組みを整えています。</p>
+    <div class="grid grid-3">
+      <div class="card"><h3><span class="num">1</span>賠償責任保険に加入（仮）</h3><p>万一のトレーニング中の事故に備え、事業者向け保険に加入しています。</p></div>
+      <div class="card"><h3><span class="num">2</span>ご家族の同席歓迎</h3><p>初回はもちろん毎回、ご家族のご同席を歓迎します。離れたご家族への報告も可能です。</p></div>
+      <div class="card"><h3><span class="num">3</span>身分証の提示・名刺のお渡し</h3><p>初回訪問時に身分証明書をご提示し、所在地・連絡先を明記した名刺をお渡しします。</p></div>
+      <div class="card"><h3><span class="num">4</span>電話・LINEで事前相談OK</h3><p>「いきなり自宅は…」という方は、まず電話やLINEで人柄を確認してからご判断ください。</p></div>
+      <div class="card"><h3><span class="num">5</span>体験のみのご利用も歓迎</h3><p>体験後の強引な勧誘は一切いたしません。合わなければそれで終了で構いません。</p></div>
+      <div class="card"><h3><span class="num">6</span>追加費用なし（仮）</h3><p>サンプル市内は出張費・入会金ゼロ。月会費以外の追加費用は発生しません。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="diff" style="background:#fff">
+  <div class="wrap">
+    <h2><small>DIFFERENCE</small>一般的なパーソナルジムとの違い</h2>
+    <div style="overflow-x:auto">
+    <table class="table">
+      <thead><tr><th>項目</th><th>一般的なパーソナルジム</th><th>◯◯パーソナル（仮）</th></tr></thead>
+      <tbody>
+        <tr><th>指導の場所</th><td>店舗へ通う必要がある</td><td>ご自宅・ご指定の場所へ出張</td></tr>
+        <tr><th>対応できる範囲</th><td>ダイエット・ボディメイク中心</td><td>痛みの改善・体力回復・シニアの健康づくりまで</td></tr>
+        <tr><th>資格</th><td>民間資格のみの場合も</td><td>医療系の運動処方資格を保持（仮）</td></tr>
+        <tr><th>出張費・入会金</th><td>数千〜数万円かかることも</td><td>サンプル市内は0円（仮）</td></tr>
+        <tr><th>サポート</th><td>セッション中のみ</td><td>LINEで食事・生活の相談も</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="trainer">
+  <div class="wrap">
+    <h2><small>TRAINER</small>トレーナー紹介</h2>
+    <div class="trainer">
+      <div class="trainer-visual">写真（ご提供いただく予定）<br>トレーナー本人の縦長写真</div>
+      <div>
+        <h3 style="font-size:24px">◯◯ ◯◯（仮）</h3>
+        <p><b>医療系運動処方資格保持 / 指導歴 ◯◯年（仮）</b></p>
+        <p>フィットネスの最先端を学び、ホテルや客船などでフィットネス指導を歴任（仮）。現在はサンプル市を中心に、40代からシニアの方、部活動のアスリートまで、ご自宅への出張指導を行っています。</p>
+        <ul>
+          <li>保有資格：国際認定の運動処方資格ほか（仮・本制作で正確に記載）</li>
+          <li>指導対象：腰痛・膝痛・五十肩の改善、60歳からの体力づくり、部活アスリートサポート</li>
+          <li>対応エリア：サンプル市内および近郊（仮）</li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">まずは体験で人柄を確かめる</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="service" style="background:#fff">
+  <div class="wrap">
+    <h2><small>SERVICE &amp; PRICE</small>サービス内容と料金（例）</h2>
+    <p class="lead">プランはライフスタイルに合わせてお選びいただけます。月額会員の前に「体験コース」もご用意。<br><span class="note">※金額は募集文に記載のない部分のため仮の例です。本制作で正確な料金に差し替えます。</span></p>
+    <div class="plans">
+      <div class="plan">
+        <h3>体験トレーニング</h3>
+        <div class="price">◯,◯◯◯円<small>/ 60分</small></div>
+        <ul><li>ご自宅へ伺い体の状態を確認</li><li>目的に合わせたお試し指導</li><li>強引な勧誘なし</li></ul>
+      </div>
+      <div class="plan rec">
+        <h3>個人指導 月4回コース</h3>
+        <div class="price">◯◯,◯◯◯円<small>/ 月</small></div>
+        <ul><li>1回60分・完全個別指導</li><li>専用メニュー＋ペアストレッチ</li><li>LINEでの食事・生活相談</li></ul>
+      </div>
+      <div class="plan">
+        <h3>ペア・グループ指導</h3>
+        <div class="price">◯,◯◯◯円<small>/ 1人1回</small></div>
+        <ul><li>ご夫婦・ご友人で一緒に</li><li>会社・施設への出張も対応</li><li>楽しく続けられる</li></ul>
+      </div>
+    </div>
+    <div class="grid grid-3" style="margin-top:28px">
+      <div class="card"><h3>パーソナルトレーニング</h3><p>大きなマシンがなくても、無理なく体を動かして健康づくり。お一人おひとりの体に合わせて指導します。</p></div>
+      <div class="card"><h3>ペアストレッチ・ケア</h3><p>ジムやサロンに行きにくい方へ。リラックスした環境で本格的なストレッチを受けられます。</p></div>
+      <div class="card"><h3>部活アスリートサポート</h3><p>正しいフォームと段階的なトレーニングで、ケガ予防とパフォーマンス向上を同時に実現します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <h2><small>FLOW</small>ご利用の流れ</h2>
+    <div class="flow">
+      <div class="step"><b>お問い合わせ（30秒）</b><p>下のフォーム・LINE・お電話のいずれかでご連絡ください。ご家族からのご相談も歓迎です。</p></div>
+      <div class="step"><b>日程のご相談</b><p>折り返しご連絡し、ご希望の日時と場所、現在のお体の状態を伺います。</p></div>
+      <div class="step"><b>体験トレーニング</b><p>トレーナーがご自宅へ伺い、体の状態を確認しながらお試し指導を行います。</p></div>
+      <div class="step"><b>ご検討・ご契約</b><p>体験後に内容と料金をご説明。ご納得いただけた場合のみ、プランをお選びください。</p></div>
+      <div class="step"><b>継続サポート</b><p>専用メニューで無理なく継続。LINEでいつでも相談できます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="voice" style="background:#fff">
+  <div class="wrap">
+    <h2><small>VOICE</small>お客様の声</h2>
+    <p class="lead note">※以下は構成確認用の仮の文例です。本制作では実際のお客様の声（ご提供）に差し替えます。</p>
+    <div class="grid grid-3">
+      <div class="voice"><div class="who">50代 女性（仮）</div>きっかけは五十肩でした。思うように体を動かせないのがショックでしたが、2か月で改善できました。</div>
+      <div class="voice"><div class="who">60代 男性（仮）</div>個別に指導していただき、腿の後ろやふくらはぎの張りがなくなりました。無理なく続けられています。</div>
+      <div class="voice"><div class="who">70代 女性（仮）</div>コロナ禍で落ちた体力を回復できました。自宅に来てもらえるので、通う負担がありません。</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2><small>FAQ</small>よくある質問</h2>
+    <details open><summary>運動は全くの初心者ですが大丈夫ですか？</summary><p>はい。初心者の方やシニアの方の指導が中心です。体の状態を確認しながら、無理のない内容から始めます。</p></details>
+    <details><summary>器具は自分で用意する必要がありますか？</summary><p>必要な器具はトレーナーが持参します。動きやすい服装だけご用意ください。</p></details>
+    <details><summary>家族が同席してもいいですか？</summary><p>もちろんです。ご家族のご同席や見守りを歓迎しています。</p></details>
+    <details><summary>体験だけでも利用できますか？</summary><p>はい。体験後の強引な勧誘はいたしません。お気に召さなければそれで終了で構いません。</p></details>
+    <details><summary>対応エリアはどこまでですか？</summary><p>サンプル市内および近郊です（仮）。エリア外の場合もまずはご相談ください。</p></details>
+  </div>
+</section>
+
+<section id="company" style="background:#fff">
+  <div class="wrap">
+    <h2><small>COMPANY</small>会社概要・対応エリア</h2>
+    <div class="two">
+      <div>
+        <dl class="company">
+          <dt>名称</dt><dd>◯◯パーソナル（仮）</dd>
+          <dt>代表</dt><dd>◯◯ ◯◯（仮）</dd>
+          <dt>所在地</dt><dd>〒000-0000 サンプル県サンプル市◯◯ 0-0-0（仮）</dd>
+          <dt>電話</dt><dd>000-0000-0000（仮）受付 10:00〜19:00</dd>
+          <dt>事業内容</dt><dd>出張型パーソナルトレーニング、ペアストレッチ、グループ運動指導、部活アスリートサポート</dd>
+          <dt>対応エリア</dt><dd>サンプル市内および近郊（仮）</dd>
+        </dl>
+      </div>
+      <div class="map">地図（本制作でGoogleマップを埋め込み）<br>所在地・対応エリアの表示</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2><small>CONTACT</small>体験トレーニングのお申込み・ご相談</h2>
+    <p class="lead">30秒で入力できます。折り返しご連絡いたします。<br>※デモのため送信はできません。</p>
+    <form class="form" onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');">
+      <label>お名前<i>必須</i></label><input type="text" placeholder="例）山田 花子">
+      <label>電話番号<i>必須</i></label><input type="tel" placeholder="例）000-0000-0000">
+      <label>お住まいの地域</label><input type="text" placeholder="例）サンプル市◯◯区">
+      <label>ご希望の内容</label>
+      <select><option>体験トレーニングを申し込みたい</option><option>まず相談したい</option><option>家族の体力低下について相談したい</option><option>部活・アスリートの指導について</option></select>
+      <label>お体の状態・ご質問</label><textarea placeholder="例）膝が痛くて階段がつらい。運動を始めたいが不安です。"></textarea>
+      <button class="btn btn-primary" type="submit">この内容で申し込む</button>
+      <p class="note" style="text-align:center;margin:12px 0 0">体験後の強引な勧誘はいたしません</p>
+    </form>
+    <div class="contact-alt">
+      <a class="btn" href="#contact">LINEで相談する（仮）</a>
+      <a class="btn" href="#contact">電話 000-0000-0000（仮）</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>◯◯パーソナル（仮）｜サンプル市の出張パーソナルトレーニング</p>
+    <p><a href="#top">トップ</a> ・ <a href="#service">サービス・料金</a> ・ <a href="#company">会社概要</a> ・ <a href="#contact">お問い合わせ</a></p>
+    <p style="opacity:.7">このページはご提案用のデモサイトです。実在の店舗・人物とは関係ありません。</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-line" href="#contact">LINEで相談</a>
+  <a class="btn btn-primary" href="#contact">体験を申し込む</a>
+</div>
+</body>
+</html>
