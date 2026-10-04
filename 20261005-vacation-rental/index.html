@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯ヴィラ（仮）｜森の中の一棟貸し貸別荘｜デモサイト</title>
+<meta name="description" content="一棟貸し貸別荘のWebサイト デモ。施設紹介・客室設備・料金・空室/予約導線・利用方法・アクセス・FAQ・お知らせ・Instagram/LINE導線を1ページに構成。名称・料金・住所・写真はすべて仮。">
+<style>
+:root{--moss:#2f4f3e;--moss-d:#1e3429;--moss-l:#e9f0ea;--sand:#f6f1e8;--wood:#8b5e3c;--amber:#c98b3a;--ink:#23272a;--ink-2:#5b6368;--line:#e4e1da;--white:#fff;--radius:16px;--max:1120px;--line-green:#06c755}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;color:var(--ink);background:var(--sand);line-height:1.9;font-size:16.5px;-webkit-font-smoothing:antialiased}
+.sans{font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif}
+h1,h2,h3,h4{line-height:1.4;margin:0 0 .5em;font-weight:600}
+h2{font-size:clamp(26px,3.4vw,38px);letter-spacing:.04em}
+h2 small{display:block;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;font-size:12px;letter-spacing:.3em;color:var(--amber);font-weight:700;margin-bottom:10px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.lead{color:var(--ink-2);max-width:720px;margin:0 0 40px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 30px;border-radius:999px;font-weight:700;text-decoration:none;min-height:54px;background:var(--moss);color:#fff;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;font-size:15.5px;border:2px solid var(--moss);transition:.2s}
+.btn:hover{background:var(--moss-d);border-color:var(--moss-d)}
+.btn.ghost{background:transparent;color:var(--moss)}.btn.ghost:hover{background:var(--moss-l)}
+.btn.amber{background:var(--amber);border-color:var(--amber)}.btn.amber:hover{filter:brightness(.92)}
+.btn.line{background:var(--line-green);border-color:var(--line-green)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+header{position:sticky;top:0;z-index:50;background:rgba(246,241,232,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-weight:700;color:var(--moss);text-decoration:none;font-size:20px;letter-spacing:.08em}
+.logo span{display:block;font-size:10px;letter-spacing:.3em;color:var(--amber);font-family:"Hiragino Sans",system-ui,sans-serif}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:22px;align-items:center}
+.nav ul a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+.nav .btn{display:none;min-height:44px;padding:10px 20px}
+.grid{display:grid;gap:20px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+.card h3{font-size:19px}
+.ph{background:linear-gradient(160deg,#3d6a53,#1e3429);color:#dfe9e1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:13px;font-family:"Hiragino Sans",system-ui,sans-serif}
+img.photo{width:100%;height:100%;object-fit:cover;display:block}
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:linear-gradient(160deg,#3d6a53,#1e3429)}
+.hero .bg{position:absolute;inset:0}.hero .bg img{width:100%;height:100%;object-fit:cover;display:block}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,32,26,.78) 0%,rgba(20,32,26,.25) 55%,rgba(20,32,26,.05) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:64px;padding-top:120px}
+.hero .eyebrow{font-family:"Hiragino Sans",system-ui,sans-serif;letter-spacing:.3em;font-size:12px;color:#f0d9a8;margin-bottom:14px}
+.hero h1{font-size:clamp(30px,5.2vw,58px);letter-spacing:.06em;line-height:1.35;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+.hero p{max-width:620px;font-size:17px;color:#eef2ee;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero .cta .ghost{color:#fff;border-color:#fff}.hero .cta .ghost:hover{background:rgba(255,255,255,.14)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.badges span{font-family:"Hiragino Sans",system-ui,sans-serif;font-size:12.5px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+/* concept */
+.concept{background:var(--white)}
+.concept .inner{display:grid;gap:36px;align-items:center}
+.concept .copy h2{text-align:left}
+.concept .pillars{display:grid;gap:14px;margin-top:10px}
+.concept .pillars div{border-left:3px solid var(--amber);padding:4px 0 4px 16px}
+.concept .pillars b{display:block;font-size:17px}
+.concept .pillars small{color:var(--ink-2);font-size:14px}
+.concept .visual{aspect-ratio:4/5;border-radius:24px;overflow:hidden}
+/* rooms */
+.gallery{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.gallery figure{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:1/1;position:relative}
+.gallery figure:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(to top,rgba(0,0,0,.6),transparent);color:#fff;font-family:"Hiragino Sans",system-ui,sans-serif;font-size:13.5px;font-weight:600}
+.spec{margin-top:36px;display:grid;gap:12px}
+.spec div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;font-size:14.5px;display:flex;gap:10px;align-items:flex-start}
+.spec div::before{content:"✓";color:var(--amber);font-weight:800}
+/* price */
+.price-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--radius);overflow:hidden;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;font-size:15px}
+.price-table th,.price-table td{padding:14px 12px;border-bottom:1px solid var(--line);text-align:left}
+.price-table th{background:var(--moss-l);color:var(--moss);font-weight:700;font-size:13.5px}
+.price-table td strong{font-size:18px;color:var(--moss)}
+.plans{margin-top:28px}
+.plan{position:relative}
+.plan .tag{position:absolute;top:-12px;left:22px;background:var(--amber);color:#fff;font-size:12px;padding:4px 12px;border-radius:999px;font-family:"Hiragino Sans",system-ui,sans-serif;font-weight:700}
+.plan .yen{font-size:24px;color:var(--moss);font-weight:700;font-family:"Hiragino Sans",system-ui,sans-serif}
+.plan .yen small{font-size:12px;color:var(--ink-2);font-weight:400}
+.note{font-size:13px;color:var(--ink-2);font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+/* booking */
+.booking{background:var(--moss);color:#fff}
+.booking h2,.booking h2 small{color:#fff}.booking h2 small{color:#f0d9a8}
+.booking .lead{color:#dfe9e1}
+.booking .inner{display:grid;gap:28px}
+.cal{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:22px;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+.cal .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:700}
+.cal .head button{background:none;border:1px solid var(--line);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:16px}
+.cal table{width:100%;border-collapse:collapse;text-align:center;font-size:13.5px}
+.cal th{color:var(--ink-2);font-weight:600;padding:6px 0;font-size:12px}
+.cal td{padding:0}
+.cal td span{display:block;padding:9px 0 6px;border-radius:8px;margin:2px;line-height:1.2}
+.cal td small{display:block;font-size:11px;color:var(--moss);font-weight:700}
+.cal td .x{color:#c3c3c3}.cal td .x small{color:#c3c3c3}
+.cal td .o{background:var(--moss-l)}
+.cal td .pick{background:var(--amber);color:#fff}.cal td .pick small{color:#fff}
+.cal .legend{display:flex;gap:16px;font-size:12px;color:var(--ink-2);margin-top:10px}
+.booking .side{display:grid;gap:14px;align-content:start}
+.booking .side .box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:22px}
+.booking .side .box h3{font-size:17px;margin-bottom:6px}
+.booking .side .box p{color:#dfe9e1;font-size:14.5px;margin-bottom:12px}
+.ota{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.ota a{display:block;text-align:center;background:#fff;color:var(--moss);text-decoration:none;border-radius:10px;padding:12px;font-weight:700;font-family:"Hiragino Sans",system-ui,sans-serif;font-size:14px}
+/* flow */
+.steps{counter-reset:s;display:grid;gap:16px}
+.step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px 22px;position:relative;counter-increment:s}
+.step::before{content:"0" counter(s);font-family:"Hiragino Sans",system-ui,sans-serif;font-weight:800;font-size:13px;letter-spacing:.2em;color:var(--amber)}
+.step h3{font-size:18px;margin:6px 0 8px}
+.step p{font-size:14.5px;color:var(--ink-2);margin:0}
+/* access */
+.access .inner{display:grid;gap:20px}
+.access .map{aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden}
+.access dl{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;font-size:15px}
+.access dt{font-weight:700;color:var(--moss);margin-top:14px;font-size:13px;letter-spacing:.1em}
+.access dd{margin:2px 0 0}
+/* faq */
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-bottom:10px}
+.faq summary{cursor:pointer;padding:16px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:16px}
+.faq summary::after{content:"＋";color:var(--amber);font-weight:400}
+.faq details[open] summary::after{content:"－"}
+.faq details p{padding:0 0 16px;color:var(--ink-2);font-size:15px}
+/* news */
+.news ul{list-style:none;padding:0;margin:0;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.news li{display:grid;gap:4px;padding:18px 22px;border-bottom:1px solid var(--line);font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+.news li:last-child{border-bottom:0}
+.news time{font-size:13px;color:var(--ink-2)}
+.news .cat{display:inline-block;font-size:11px;background:var(--moss-l);color:var(--moss);padding:2px 10px;border-radius:999px;margin-left:8px;font-weight:700}
+.news li a{color:var(--ink);text-decoration:none;font-weight:600}
+/* sns */
+.sns .inner{display:grid;gap:24px}
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ig div{aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#cfd9c9,#8fa892)}
+.ig div:nth-child(2){background:linear-gradient(135deg,#e6d7c3,#b08a62)}
+.ig div:nth-child(3){background:linear-gradient(135deg,#d9e3e6,#6f8d96)}
+.ig div:nth-child(4){background:linear-gradient(135deg,#f0e4cf,#c98b3a)}
+.ig div:nth-child(5){background:linear-gradient(135deg,#d3dfd0,#2f4f3e)}
+.ig div:nth-child(6){background:linear-gradient(135deg,#efe6de,#9a6b4f)}
+.linecard{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.linecard h3{font-size:19px}
+.linecard ul{padding-left:18px;font-size:14.5px;color:var(--ink-2);font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+/* contact */
+.contact{background:var(--white)}
+.form{max-width:640px;margin:0 auto;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+.form label{display:block;font-weight:700;font-size:14.5px;margin:16px 0 6px}
+.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+.form textarea{min-height:120px}
+footer{background:var(--moss-d);color:#b9cfc6;font-size:13px;padding:40px 0 110px;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+footer .cols{display:grid;gap:18px}
+footer a{color:#dfe9e1;text-decoration:none}
+footer .fine{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:16px;font-size:12px;color:#8fa892}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(246,241,232,.97);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sticky .btn{min-height:50px;padding:10px}
+@media(min-width:860px){
+  .nav ul{display:flex}.nav .btn{display:inline-flex}
+  .grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+  .concept .inner{grid-template-columns:1.1fr .9fr}
+  .gallery{grid-template-columns:2fr 1fr 1fr}.gallery figure:first-child{grid-column:1;grid-row:1/3;aspect-ratio:auto}
+  .spec{grid-template-columns:repeat(3,1fr)}
+  .booking .inner{grid-template-columns:1.2fr .8fr}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .access .inner{grid-template-columns:1fr 1fr}
+  .sns .inner{grid-template-columns:1fr 1fr}
+  footer .cols{grid-template-columns:2fr 1fr 1fr}
+  footer{padding-bottom:40px}
+  .sticky{display:none}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】募集文の情報だけで構成したご提案用の見本です。施設名・料金・住所・写真・お知らせはすべて仮の内容です。</div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#top">◯◯ヴィラ（仮）<span>PRIVATE VILLA</span></a>
+  <ul>
+    <li><a href="#concept">施設紹介</a></li>
+    <li><a href="#rooms">客室・設備</a></li>
+    <li><a href="#price">料金</a></li>
+    <li><a href="#flow">ご利用方法</a></li>
+    <li><a href="#access">アクセス</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#news">お知らせ</a></li>
+    <li><a class="btn amber" href="#booking">空室を確認する</a></li>
+  </ul>
+</div></header>
+
+<main id="top">
+
+<!-- 1 ヒーロー -->
+<section class="hero" style="padding:0">
+  <div class="bg"><img src="img/hero.jpg" alt="" onerror="this.remove()"></div>
+  <div class="wrap">
+    <div class="eyebrow sans">一棟貸しの貸別荘 ─ 2027年春 OPEN（仮）</div>
+    <h1>森の静けさを、<br>一棟まるごと貸し切る。</h1>
+    <p>◯◯ヴィラ（仮）は、大切な人とだけ過ごすための一棟貸しの別荘です。鍵を受け取ったら、チェックアウトまで誰にも気を使わない時間を。</p>
+    <div class="cta">
+      <a class="btn amber" href="#booking">空室カレンダーを見る</a>
+      <a class="btn ghost" href="#sns">LINEで相談する</a>
+    </div>
+    <div class="badges">
+      <span>一棟貸し・1日1組限定</span><span>最大6名（仮）</span><span>駐車場2台（仮）</span><span>セルフチェックイン</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2 コンセプト / 施設紹介 -->
+<section class="concept" id="concept"><div class="wrap inner">
+  <div class="copy">
+    <h2><small>CONCEPT</small>何もしない贅沢を、<br>森の中の一棟で。</h2>
+    <p class="lead">ホテルの便利さではなく、「自分たちの家のように過ごせる自由」を大切にしました。食事の時間も、お風呂の順番も、夜更かしも、すべてあなたたちのペースで。</p>
+    <div class="pillars">
+      <div><b>完全プライベート</b><small>敷地内はあなたのグループだけ。他のお客様と顔を合わせることはありません。</small></div>
+      <div><b>森に開いた大きな窓</b><small>リビングの窓いっぱいに広がる木々。朝は鳥の声で目が覚めます（仮）。</small></div>
+      <div><b>暮らすように泊まる</b><small>キッチン・洗濯機・Wi-Fiを完備。長期滞在やワーケーションにも。</small></div>
+    </div>
+  </div>
+  <div class="visual ph"><img class="photo" src="img/room.jpg" alt="リビングのイメージ（仮）" onerror="this.replaceWith(Object.assign(document.createElement('div'),{textContent:'施設写真（本制作で差し替え）',style:'padding:20px'}))"></div>
+</div></section>
+
+<!-- 3 客室・設備 -->
+<section id="rooms"><div class="wrap">
+  <div class="center"><h2><small>ROOMS &amp; FACILITIES</small>客室・設備</h2>
+  <p class="lead">木のぬくもりを基調にした2階建ての一棟（仮）。寝室2室・リビング・ダイニングキッチン・テラス・露天風呂（仮）をご用意しています。</p></div>
+  <div class="gallery">
+    <figure class="ph"><img class="photo" src="img/room.jpg" alt="" onerror="this.remove()"><figcaption>リビング・ダイニング（仮）</figcaption></figure>
+    <figure class="ph"><img class="photo" src="img/bath.jpg" alt="" onerror="this.remove()"><figcaption>テラスの露天風呂（仮）</figcaption></figure>
+    <figure class="ph"><img class="photo" src="img/dining.jpg" alt="" onerror="this.remove()"><figcaption>ウッドデッキ・BBQ（仮）</figcaption></figure>
+  </div>
+  <div class="spec">
+    <div>寝室2室（ダブル×1・シングル×2／仮）</div><div>フルキッチン（IH・冷蔵庫・調理器具一式）</div><div>テラスの露天風呂（仮）</div>
+    <div>BBQグリル・屋外ダイニング</div><div>Wi-Fi・プロジェクター（仮）</div><div>洗濯乾燥機・アメニティ一式</div>
+    <div>駐車場2台（仮）</div><div>薪ストーブ（冬季・仮）</div><div>ペット同伴（要相談・仮）</div>
+  </div>
+</div></section>
+
+<!-- 4 料金・プラン -->
+<section id="price" style="background:var(--white)"><div class="wrap">
+  <div class="center"><h2><small>PRICE</small>料金・プラン</h2>
+  <p class="lead">1棟あたりの料金です（仮）。人数ではなく「棟」で料金が決まるので、人数が多いほど一人あたりはお得になります。</p></div>
+  <table class="price-table">
+    <thead><tr><th>シーズン</th><th>1棟1泊（〜4名）</th><th>追加1名</th><th>備考</th></tr></thead>
+    <tbody>
+      <tr><td>平日</td><td><strong>¥38,000</strong>（仮）</td><td>¥5,000</td><td>日〜木チェックイン</td></tr>
+      <tr><td>週末・祝前日</td><td><strong>¥48,000</strong>（仮）</td><td>¥5,000</td><td>金・土・祝前日</td></tr>
+      <tr><td>ハイシーズン</td><td><strong>¥58,000</strong>（仮）</td><td>¥6,000</td><td>GW・夏休み・年末年始</td></tr>
+    </tbody>
+  </table>
+  <div class="grid grid-3 plans">
+    <div class="card plan"><span class="tag">基本</span><h3>素泊まりプラン</h3><div class="yen">¥38,000〜<small> /棟</small></div><p class="note">食材はお持ち込み。キッチン・BBQ設備はご自由にお使いください。</p></div>
+    <div class="card plan"><span class="tag">人気</span><h3>BBQ食材セット付き</h3><div class="yen">+¥4,500<small> /名</small></div><p class="note">地元の野菜とお肉をご用意（仮）。到着したらすぐにBBQを始められます。</p></div>
+    <div class="card plan"><span class="tag">記念日</span><h3>アニバーサリープラン</h3><div class="yen">+¥8,000<small> /棟</small></div><p class="note">ケーキ・花・スパークリングをご用意（仮）。誕生日や結婚記念日に。</p></div>
+  </div>
+  <p class="note" style="margin-top:18px">※料金・プランは仮の内容です。本制作では管理画面から料金表とプランをご自身で変更できるようにします。</p>
+</div></section>
+
+<!-- 5 空室・ご予約 -->
+<section class="booking" id="booking"><div class="wrap">
+  <h2><small>RESERVATION</small>空室状況・ご予約</h2>
+  <p class="lead">空室カレンダーから日程を選び、そのまま決済まで完了できます。本制作では既存の宿泊予約サービスをこの位置に埋め込み、OTA（じゃらん・一休など）と在庫を連動させます。</p>
+  <div class="inner">
+    <div class="cal">
+      <div class="head"><button type="button" aria-label="前の月">‹</button><span>2027年 5月（表示例）</span><button type="button" aria-label="次の月">›</button></div>
+      <table>
+        <thead><tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="x">1<small>×</small></span></td></tr>
+          <tr><td><span class="x">2<small>×</small></span></td><td><span class="x">3<small>×</small></span></td><td><span class="x">4<small>×</small></span></td><td><span class="x">5<small>×</small></span></td><td><span class="o">6<small>○</small></span></td><td><span class="o">7<small>○</small></span></td><td><span class="x">8<small>×</small></span></td></tr>
+          <tr><td><span class="o">9<small>○</small></span></td><td><span class="o">10<small>○</small></span></td><td><span class="o">11<small>○</small></span></td><td><span class="o">12<small>○</small></span></td><td><span class="o">13<small>○</small></span></td><td><span class="pick">14<small>選択</small></span></td><td><span class="pick">15<small>選択</small></span></td></tr>
+          <tr><td><span class="o">16<small>○</small></span></td><td><span class="o">17<small>○</small></span></td><td><span class="o">18<small>○</small></span></td><td><span class="o">19<small>○</small></span></td><td><span class="o">20<small>○</small></span></td><td><span class="x">21<small>×</small></span></td><td><span class="x">22<small>×</small></span></td></tr>
+          <tr><td><span class="o">23<small>○</small></span></td><td><span class="o">24<small>○</small></span></td><td><span class="o">25<small>○</small></span></td><td><span class="o">26<small>○</small></span></td><td><span class="o">27<small>○</small></span></td><td><span class="o">28<small>○</small></span></td><td><span class="o">29<small>○</small></span></td></tr>
+          <tr><td><span class="o">30<small>○</small></span></td><td><span class="o">31<small>○</small></span></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <div class="legend"><span>○ 空室</span><span>× 満室</span><span>■ 選択中（5/14〜15・1泊）</span></div>
+      <a class="btn amber" href="#contact" style="width:100%;margin-top:14px">この日程で予約へ進む（デモ）</a>
+    </div>
+    <div class="side">
+      <div class="box"><h3>公式サイト予約の特典（仮）</h3><p>公式サイトからのご予約はOTAより1棟あたり2,000円お得（仮）。チェックアウト時間の延長特典も。</p></div>
+      <div class="box"><h3>外部予約サイトからも</h3><p>お使いのポイントやクーポンがある方はこちらから。</p>
+        <div class="ota"><a href="#" onclick="return false">じゃらん（仮）</a><a href="#" onclick="return false">一休（仮）</a><a href="#" onclick="return false">楽天トラベル（仮）</a><a href="#" onclick="return false">Airbnb（仮）</a></div></div>
+      <div class="box"><h3>予約前の相談はLINEで</h3><p>人数・ペット・持ち込みなど、迷ったらLINEで気軽にご質問ください。</p><a class="btn line" href="#sns" style="width:100%">LINEで相談する</a></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 6 ご利用方法 -->
+<section id="flow"><div class="wrap">
+  <div class="center"><h2><small>HOW TO STAY</small>ご利用方法</h2><p class="lead">フロントはありません。予約からチェックアウトまで、スマートフォンだけで完結します。</p></div>
+  <div class="steps">
+    <div class="step"><h3>Webで予約</h3><p>空室カレンダーから日程を選び、カード決済で予約完了。確認メールが届きます。</p></div>
+    <div class="step"><h3>LINEで事前案内</h3><p>宿泊3日前にアクセス方法・鍵の受け取り方・近くのスーパー情報をLINEでお届け（仮）。</p></div>
+    <div class="step"><h3>セルフチェックイン</h3><p>15:00から（仮）。玄関のキーボックスに暗証番号を入力して鍵を受け取ります。</p></div>
+    <div class="step"><h3>チェックアウト</h3><p>翌10:00まで（仮）。ゴミをまとめて鍵をキーボックスへ。清掃はお任せください。</p></div>
+  </div>
+</div></section>
+
+<!-- 7 アクセス -->
+<section class="access" id="access" style="background:var(--white)"><div class="wrap">
+  <h2><small>ACCESS</small>アクセス</h2>
+  <div class="inner">
+    <div class="map ph">地図（本制作でGoogleマップを埋め込み）</div>
+    <dl>
+      <dt>所在地</dt><dd>◯◯県◯◯郡◯◯町 0-0-0（仮）</dd>
+      <dt>お車で</dt><dd>◯◯ICから約20分（仮）。敷地内に2台まで駐車可。冬季はスタッドレスタイヤ推奨（仮）。</dd>
+      <dt>電車・バスで</dt><dd>◯◯駅からタクシーで約15分（仮）。事前にご連絡いただければ送迎のご相談も（仮）。</dd>
+      <dt>周辺</dt><dd>スーパーまで車で10分・温泉街まで車で15分・◯◯湖まで徒歩20分（仮）</dd>
+    </dl>
+  </div>
+</div></section>
+
+<!-- 8 FAQ -->
+<section class="faq" id="faq"><div class="wrap">
+  <div class="center"><h2><small>FAQ</small>よくあるご質問</h2><p class="lead">本制作では、ここに載せた質問をLINEの自動応答にも流用できる形で整理します。</p></div>
+  <details open><summary>チェックイン・チェックアウトの時間は？</summary><p>チェックイン15:00〜、チェックアウト10:00です（仮）。前後の時間はご相談ください。</p></details>
+  <details><summary>食材や飲み物は持ち込めますか？</summary><p>はい。持ち込み自由です。BBQ食材セットのご用意も可能です（仮）。</p></details>
+  <details><summary>子ども・ペットは一緒に泊まれますか？</summary><p>お子様は何歳でも歓迎です。ペットは要相談とさせていただきます（仮）。</p></details>
+  <details><summary>キャンセル料はかかりますか？</summary><p>7日前まで無料、3日前まで50%、前日・当日100%です（仮）。予約時の規約をご確認ください。</p></details>
+  <details><summary>支払い方法は？</summary><p>公式サイトではクレジットカード決済のみです（仮）。現地でのお支払いはできません。</p></details>
+</div></section>
+
+<!-- 9 お知らせ・ブログ -->
+<section class="news" id="news" style="background:var(--white)"><div class="wrap">
+  <h2><small>NEWS &amp; BLOG</small>お知らせ・ブログ</h2>
+  <ul>
+    <li><div><time>2027.03.01</time><span class="cat">お知らせ</span></div><a href="#" onclick="return false">2027年春のオープンに向けて、ご予約の受付を開始しました（仮）</a></li>
+    <li><div><time>2027.02.15</time><span class="cat">ブログ</span></div><a href="#" onclick="return false">薪ストーブの使い方と、冬の過ごし方（仮）</a></li>
+    <li><div><time>2027.02.01</time><span class="cat">お知らせ</span></div><a href="#" onclick="return false">Instagram・LINE公式アカウントを開設しました（仮）</a></li>
+  </ul>
+  <p class="note" style="margin-top:14px">※お知らせ・ブログは管理画面から文章と写真を入れるだけで追加できる形にします。</p>
+</div></section>
+
+<!-- 10 Instagram・LINE -->
+<section class="sns" id="sns"><div class="wrap">
+  <div class="center"><h2><small>FOLLOW US</small>Instagram・LINE</h2><p class="lead">日々の森の様子はInstagramで。予約前の相談や宿泊中のご案内はLINEで。</p></div>
+  <div class="inner">
+    <div>
+      <h3 class="sans" style="font-size:17px">@◯◯_villa（仮）の最新投稿</h3>
+      <div class="ig"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <p class="note" style="margin-top:10px">※本制作ではInstagramの最新投稿を自動で表示します。</p>
+    </div>
+    <div class="linecard">
+      <h3>LINE公式アカウント（仮）</h3>
+      <p class="note">友だち追加で、次のご案内を受け取れます。</p>
+      <ul>
+        <li>予約前の質問（人数・ペット・持ち込みなど）</li>
+        <li>宿泊3日前のアクセス案内・鍵の受け取り方</li>
+        <li>宿泊中の設備の使い方・近隣情報</li>
+        <li>宿泊後のお礼とリピーター特典（仮）</li>
+      </ul>
+      <a class="btn line" href="#" onclick="return false" style="width:100%">友だち追加（デモ）</a>
+      <p class="note" style="margin-top:12px">※本制作では友だち追加ボタンとリッチメニューを設置し、将来のFAQ自動回答・チェックイン案内Botを追加できる構成にします。</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- 11 お問い合わせ -->
+<section class="contact" id="contact"><div class="wrap">
+  <div class="center"><h2><small>CONTACT</small>お問い合わせ</h2><p class="lead">団体利用・貸切イベント・取材などのご相談はこちらから。</p></div>
+  <form class="form" onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');">
+    <label>お名前</label><input type="text" placeholder="山田 太郎">
+    <label>メールアドレス</label><input type="email" placeholder="example@example.com">
+    <label>ご相談内容</label><select><option>宿泊について</option><option>団体・貸切利用</option><option>取材・撮影</option><option>その他</option></select>
+    <label>メッセージ</label><textarea placeholder="ご希望の日程・人数などをご記入ください"></textarea>
+    <button class="btn" type="submit" style="width:100%;margin-top:22px">送信する（デモ）</button>
+  </form>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><strong style="color:#fff;font-size:16px">◯◯ヴィラ（仮）</strong><br>◯◯県◯◯郡◯◯町 0-0-0（仮）<br>一棟貸しの貸別荘・1日1組限定</div>
+    <div><a href="#concept">施設紹介</a><br><a href="#rooms">客室・設備</a><br><a href="#price">料金・プラン</a><br><a href="#booking">空室・ご予約</a></div>
+    <div><a href="#flow">ご利用方法</a><br><a href="#access">アクセス</a><br><a href="#faq">よくあるご質問</a><br><a href="#news">お知らせ</a></div>
+  </div>
+  <div class="fine">このページはご提案用のデモサイトです。実在の施設・人物・団体とは関係ありません。写真はAI生成のイメージです。</div>
+</div></footer>
+
+<div class="sticky"><a class="btn line" href="#sns">LINEで相談</a><a class="btn amber" href="#booking">空室を確認</a></div>
+</body>
+</html>
