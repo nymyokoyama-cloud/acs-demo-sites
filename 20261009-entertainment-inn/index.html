@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯の宿（仮）｜泊まるだけじゃ、もったいない。— ご提案用デモ</title>
+<meta name="description" content="宿泊×エンターテイメントの宿サイトのご提案用デモ。名称・料金・写真・空室はすべて仮です。">
+<style>
+:root{--night:#1b2350;--night-2:#2c3a7a;--sun:#ff8a3d;--sun-2:#ffc93c;--leaf:#2fa36b;--sky:#e9f3ff;--cream:#fffaf1;--ink:#1f2433;--ink-2:#535a6b;--line:#e6e2d8;--r:18px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.8;font-size:16px}
+img{max-width:100%}a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+section{padding:72px 0}
+h1,h2,h3{line-height:1.3;margin:0 0 .5em}
+h2{font-size:clamp(24px,3.4vw,36px);text-align:center}
+.kicker{display:block;text-align:center;font-size:12px;letter-spacing:.25em;font-weight:800;color:var(--sun);margin-bottom:6px}
+.lead{text-align:center;color:var(--ink-2);max-width:700px;margin:0 auto 36px}
+.demo-bar{background:#fff1c9;color:#6b4a00;font-size:12.5px;text-align:center;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,250,241,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:900;text-decoration:none;color:var(--night);font-size:18px;display:flex;align-items:center;gap:8px}
+.logo i{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--sun-2),var(--sun));display:inline-block}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:22px}.nav ul a{text-decoration:none;font-weight:700;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:14px 24px;border-radius:999px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:16px;min-height:52px}
+.btn-sun{background:var(--sun);color:#fff;box-shadow:0 6px 0 #d8661f}
+.btn-sun:active{transform:translateY(3px);box-shadow:0 3px 0 #d8661f}
+.btn-ghost{background:#fff;color:var(--night);border:2px solid var(--night)}
+.btn-sm{padding:9px 16px;min-height:40px;font-size:14px;box-shadow:0 4px 0 #d8661f}
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--night) 0%,var(--night-2) 55%,#f0806a 100%);color:#fff;padding:64px 0 120px}
+.hero .stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 12% 18%,#fff,transparent),radial-gradient(2px 2px at 30% 8%,#fff,transparent),radial-gradient(1.5px 1.5px at 52% 22%,#fff,transparent),radial-gradient(2px 2px at 74% 12%,#fff,transparent),radial-gradient(1.5px 1.5px at 88% 30%,#fff,transparent),radial-gradient(1.5px 1.5px at 64% 40%,#fff,transparent);opacity:.8}
+.hero .moon{position:absolute;right:8%;top:40px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fff6d6,#ffd36b);box-shadow:0 0 60px rgba(255,211,107,.6)}
+.hero .hills{position:absolute;left:-5%;right:-5%;bottom:-2px;height:120px;background:radial-gradient(60% 120px at 25% 120px,#1f7a4f 98%,transparent 100%),radial-gradient(55% 110px at 78% 120px,#2fa36b 98%,transparent 100%);}
+.hero .inner{position:relative;max-width:760px}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);padding:4px 14px;border-radius:999px;font-size:13px;margin-bottom:16px}
+.hero h1{font-size:clamp(34px,6.4vw,64px);letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--sun-2)}
+.hero p{font-size:clamp(15px,2vw,18px);opacity:.95;margin:0 0 26px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chips span{background:rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;font-size:13px}
+/* journey bar */
+.journey{background:#fff;border-radius:var(--r);margin:-60px auto 0;position:relative;z-index:2;box-shadow:0 10px 30px rgba(27,35,80,.12);padding:18px 16px;max-width:var(--max)}
+.journey ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;counter-reset:j}
+.journey li{text-align:center;font-size:12px;font-weight:700;color:var(--ink-2)}
+.journey li a{text-decoration:none;display:block;padding:8px 4px;border-radius:12px}
+.journey li a:hover{background:var(--sky)}
+.journey li b{display:block;font-size:15px;color:var(--night)}
+.journey li::before{counter-increment:j;content:counter(j);display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--sun);color:#fff;font-size:13px;margin-bottom:4px}
+/* attractions */
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:24px}
+.filters button{border:2px solid var(--night);background:#fff;color:var(--night);border-radius:999px;padding:8px 16px;font-weight:800;font-family:inherit;cursor:pointer;font-size:14px}
+.filters button[aria-pressed="true"]{background:var(--night);color:#fff}
+.grid{display:grid;gap:18px}
+.att{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);transition:transform .2s}
+.att:hover{transform:translateY(-4px)}
+.att .pic{aspect-ratio:16/10;display:grid;place-items:center;color:#fff;font-weight:900;font-size:22px;letter-spacing:.05em;position:relative}
+.att .pic small{position:absolute;right:10px;bottom:8px;font-size:11px;font-weight:600;opacity:.85}
+.att .body{padding:18px}
+.att h3{font-size:19px}
+.att p{margin:0 0 10px;color:var(--ink-2);font-size:14.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;background:var(--sky);color:var(--night);padding:3px 10px;border-radius:999px;font-weight:700}
+.att.hide{display:none}
+/* timeline */
+.day{background:var(--night);color:#fff}
+.day h2{color:#fff}.day .lead{color:#cfd6ff}
+.tl{list-style:none;margin:0 auto;padding:0;max-width:720px;position:relative}
+.tl::before{content:"";position:absolute;left:62px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--sun-2),var(--sun),#8ea2ff)}
+.tl li{display:grid;grid-template-columns:52px 1fr;gap:26px;padding:12px 0;position:relative}
+.tl time{font-weight:900;color:var(--sun-2);text-align:right;font-size:15px}
+.tl li::after{content:"";position:absolute;left:56px;top:20px;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--sun)}
+.tl b{display:block;font-size:17px}.tl span{color:#cfd6ff;font-size:14px}
+/* seasons */
+.tabs{display:flex;justify-content:center;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tabs button{border:0;border-radius:12px;padding:10px 18px;font-weight:800;font-family:inherit;cursor:pointer;background:#fff;color:var(--ink-2);border:1px solid var(--line)}
+.tabs button[aria-selected="true"]{background:var(--sun);color:#fff;border-color:var(--sun)}
+.season{display:none;background:#fff;border-radius:var(--r);padding:24px;border:1px solid var(--line);max-width:820px;margin:0 auto}
+.season.on{display:block}
+.season ul{margin:0;padding-left:1.2em}
+/* plans */
+.plans{background:linear-gradient(180deg,var(--sky),var(--cream))}
+.plan{background:#fff;border-radius:var(--r);padding:24px;border:2px solid transparent;position:relative}
+.plan.best{border-color:var(--sun)}
+.plan .ribbon{position:absolute;top:-12px;left:18px;background:var(--sun);color:#fff;font-size:12px;font-weight:800;padding:3px 12px;border-radius:999px}
+.plan .price{font-size:28px;font-weight:900;color:var(--night)}
+.plan .price small{font-size:13px;color:var(--ink-2);font-weight:600}
+.plan ul{padding-left:1.2em;margin:10px 0 16px;font-size:14.5px;color:var(--ink-2)}
+/* simulator + calendar */
+.book{display:grid;gap:20px}
+.panel{background:#fff;border-radius:var(--r);padding:22px;border:1px solid var(--line)}
+.panel h3{font-size:18px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.step{display:flex;align-items:center;gap:8px}
+.step button{width:36px;height:36px;border-radius:50%;border:2px solid var(--night);background:#fff;font-size:18px;font-weight:900;cursor:pointer;color:var(--night)}
+.step output{min-width:24px;text-align:center;font-weight:800}
+.row label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.row input[type=checkbox]{width:20px;height:20px;accent-color:var(--sun)}
+.total{margin-top:14px;background:var(--night);color:#fff;border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.total b{font-size:28px;color:var(--sun-2)}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;font-size:13px}
+.cal .w{font-weight:800;color:var(--ink-2);font-size:12px}
+.cal button{border:0;border-radius:10px;padding:6px 0;font-family:inherit;cursor:pointer;background:var(--sky);color:var(--night);font-weight:700;line-height:1.3}
+.cal button small{display:block;font-size:11px}
+.cal button.few{background:#fff1c9}
+.cal button.full{background:#eee;color:#aaa;cursor:not-allowed}
+.cal button.sel{background:var(--sun);color:#fff}
+.legend{display:flex;gap:12px;font-size:12px;color:var(--ink-2);margin-top:8px;flex-wrap:wrap}
+.picked{margin-top:14px;font-weight:800;color:var(--night)}
+/* sauna / corp */
+.split{display:grid;gap:18px}
+.feature{border-radius:var(--r);padding:28px;color:#fff;min-height:240px;display:flex;flex-direction:column;justify-content:flex-end}
+.feature.sauna{background:linear-gradient(150deg,#3b2a24,#8a4b2f 60%,#d07a3e)}
+.feature.corp{background:linear-gradient(150deg,#123a5c,#1f6f8b 60%,#3fb3a5)}
+.feature h3{font-size:22px}.feature p{margin:0 0 14px;opacity:.95}
+.feature .btn{align-self:flex-start;background:#fff;color:var(--night)}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin:0 auto 10px;max-width:820px}
+summary{cursor:pointer;font-weight:800;padding:12px 0;list-style:none}
+summary::before{content:"Q. ";color:var(--sun)}
+details p{margin:0 0 14px;color:var(--ink-2)}
+/* access */
+.access{display:grid;gap:18px}
+.map{border-radius:var(--r);min-height:220px;background:repeating-linear-gradient(45deg,#e5efe7,#e5efe7 12px,#dbe8de 12px,#dbe8de 24px);display:grid;place-items:center;color:var(--ink-2);font-weight:700}
+dl{margin:0}dt{font-weight:800;margin-top:10px}dd{margin:0;color:var(--ink-2)}
+footer{background:var(--night);color:#c9d0f5;font-size:13px;padding:32px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,250,241,.96);border-top:1px solid var(--line);display:flex;gap:8px}
+.sticky .btn{flex:1;min-height:48px;font-size:15px}
+@media(min-width:820px){
+ .nav ul{display:flex}
+ .g3{grid-template-columns:repeat(3,1fr)}
+ .book,.split,.access{grid-template-columns:1fr 1fr}
+ .journey li{font-size:13px}
+ .sticky{display:none}footer{padding-bottom:32px}
+}
+@media(max-width:520px){.journey ol{gap:2px}.journey li{font-size:10.5px}.journey li b{font-size:12px}.tl::before{left:52px}.tl li{grid-template-columns:44px 1fr;gap:22px}.tl li::after{left:46px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">ご提案用デモです。宿名・料金・空室・写真はすべて仮。募集文の情報だけで作成しています。</div>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#top"><i></i>◯◯の宿（仮）</a>
+  <ul>
+   <li><a href="#play">あそぶ</a></li>
+   <li><a href="#day">1泊のながれ</a></li>
+   <li><a href="#season">季節のイベント</a></li>
+   <li><a href="#plans">プラン・料金</a></li>
+   <li><a href="#corp">法人・サウナ</a></li>
+   <li><a href="#faq">よくある質問</a></li>
+  </ul>
+  <a class="btn btn-sun btn-sm" href="#book">空室をみる</a>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="stars"></div><div class="moon"></div><div class="hills"></div>
+ <div class="wrap inner">
+  <span class="tag">宿泊 × エンターテイメント</span>
+  <h1>泊まるだけじゃ、<br><em>もったいない。</em></h1>
+  <p>BBQ、サウナ、宝探し、夜のゲーム大会。<br>チェックインからチェックアウトまで、1泊まるごとアトラクションの宿です。</p>
+  <div class="ctas">
+   <a class="btn btn-sun" href="#play">今日なにして遊ぶ？</a>
+   <a class="btn btn-ghost" href="#book">料金と空室をみる</a>
+  </div>
+  <div class="chips"><span>一棟まるごと（仮）</span><span>子ども大歓迎</span><span>手ぶらBBQ</span><span>サウナ付き</span></div>
+ </div>
+</section>
+
+<div class="wrap">
+ <nav class="journey" aria-label="予約までの道のり">
+  <ol>
+   <li><a href="#play"><b>ワクワク</b>あそびを見る</a></li>
+   <li><a href="#day"><b>想像する</b>1泊のながれ</a></li>
+   <li><a href="#plans"><b>料金</b>プランを選ぶ</a></li>
+   <li><a href="#book"><b>空室</b>日付を選ぶ</a></li>
+   <li><a href="#book"><b>予約</b>そのまま申込</a></li>
+  </ol>
+ </nav>
+</div>
+
+<section id="play">
+ <div class="wrap">
+  <span class="kicker">ATTRACTIONS</span>
+  <h2>この宿の「あそび」</h2>
+  <p class="lead">気になるものを選ぶと、ぴったりの遊びだけが残ります。</p>
+  <div class="filters" role="group" aria-label="絞り込み">
+   <button aria-pressed="true" data-f="all">ぜんぶ</button>
+   <button aria-pressed="false" data-f="kids">子どもと</button>
+   <button aria-pressed="false" data-f="adult">大人だけで</button>
+   <button aria-pressed="false" data-f="rain">雨の日もOK</button>
+  </div>
+  <div class="grid g3" id="atts">
+   <article class="att" data-t="kids adult">
+    <div class="pic" style="background:linear-gradient(135deg,#ff8a3d,#c2410c)">手ぶらBBQ<small>写真差し替え予定</small></div>
+    <div class="body"><h3>手ぶらBBQ</h3><p>食材も道具もおまかせ。焼く係は子どもに任せてもいい、のんびり夕ごはん。</p><div class="tags"><span>夕方</span><span>家族</span><span>グループ</span></div></div>
+   </article>
+   <article class="att" data-t="adult rain">
+    <div class="pic" style="background:linear-gradient(135deg,#7c4a2d,#d07a3e)">サウナ<small>写真差し替え予定</small></div>
+    <div class="body"><h3>サウナでととのう</h3><p>夜風の外気浴まで含めて一つの体験に。貸切の時間帯をつくる案も（仮）。</p><div class="tags"><span>夜</span><span>大人</span><span>雨の日OK</span></div></div>
+   </article>
+   <article class="att" data-t="kids">
+    <div class="pic" style="background:linear-gradient(135deg,#2fa36b,#14532d)">宝探し<small>写真差し替え予定</small></div>
+    <div class="body"><h3>宿じゅう宝探し</h3><p>地図とヒントを手に、宿の中と庭を探検。見つけた子にはちょっとしたお宝を。</p><div class="tags"><span>昼</span><span>子ども</span></div></div>
+   </article>
+   <article class="att" data-t="kids rain">
+    <div class="pic" style="background:linear-gradient(135deg,#ffc93c,#f59e0b)">あそび場<small>写真差し替え予定</small></div>
+    <div class="body"><h3>子どもの遊び場</h3><p>大人がBBQの準備をしている間も、子どもは目の届く場所で思いきり遊べます。</p><div class="tags"><span>いつでも</span><span>子ども</span><span>雨の日OK</span></div></div>
+   </article>
+   <article class="att" data-t="kids adult rain">
+    <div class="pic" style="background:linear-gradient(135deg,#3b4fb8,#1b2350)">ゲーム大会<small>写真差し替え予定</small></div>
+    <div class="body"><h3>夜のゲーム大会</h3><p>家族対抗、友だち対抗。スマホを置いて、みんなで盛り上がる夜を。</p><div class="tags"><span>夜</span><span>家族</span><span>雨の日OK</span></div></div>
+   </article>
+   <article class="att" data-t="kids adult">
+    <div class="pic" style="background:linear-gradient(135deg,#ec4899,#9d174d)">季節イベント<small>写真差し替え予定</small></div>
+    <div class="body"><h3>季節のイベント</h3><p>来るたびに中身が変わる、季節ごとの特別企画。<a href="#season">開催予定を見る</a></p><div class="tags"><span>季節限定</span><span>みんなで</span></div></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="day" id="day">
+ <div class="wrap">
+  <span class="kicker">ONE NIGHT STORY</span>
+  <h2>たとえば、こんな1泊2日</h2>
+  <p class="lead">「着いたら何しよう？」が、来る前からわかるように。時間はモデルコース（仮）です。</p>
+  <ol class="tl">
+   <li><time>15:00</time><div><b>チェックイン・宝の地図を受け取る</b><span>到着した瞬間から冒険スタート</span></div></li>
+   <li><time>15:30</time><div><b>宿じゅう宝探し</b><span>子どもが夢中になっている間に、大人はひと休み</span></div></li>
+   <li><time>17:30</time><div><b>手ぶらBBQ</b><span>夕焼けを見ながら、みんなで焼いて食べる</span></div></li>
+   <li><time>19:30</time><div><b>夜のゲーム大会</b><span>家族対抗で本気の勝負</span></div></li>
+   <li><time>21:00</time><div><b>サウナと外気浴</b><span>子どもが寝たあとは大人の時間</span></div></li>
+   <li><time>8:00</time><div><b>朝ごはん・遊び場でもうひと遊び</b><span>「また来たい！」で締めくくる朝</span></div></li>
+  </ol>
+ </div>
+</section>
+
+<section id="season">
+ <div class="wrap">
+  <span class="kicker">SEASONAL EVENTS</span>
+  <h2>季節のイベント</h2>
+  <p class="lead">イベントが増えても、ここに1行足すだけで更新できる作りにします。内容は例（仮）です。</p>
+  <div class="tabs" role="tablist">
+   <button role="tab" aria-selected="false" data-s="spring">春</button>
+   <button role="tab" aria-selected="false" data-s="summer">夏</button>
+   <button role="tab" aria-selected="true" data-s="autumn">秋</button>
+   <button role="tab" aria-selected="false" data-s="winter">冬</button>
+  </div>
+  <div class="season" id="s-spring"><h3>春：はじめての外遊び</h3><ul><li>庭でピクニック朝ごはん（例）</li><li>春休み 宝探しスペシャル（例）</li></ul></div>
+  <div class="season" id="s-summer"><h3>夏：いちばん長い一日</h3><ul><li>夏休み 夜のゲーム大会 拡大版（例）</li><li>花火とBBQの夕べ（例）</li></ul></div>
+  <div class="season on" id="s-autumn"><h3>秋：ハロウィンと焚き火</h3><ul><li>ハロウィン仮装で宝探し（例）</li><li>焚き火を囲む夜（例）</li></ul></div>
+  <div class="season" id="s-winter"><h3>冬：あったかい宿ごもり</h3><ul><li>サウナと鍋の冬プラン（例）</li><li>クリスマス・年越しイベント（例）</li></ul></div>
+ </div>
+</section>
+
+<section class="plans" id="plans">
+ <div class="wrap">
+  <span class="kicker">PLANS</span>
+  <h2>プランと料金</h2>
+  <p class="lead">「いくらかな？」をすぐ解決。金額はすべて仮置きです（本制作で正式料金に差し替え）。</p>
+  <div class="grid g3">
+   <div class="plan"><h3>素泊まり＋あそび</h3><div class="price">¥0,000〜<small> /大人1名（仮）</small></div><ul><li>宝探し・遊び場・ゲーム大会</li><li>夕食は持ち込みOK（仮）</li></ul><a class="btn btn-ghost" href="#book" data-plan="素泊まり＋あそび">このプランで空室をみる</a></div>
+   <div class="plan best"><span class="ribbon">いちばん人気（仮）</span><h3>BBQまんきつプラン</h3><div class="price">¥0,000〜<small> /大人1名（仮）</small></div><ul><li>手ぶらBBQ（夕食）＋朝ごはん</li><li>あそび全部入り</li></ul><a class="btn btn-sun" href="#book" data-plan="BBQまんきつプラン">このプランで空室をみる</a></div>
+   <div class="plan"><h3>サウナ貸切プラン</h3><div class="price">¥0,000〜<small> /大人1名（仮）</small></div><ul><li>サウナ貸切時間つき（仮）</li><li>大人グループ・記念日に</li></ul><a class="btn btn-ghost" href="#book" data-plan="サウナ貸切プラン">このプランで空室をみる</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="book">
+ <div class="wrap">
+  <span class="kicker">CHECK &amp; BOOK</span>
+  <h2>料金の目安と空室</h2>
+  <p class="lead">人数を入れると目安がわかり、そのまま日付を選んで予約へ。本番は現在お使いの予約システムにつなぎます。</p>
+  <div class="book">
+   <div class="panel">
+    <h3>料金シミュレーター（仮）</h3>
+    <div class="row"><span>プラン</span><select id="plan" style="font:inherit;padding:8px;border-radius:10px;border:1px solid var(--line)"><option value="8000">素泊まり＋あそび</option><option value="13000" selected>BBQまんきつプラン</option><option value="15000">サウナ貸切プラン</option></select></div>
+    <div class="row"><span>大人</span><div class="step"><button type="button" data-k="ad" data-d="-1" aria-label="大人を減らす">−</button><output id="ad">2</output><button type="button" data-k="ad" data-d="1" aria-label="大人を増やす">＋</button></div></div>
+    <div class="row"><span>子ども（小学生）</span><div class="step"><button type="button" data-k="ch" data-d="-1" aria-label="子どもを減らす">−</button><output id="ch">2</output><button type="button" data-k="ch" data-d="1" aria-label="子どもを増やす">＋</button></div></div>
+    <div class="row"><label><input type="checkbox" id="opt1">ハロウィン宝探しに参加（仮）</label></div>
+    <div class="total"><span>合計の目安（仮）</span><b id="sum">¥0</b></div>
+    <p style="font-size:12px;color:var(--ink-2);margin:8px 0 0">※デモ用の仮計算です。実際の料金ではありません。</p>
+   </div>
+   <div class="panel">
+    <div class="cal-head"><h3 style="margin:0">空室カレンダー（仮）</h3><span id="ym" style="font-weight:800"></span></div>
+    <div class="cal" id="cal"></div>
+    <div class="legend"><span>◯ 空きあり</span><span style="background:#fff1c9;padding:0 6px;border-radius:6px">△ 残りわずか</span><span>× 満室</span></div>
+    <p class="picked" id="picked">日付を選んでください</p>
+    <a class="btn btn-sun" style="width:100%" href="#book" id="go" aria-disabled="true">この日で予約へ進む</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="corp" style="padding-top:20px">
+ <div class="wrap">
+  <span class="kicker">NEW PAGES</span>
+  <h2>サウナと、企業の福利厚生</h2>
+  <p class="lead">ご要望の追加ページは、トップからこの2枚の入口で案内する想定です。</p>
+  <div class="split">
+   <div class="feature sauna"><h3>サウナページ（新設）</h3><p>設備・入り方・貸切の時間帯・外気浴スペースを1ページに。サウナ目的の検索からも入ってこられる作りに。</p><a class="btn" href="#plans">サウナ貸切プランへ</a></div>
+   <div class="feature corp"><h3>企業の福利厚生・研修利用（新設）</h3><p>社員旅行・チームビルディング・研修合宿向けに、貸切の流れと見積り依頼の窓口をまとめます。</p><a class="btn" href="#faq">法人のご相談について</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="faq" style="padding-top:20px">
+ <div class="wrap">
+  <span class="kicker">FAQ</span>
+  <h2>よくある質問</h2>
+  <p class="lead">Google検索やAI検索が答えに引用しやすいよう、質問と答えを短く明確に書く形にします。回答は仮です。</p>
+  <details><summary>小さな子ども連れでも楽しめますか？</summary><p>はい（仮）。遊び場と宝探しは小さなお子さまにも合わせて楽しめる内容です。</p></details>
+  <details><summary>BBQの食材は持ち込めますか？</summary><p>プランにより異なります（仮）。手ぶらBBQプランでは食材と道具をご用意します。</p></details>
+  <details><summary>雨の日でも遊べますか？</summary><p>サウナ・遊び場・ゲーム大会は雨の日も楽しめます（仮）。</p></details>
+  <details><summary>会社の研修や社員旅行で使えますか？</summary><p>貸切でのご利用をご相談いただけます（仮）。法人ページから見積りをご依頼ください。</p></details>
+ </div>
+</section>
+
+<section style="padding-top:20px">
+ <div class="wrap access">
+  <div class="map">地図（Googleマップ埋め込み予定）</div>
+  <div class="panel">
+   <h3>アクセス・基本情報（仮）</h3>
+   <dl><dt>所在地</dt><dd>◯◯県◯◯市◯◯（仮）</dd><dt>チェックイン / アウト</dt><dd>15:00 / 10:00（仮）</dd><dt>駐車場</dt><dd>あり（仮）</dd><dt>お問い合わせ</dt><dd>お問い合わせフォーム（仮）</dd></dl>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">◯◯の宿（仮）— ご提案用デモ。名称・料金・空室・写真・住所はすべて仮のものです。</div>
+</footer>
+<div class="sticky"><a class="btn btn-ghost" href="#play">あそびを見る</a><a class="btn btn-sun" href="#book">空室をみる</a></div>
+
+<script>
+// 遊びの絞り込み
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed','false'));
+ b.setAttribute('aria-pressed','true');const f=b.dataset.f;
+ document.querySelectorAll('.att').forEach(a=>a.classList.toggle('hide',f!=='all'&&!a.dataset.t.split(' ').includes(f)));
+}));
+// 季節タブ
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected','false'));
+ b.setAttribute('aria-selected','true');
+ document.querySelectorAll('.season').forEach(s=>s.classList.toggle('on',s.id==='s-'+b.dataset.s));
+}));
+// 料金シミュレーター（仮の計算）
+const st={ad:2,ch:2};
+function calc(){const p=+document.getElementById('plan').value;let s=p*st.ad+Math.round(p*0.6)*st.ch;
+ if(document.getElementById('opt1').checked)s+=1000*st.ch;
+ document.getElementById('ad').textContent=st.ad;document.getElementById('ch').textContent=st.ch;
+ document.getElementById('sum').textContent='¥'+s.toLocaleString();}
+document.querySelectorAll('.step button').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.k;st[k]=Math.max(k==='ad'?1:0,Math.min(10,st[k]+(+b.dataset.d)));calc();}));
+document.getElementById('plan').addEventListener('change',calc);document.getElementById('opt1').addEventListener('change',calc);
+document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',()=>{const sel=document.getElementById('plan');[...sel.options].forEach(o=>{if(o.text===a.dataset.plan)sel.value=o.value});calc();}));
+calc();
+// 空室カレンダー（仮のデータ）
+(function(){const now=new Date(),y=now.getFullYear(),m=now.getMonth();
+ document.getElementById('ym').textContent=y+'年'+(m+1)+'月';
+ const cal=document.getElementById('cal');'日月火水木金土'.split('').forEach(w=>{const d=document.createElement('div');d.className='w';d.textContent=w;cal.appendChild(d)});
+ const first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
+ for(let i=0;i<first;i++)cal.appendChild(document.createElement('div'));
+ for(let d=1;d<=days;d++){const b=document.createElement('button');b.type='button';const dow=(first+d-1)%7;
+  const past=d<now.getDate();const full=!past&&(d*7%11===0);const few=!past&&!full&&(dow===6||dow===5);
+  b.innerHTML=d+'<small>'+(past?'-':full?'×':few?'△':'◯')+'</small>';
+  if(past||full){b.className='full';b.disabled=true}else if(few)b.className='few';
+  b.addEventListener('click',()=>{cal.querySelectorAll('.sel').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');
+   document.getElementById('picked').textContent=(m+1)+'月'+d+'日 チェックインで選択中（仮）';
+   document.getElementById('go').setAttribute('aria-disabled','false');});
+  cal.appendChild(b);}
+})();
+document.getElementById('go').addEventListener('click',e=>{e.preventDefault();alert('デモのため、ここで予約システム（現在お使いのもの）へ移動する想定です。');});
+</script>
+</body>
+</html>
