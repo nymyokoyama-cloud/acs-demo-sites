@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯経営会計（仮）｜会計・財務コンサルティング — ご提案用デモ</title>
+<meta name="description" content="会計・財務コンサルティング会社のコーポレートサイト（Googleサイト想定・全5ページ）のご提案用デモ。社名・人物・料金・連絡先はすべて仮です。">
+<style>
+/* Googleサイトの標準機能（バナー・セクション・ボタン・折りたたみテキスト・フォーム埋め込み）で再現できる表現だけを使っています */
+:root{--navy:#0f2a4a;--blue:#1f5fa8;--sky:#e8f1fb;--line:#dbe4ee;--ink:#1d2733;--ink-2:#4a5868;--bg:#ffffff;--max:1040px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px}
+a{color:var(--blue)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+.demo-bar{background:#fff4e0;color:#734a0e;font-size:12.5px;text-align:center;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;letter-spacing:.04em;color:#fff;text-decoration:none;font-size:17px;padding:10px 0}
+.menu-btn{background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 12px;font-size:14px;font-family:inherit}
+.tabs{display:none;width:100%;list-style:none;margin:0;padding:0 0 10px}
+.tabs.open{display:block}
+.tabs a{display:block;color:#dbe7f5;text-decoration:none;padding:10px 4px;font-size:15px;border-top:1px solid rgba(255,255,255,.12)}
+.tabs a.on{color:#fff;font-weight:700}
+.banner{background:linear-gradient(120deg,#0f2a4a 0%,#1f5fa8 70%,#3d82c9 100%);color:#fff;padding:64px 0 56px}
+.banner h1{font-size:clamp(26px,4.4vw,42px);line-height:1.35;margin:0 0 14px}
+.banner p{margin:0 0 26px;color:#dbe7f5;max-width:640px}
+.banner.small{padding:40px 0 34px}.banner.small h1{font-size:clamp(24px,3.6vw,34px);margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:6px;font-weight:700;text-decoration:none;background:#fff;color:var(--navy);border:0;font-size:16px;font-family:inherit;cursor:pointer}
+.btn.blue{background:var(--blue);color:#fff}
+.btn.line{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+section{padding:56px 0}section.alt{background:var(--sky)}
+h2{font-size:clamp(22px,3vw,28px);margin:0 0 8px;color:var(--navy)}
+h2+.sub{color:var(--ink-2);margin:0 0 28px}
+h3{font-size:18px;margin:0 0 6px;color:var(--navy)}
+.grid{display:grid;gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px}
+.card .num{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.1em}
+.news{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.news li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;flex-wrap:wrap}
+.news time{color:var(--ink-2);font-size:14px;min-width:96px}
+.price td,.price th{border-bottom:1px solid var(--line);padding:12px 8px;text-align:left;vertical-align:top}
+.price{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.price th{width:38%;color:var(--navy)}
+.photo{aspect-ratio:4/3;border-radius:8px;background:linear-gradient(150deg,#c9d9ec,#8fb0d6);display:flex;align-items:center;justify-content:center;color:#24476e;font-size:14px;text-align:center;padding:16px}
+dl.outline{display:grid;grid-template-columns:7.5em 1fr;margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+dl.outline dt,dl.outline dd{margin:0;padding:12px 14px;border-bottom:1px solid var(--line)}dl.outline dt{background:#f4f8fc;font-weight:700;color:var(--navy);font-size:14px}
+details{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin-bottom:10px}summary{font-weight:700;cursor:pointer;color:var(--navy)}
+.form{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;max-width:640px}
+.form .gf{font-size:12px;color:var(--ink-2);margin:0 0 10px}
+.form label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #c6d2df;border-radius:6px;font-size:16px;font-family:inherit;background:#fff}
+.cal{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:10px}.cal span{background:#fff;border:1px solid var(--line);border-radius:6px;text-align:center;padding:8px 0;font-size:13px}.cal span.ok{border-color:var(--blue);color:var(--blue);font-weight:700}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:48px 16px}.cta h2{color:#fff}.cta p{color:#cfdcec}
+footer{background:#0a1d34;color:#9fb3ca;font-size:13px;padding:26px 0;text-align:center}
+.page{display:none}.page.on{display:block}
+@media(min-width:820px){.menu-btn{display:none}.tabs{display:flex;width:auto;padding:0;gap:4px}.tabs a{border:0;padding:18px 12px;font-size:14px}.tabs a.on{box-shadow:inset 0 -3px 0 #7fb2e6}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】募集文の情報だけで作った見本です。社名・人物・料金・連絡先・写真はすべて仮です。本制作はGoogleサイトで構築します。</div>
+<header><div class="wrap nav">
+<a class="logo" href="#home">◯◯経営会計（仮）</a>
+<button class="menu-btn" onclick="document.querySelector('.tabs').classList.toggle('open')">メニュー</button>
+<ul class="tabs">
+<li><a href="#home">ホーム</a></li>
+<li><a href="#service">サービス・料金</a></li>
+<li><a href="#about">会社概要・代表</a></li>
+<li><a href="#column">コラム・お知らせ</a></li>
+<li><a href="#contact">お問い合わせ</a></li>
+</ul></div></header>
+
+<main>
+<!-- 1 ホーム -->
+<div class="page" id="p-home">
+<div class="banner"><div class="wrap">
+<h1>数字がわかると、<br>経営の打ち手が決まる。</h1>
+<p>起業準備中の方から中小企業の経営層まで。会計・財務の整理から資金繰り、顧問としての伴走まで、決算書の「その先」を一緒に考えます。</p>
+<div class="btns"><a class="btn" href="#contact">無料相談を予約する</a><a class="btn line" href="#service">サービスと料金を見る</a></div>
+</div></div>
+<section><div class="wrap">
+<h2>こんなお悩みはありませんか</h2><p class="sub">ご相談の多いテーマの例です（仮）</p>
+<div class="grid g2">
+<div class="card">売上は伸びているのに、手元のお金が増えない</div>
+<div class="card">起業・法人化のタイミングと、最初に整える数字がわからない</div>
+<div class="card">試算表は届くが、読み方と次の一手がわからない</div>
+<div class="card">融資や補助金の相談先を、数字のわかる人にしたい</div>
+</div></div></section>
+<section class="alt"><div class="wrap">
+<h2>弊社の強み</h2><p class="sub">本制作では御社の実際の強みに差し替えます（仮）</p>
+<div class="grid g3">
+<div class="card"><div class="num">01</div><h3>経営者の言葉で説明</h3><p>専門用語ではなく、意思決定に必要な数字だけを、経営者の言葉に置き換えてお伝えします。</p></div>
+<div class="card"><div class="num">02</div><h3>起業前から伴走</h3><p>事業計画・資金計画の段階から関わり、法人化・顧問契約までつながる支援を行います。</p></div>
+<div class="card"><div class="num">03</div><h3>オンラインで完結</h3><p>Google Meetと共有ドライブを使い、遠方の方も来社不要でご相談いただけます。</p></div>
+</div></div></section>
+<section><div class="wrap">
+<h2>新着情報</h2><p class="sub">お知らせページの最新3件を表示します</p>
+<ul class="news">
+<li><time>2026.10.01</time><span>【お知らせ】年末に向けた資金繰り相談の受付を開始しました（仮）</span></li>
+<li><time>2026.09.15</time><span>【コラム】試算表で最初に見るべき3つの数字（仮）</span></li>
+<li><time>2026.09.01</time><span>【お知らせ】ホームページを公開しました（仮）</span></li>
+</ul>
+<p style="margin-top:18px"><a href="#column">コラム・お知らせ一覧へ →</a></p>
+</div></section>
+<div class="cta"><h2>まずは30分の無料相談から</h2><p>オンライン（Google Meet）で承ります。ご予約はカレンダーから空き枠を選ぶだけです。</p><a class="btn" href="#contact">無料相談を予約する</a></div>
+</div>
+
+<!-- 2 サービス・料金 -->
+<div class="page" id="p-service">
+<div class="banner small"><div class="wrap"><h1>サービス内容・料金</h1></div></div>
+<section><div class="wrap">
+<div class="grid g3">
+<div class="card"><h3>会計・財務コンサルティング</h3><p>月次の数字の見える化、資金繰り表の作成、融資・補助金に向けた計画づくりを支援します。</p></div>
+<div class="card"><h3>顧問契約</h3><p>毎月の定例ミーティングで試算表を一緒に読み、経営判断の相談相手として伴走します。</p></div>
+<div class="card"><h3>起業・法人化サポート</h3><p>事業計画・資金計画の作成から、法人化の判断材料の整理まで行います。</p></div>
+</div></div></section>
+<section class="alt"><div class="wrap">
+<h2>料金の目安</h2><p class="sub">金額はすべて仮です。本制作で御社の料金表に差し替えます</p>
+<table class="price">
+<tr><th>初回相談（30分）</th><td>無料（仮）</td></tr>
+<tr><th>スポットコンサルティング</th><td>◯◯,◯◯◯円〜／回（仮）</td></tr>
+<tr><th>顧問契約</th><td>月額 ◯◯,◯◯◯円〜（仮）</td></tr>
+<tr><th>起業・法人化サポート</th><td>◯◯,◯◯◯円〜（仮）</td></tr>
+</table>
+</div></section>
+<section><div class="wrap">
+<h2>よくあるご質問</h2><p class="sub">Googleサイトの「折りたたみテキスト」で作れる形です</p>
+<details open><summary>相談はオンラインだけですか？</summary><p>オンライン・対面のどちらにも対応します（仮）。</p></details>
+<details><summary>個人事業主でも相談できますか？</summary><p>はい。起業を検討中の段階からご相談いただけます（仮）。</p></details>
+<details><summary>顧問契約の途中解約はできますか？</summary><p>契約条件は個別にご説明します（仮）。</p></details>
+</div></section>
+</div>
+
+<!-- 3 会社概要・代表 -->
+<div class="page" id="p-about">
+<div class="banner small"><div class="wrap"><h1>会社概要・代表プロフィール</h1></div></div>
+<section><div class="wrap grid g2" style="align-items:start">
+<div class="photo">代表写真（ご支給またはフリー素材を選定）</div>
+<div>
+<h2>代表メッセージ</h2>
+<p>数字は、経営者が自信を持って決めるための材料です。決算書をつくって終わりではなく、その数字から「次に何をするか」までご一緒できる存在でありたいと考えています。（仮の文章です）</p>
+<p style="font-weight:700;color:var(--navy)">代表取締役　◯◯ ◯◯（仮）</p>
+<p style="font-size:14px;color:var(--ink-2)">経歴・保有資格は本制作でご支給の内容を掲載します。</p>
+</div></div></section>
+<section class="alt"><div class="wrap">
+<h2>会社概要</h2><p class="sub">信頼感を重視し、表形式で端的に掲載します</p>
+<dl class="outline">
+<dt>社名</dt><dd>◯◯経営会計株式会社（仮）</dd>
+<dt>代表者</dt><dd>◯◯ ◯◯（仮）</dd>
+<dt>所在地</dt><dd>サンプル県◯◯市0-0-0（仮）</dd>
+<dt>事業内容</dt><dd>会計・財務コンサルティング、顧問業務、起業支援</dd>
+<dt>お問い合わせ</dt><dd>お問い合わせページのフォームより</dd>
+</dl>
+</div></section>
+</div>
+
+<!-- 4 コラム・お知らせ -->
+<div class="page" id="p-column">
+<div class="banner small"><div class="wrap"><h1>コラム・お知らせ</h1></div></div>
+<section><div class="wrap">
+<p class="sub">記事の追加は「この枠をコピーして文章を書き換えるだけ」の形にし、更新手順をマニュアルにまとめます。</p>
+<div class="grid g3">
+<div class="card"><div class="num">COLUMN</div><h3>試算表で最初に見るべき3つの数字</h3><p style="font-size:14px;color:var(--ink-2)">2026.09.15（仮）</p></div>
+<div class="card"><div class="num">COLUMN</div><h3>法人化を考え始めたら整える書類</h3><p style="font-size:14px;color:var(--ink-2)">2026.08.20（仮）</p></div>
+<div class="card"><div class="num">NEWS</div><h3>年末の資金繰り相談を受付中です</h3><p style="font-size:14px;color:var(--ink-2)">2026.10.01（仮）</p></div>
+</div></div></section>
+</div>
+
+<!-- 5 お問い合わせ -->
+<div class="page" id="p-contact">
+<div class="banner small"><div class="wrap"><h1>お問い合わせ・無料相談</h1></div></div>
+<section><div class="wrap grid g2" style="align-items:start">
+<div class="form">
+<p class="gf">▼ 本制作ではGoogleフォームをこの位置に埋め込みます（デモは見た目のみ）</p>
+<form onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');">
+<label>お名前</label><input type="text">
+<label>メールアドレス</label><input type="email">
+<label>ご相談の種類</label><select><option>会計・財務コンサルティング</option><option>顧問契約</option><option>起業・法人化</option><option>その他</option></select>
+<label>ご相談内容</label><textarea rows="4"></textarea>
+<button class="btn blue" type="submit" style="width:100%;margin-top:18px">送信する</button>
+</form></div>
+<div class="card">
+<h3>オンライン無料相談の予約</h3>
+<p style="font-size:14px">本制作ではGoogleカレンダーの予約スケジュールを埋め込み、空き枠を選ぶだけで予約とMeetのURL発行まで完了する形にします。</p>
+<div class="cal"><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span class="ok">10:00</span><span>—</span><span class="ok">13:00</span><span>—</span><span class="ok">15:00</span><span>—</span><span class="ok">11:00</span><span>—</span><span class="ok">16:00</span><span>—</span></div>
+<p style="font-size:12px;color:var(--ink-2);margin-top:8px">※枠はイメージです</p>
+</div></div></section>
+</div>
+</main>
+<footer><div class="wrap">© ◯◯経営会計（仮）｜このページはご提案用のデモサイトです。実在の企業・人物とは関係ありません。</div></footer>
+<script>
+function show(){var id=(location.hash||'#home').slice(1);if(!document.getElementById('p-'+id))id='home';
+document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.id==='p-'+id)});
+document.querySelectorAll('.tabs a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});
+document.querySelector('.tabs').classList.remove('open');window.scrollTo(0,0);}
+window.addEventListener('hashchange',show);show();
+</script>
+</body>
+</html>
