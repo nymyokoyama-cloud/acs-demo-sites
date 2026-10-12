@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯ Sushi (provisoire) | Sushi · Poké · Nouilles à emporter — démo</title>
+<meta name="description" content="Démo de site pour un restaurant de sushi, poké et nouilles à emporter. Nom, adresse, prix et photos provisoires.">
+<style>
+:root{--blue:#1d4e89;--blue-d:#123459;--blue-l:#e8f0fa;--coral:#f0704f;--coral-d:#d9583a;--ink:#1f2630;--ink-2:#566170;--line:#e2e7ee;--bg:#fbfaf6;--radius:16px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:17px}
+h1,h2,h3{line-height:1.25;margin:0 0 .5em}h2{font-size:clamp(26px,3.4vw,36px);text-align:center}
+h2 small{display:block;font-size:12px;letter-spacing:.22em;color:var(--coral-d);font-weight:800;margin-bottom:8px;text-transform:uppercase}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}section{padding:68px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:680px;margin:0 auto 36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:800;text-decoration:none;min-height:52px;background:var(--coral);color:#fff;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--coral-d)}.btn.ghost{background:#fff;color:var(--blue);border:2px solid #fff}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}.logo{font-weight:900;color:var(--blue);text-decoration:none;font-size:20px;letter-spacing:.02em}
+.logo span{color:var(--coral)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:700;color:var(--ink)}
+.cart-btn{background:var(--blue);color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:800;font-family:inherit;font-size:15px;cursor:pointer;white-space:nowrap}
+.cart-btn b{background:var(--coral);border-radius:999px;padding:1px 8px;margin-left:6px}
+.hero{background:radial-gradient(circle at 85% 20%,#2f6fb8 0,transparent 45%),linear-gradient(135deg,var(--blue-d),var(--blue));color:#fff;padding:64px 0 72px;overflow:hidden}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(34px,5.6vw,58px);letter-spacing:-.01em}.hero p{color:#d6e4f5;font-size:18px;max-width:520px}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}.hero .tags span{background:rgba(255,255,255,.14);border-radius:999px;padding:4px 12px;font-size:14px;font-weight:700}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.plate{aspect-ratio:1;max-width:420px;margin:0 auto;border-radius:50%;background:radial-gradient(circle at 50% 50%,#fff 0 56%,#dfe8f3 57% 60%,transparent 61%);position:relative;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.plate i{position:absolute;border-radius:14px;display:block}
+.plate .s1{width:22%;height:22%;left:24%;top:30%;background:radial-gradient(circle,#f58a6c 0 38%,#fff 39% 62%,#1b2a1f 63%)}
+.plate .s2{width:22%;height:22%;left:48%;top:28%;background:radial-gradient(circle,#ffcf5a 0 36%,#fff 37% 62%,#1b2a1f 63%)}
+.plate .s3{width:22%;height:22%;left:36%;top:50%;background:radial-gradient(circle,#7cc26b 0 36%,#fff 37% 62%,#1b2a1f 63%)}
+.plate .s4{width:16%;height:30%;left:66%;top:44%;background:linear-gradient(#f0704f,#f7a189);border-radius:40px;transform:rotate(-25deg)}
+.plate em{position:absolute;bottom:14%;left:0;right:0;text-align:center;font-style:normal;color:var(--ink-2);font-size:12px}
+.info-strip{background:#fff;border-bottom:1px solid var(--line)}.info-strip .wrap{display:grid;gap:10px;padding:16px;font-size:15px}
+.info-strip b{color:var(--blue)}
+.steps{display:grid;gap:16px;counter-reset:s}.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative}
+.step:before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:20px;background:var(--coral);color:#fff;font-weight:900;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.tab{border:2px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:8px 18px;font-weight:800;cursor:pointer;font-family:inherit;font-size:15px}
+.tab.on{background:var(--blue);color:#fff}
+.menu{display:grid;gap:14px}.item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);display:grid;grid-template-columns:88px 1fr;gap:14px;padding:14px;align-items:center}
+.thumb{width:88px;height:88px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;text-align:center;font-weight:700;padding:6px}
+.item h3{font-size:17px;margin:0 0 2px}.item p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.5}
+.item .row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:8px}.price{font-weight:900;color:var(--blue)}
+.add{background:var(--coral);color:#fff;border:0;border-radius:999px;padding:7px 14px;font-weight:800;cursor:pointer;font-family:inherit;font-size:14px}
+.badge{display:inline-block;font-size:11px;font-weight:800;background:var(--blue-l);color:var(--blue);border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.hours{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.hours div{display:flex;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--line)}.hours div:last-child{border:0}
+.hours .today{background:var(--blue-l);font-weight:800}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.map{aspect-ratio:4/3;border-radius:var(--radius);background:repeating-linear-gradient(45deg,#e7edf5 0 14px,#eef3f9 14px 28px);display:flex;align-items:center;justify-content:center;color:var(--ink-2);text-align:center;padding:20px;font-size:14px;border:1px solid var(--line)}
+footer{background:var(--blue-d);color:#b8c9de;font-size:13px;padding:30px 0 110px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.97);border-top:1px solid var(--line)}.sticky .btn{width:100%}
+/* panier */
+.drawer{position:fixed;inset:0;z-index:100;display:none}.drawer.open{display:block}
+.drawer .shade{position:absolute;inset:0;background:rgba(10,20,35,.45)}
+.drawer .panel{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:#fff;display:flex;flex-direction:column}
+.panel header{position:static;display:flex;justify-content:space-between;align-items:center;padding:16px 18px;backdrop-filter:none}
+.panel .body{flex:1;overflow:auto;padding:16px 18px}.panel .foot{border-top:1px solid var(--line);padding:16px 18px}
+.line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.qty button{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:#fff;font-weight:900;cursor:pointer}
+.qty span{display:inline-block;min-width:24px;text-align:center;font-weight:800}
+label{display:block;font-weight:800;font-size:14px;margin:14px 0 6px}select,input{width:100%;padding:12px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+.total{display:flex;justify-content:space-between;font-size:18px;font-weight:900;margin-bottom:12px}
+.note{font-size:12px;color:var(--ink-2);margin-top:8px}
+.x{background:none;border:0;font-size:26px;cursor:pointer;line-height:1}
+.done{text-align:center;padding:30px 10px}.done .ok{width:64px;height:64px;border-radius:50%;background:#e7f6ec;color:#228a4a;font-size:34px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+@media(min-width:820px){.nav ul{display:flex}.hero-grid{grid-template-columns:1.1fr .9fr}.steps{grid-template-columns:repeat(3,1fr)}.menu{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr 1fr}.info-strip .wrap{grid-template-columns:repeat(3,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】募集文の情報だけで構成した見本です（フランス語のみ・Wix制作時の構成見本）。店名・住所・メニュー・価格・写真はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top">◯◯ <span>Sushi</span></a><ul><li><a href="#menu">Menu</a></li><li><a href="#commander">Commander</a></li><li><a href="#horaires">Horaires</a></li><li><a href="#acces">Accès</a></li><li><a href="#contact">Contact</a></li></ul><button class="cart-btn" onclick="openCart()">Panier<b id="count">0</b></button></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid"><div>
+<div class="tags"><span>Sushi</span><span>Poké bowls</span><span>Nouilles</span><span>À emporter</span></div>
+<h1>Commandez en ligne,<br>récupérez quand vous voulez.</h1>
+<p>Sushi, poké et nouilles préparés frais chaque jour. Choisissez vos plats, l’heure de retrait et payez par carte — votre commande vous attend au comptoir.</p>
+<div class="cta"><a class="btn" href="#menu">Voir le menu et commander</a><a class="btn ghost" href="#horaires">Horaires</a></div>
+</div><div class="plate" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><em>Photo du restaurant (fournie par vos soins)</em></div></div></section>
+<div class="info-strip"><div class="wrap"><div><b>Aujourd’hui :</b> <span id="todayHours">11h30 – 14h00 / 17h30 – 21h00</span> (provisoire)</div><div><b>Retrait :</b> créneaux de 15 min, dès 20 min après la commande</div><div><b>Paiement :</b> carte bancaire en ligne</div></div></div>
+
+<section id="commander"><div class="wrap"><h2><small>Comment commander</small>Trois étapes, c’est tout</h2><div class="steps" style="margin-top:34px">
+<div class="step"><h3>Choisissez vos plats</h3><p>Ajoutez sushi, poké ou nouilles au panier depuis le menu ci-dessous.</p></div>
+<div class="step"><h3>Choisissez l’heure de retrait</h3><p>Sélectionnez un créneau disponible aujourd’hui, selon nos horaires d’ouverture.</p></div>
+<div class="step"><h3>Payez par carte</h3><p>Paiement sécurisé en ligne. Le restaurant reçoit votre commande immédiatement par e-mail.</p></div>
+</div></div></section>
+
+<section id="menu" style="background:#fff"><div class="wrap"><h2><small>Menu</small>Notre carte</h2><p class="lead">Exemples de plats et de prix (provisoires) — la carte réelle sera reprise de votre menu actuel.</p>
+<div class="tabs" id="tabs"></div><div class="menu" id="menuList"></div></div></section>
+
+<section id="horaires"><div class="wrap"><h2><small>Horaires</small>Horaires d’ouverture</h2><p class="lead">Les créneaux de retrait proposés à la commande suivent automatiquement ces horaires.</p>
+<div class="hours" id="hoursTable"></div></div></section>
+
+<section id="acces" style="background:#fff"><div class="wrap"><h2><small>Accès</small>Nous trouver</h2><div class="grid grid-2" style="margin-top:28px">
+<div class="card"><h3>◯◯ Sushi (provisoire)</h3><p>Rue Exemple 00<br>0000 Ville (provisoire)<br>Suisse</p><p><b>Téléphone :</b> +41 00 000 00 00 (provisoire)<br><b>E-mail :</b> contact@exemple.ch (provisoire)</p><p class="note">Retrait au comptoir uniquement. Indiquez votre nom à l’arrivée.</p></div>
+<div class="map">Carte Google Maps<br>(intégrée lors de la création sur Wix)</div></div></div></section>
+
+<section id="contact"><div class="wrap"><h2><small>Contact</small>Une question ?</h2><p class="lead">Commande de groupe, allergies, événement : écrivez-nous, nous répondons rapidement.</p>
+<form class="card" style="max-width:620px;margin:0 auto" onsubmit="event.preventDefault();alert('Démo : l’envoi est désactivé.');"><label>Nom</label><input type="text"><label>E-mail</label><input type="email"><label>Message</label><input type="text"><button class="btn" style="width:100%;margin-top:18px">Envoyer</button></form></div></section>
+</main>
+<footer><div class="wrap">◯◯ Sushi (provisoire) — Site de démonstration réalisé pour une proposition. Aucun lien avec un restaurant existant.</div></footer>
+<div class="sticky"><button class="btn" style="width:100%" onclick="openCart()">Panier · <span id="stickyTotal">CHF 0.00</span></button></div>
+
+<div class="drawer" id="drawer"><div class="shade" onclick="closeCart()"></div><div class="panel"><header><b style="font-size:18px">Votre commande</b><button class="x" onclick="closeCart()" aria-label="Fermer">×</button></header>
+<div class="body" id="cartBody"></div>
+<div class="foot" id="cartFoot"></div></div></div>
+
+<script>
+const MENU={
+ "Sushi":[["Assortiment Maki (12 pcs)","Saumon, thon, concombre, avocat","15.90","#e46a4e"],["Nigiri Saumon (6 pcs)","Saumon frais, riz vinaigré","13.50","#f08a62"],["California Roll (8 pcs)","Surimi, avocat, sésame","12.90","#d9a441"],["Box Mixte (18 pcs)","Maki, nigiri et california","24.90","#b4553f"]],
+ "Poké":[["Poké Saumon","Saumon, edamame, mangue, avocat, sauce ponzu","17.90","#e9785a"],["Poké Tofu","Tofu mariné, chou rouge, concombre, sésame","15.90","#6aa65b"],["Poké Thon épicé","Thon, mayo épicée, oignon frit, algues","18.90","#c2453a"]],
+ "Nouilles":[["Ramen Shoyu","Bouillon soja, porc, œuf mollet, nori","18.50","#a8743d"],["Yakisoba Poulet","Nouilles sautées, légumes, sauce yakisoba","16.50","#c48a3a"],["Udon Végétarien","Udon, bouillon dashi végétal, légumes","15.50","#7b9a52"]],
+ "Boissons":[["Thé vert glacé","33 cl","4.50","#5c8f6a"],["Limonade japonaise","Ramune 20 cl","4.90","#4f86c6"]]
+};
+const HOURS=[["Lundi","Fermé"],["Mardi","11h30 – 14h00 / 17h30 – 21h00"],["Mercredi","11h30 – 14h00 / 17h30 – 21h00"],["Jeudi","11h30 – 14h00 / 17h30 – 21h00"],["Vendredi","11h30 – 14h00 / 17h30 – 21h30"],["Samedi","11h30 – 21h30"],["Dimanche","17h30 – 21h00"]];
+const cart={};let current="Sushi";
+const fmt=n=>"CHF "+n.toFixed(2);
+function renderTabs(){document.getElementById('tabs').innerHTML=Object.keys(MENU).map(k=>`<button class="tab ${k===current?'on':''}" onclick="current='${k}';renderTabs();renderMenu()">${k}</button>`).join('')}
+function renderMenu(){document.getElementById('menuList').innerHTML=MENU[current].map((it,i)=>`<div class="item"><div class="thumb" style="background:linear-gradient(150deg,${it[3]},#1d4e89)">photo<br>(à fournir)</div><div><h3>${it[0]}${i===0?'<span class="badge">Populaire</span>':''}</h3><p>${it[1]}</p><div class="row"><span class="price">CHF ${it[2]}</span><button class="add" onclick="add('${current}',${i})">+ Ajouter</button></div></div></div>`).join('')}
+function add(c,i){const k=c+'|'+i;cart[k]=(cart[k]||0)+1;update();}
+function chg(k,d){cart[k]+=d;if(cart[k]<=0)delete cart[k];update();renderCart();}
+function total(){return Object.entries(cart).reduce((s,[k,q])=>{const[c,i]=k.split('|');return s+parseFloat(MENU[c][i][2])*q},0)}
+function update(){const n=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById('count').textContent=n;document.getElementById('stickyTotal').textContent=fmt(total());}
+function slots(){const out=[];const d=new Date();let m=Math.ceil((d.getHours()*60+d.getMinutes()+20)/15)*15;const ranges=[[690,840],[1050,1260]];ranges.forEach(([a,b])=>{for(let t=Math.max(a,m);t<=b;t+=15){out.push(String(Math.floor(t/60)).padStart(2,'0')+'h'+String(t%60).padStart(2,'0'))}});return out.length?out:["11h45 (demain)","12h00 (demain)","12h15 (demain)"]}
+function renderCart(){const b=document.getElementById('cartBody'),f=document.getElementById('cartFoot');const ks=Object.keys(cart);
+ if(!ks.length){b.innerHTML='<p style="color:var(--ink-2)">Votre panier est vide. Ajoutez des plats depuis le menu.</p>';f.innerHTML='<a class="btn" style="width:100%" href="#menu" onclick="closeCart()">Voir le menu</a>';return}
+ b.innerHTML=ks.map(k=>{const[c,i]=k.split('|');const it=MENU[c][i];return `<div class="line"><div><b>${it[0]}</b><br><small>CHF ${it[2]}</small></div><div class="qty"><button onclick="chg('${k}',-1)">−</button><span>${cart[k]}</span><button onclick="chg('${k}',1)">+</button></div></div>`}).join('')+
+ `<label>Heure de retrait</label><select>${slots().map(s=>`<option>${s}</option>`).join('')}</select><label>Nom pour le retrait</label><input type="text" placeholder="ex. Martin"><label>Téléphone</label><input type="tel" placeholder="+41 ..."><p class="note">Les créneaux proposés suivent les horaires d’ouverture du jour.</p>`;
+ f.innerHTML=`<div class="total"><span>Total</span><span>${fmt(total())}</span></div><button class="btn" style="width:100%" onclick="pay()">Payer par carte</button><p class="note">Démo : sur Wix, le paiement par carte et la notification e-mail au restaurant sont gérés par la fonction de commande en ligne.</p>`}
+function pay(){document.getElementById('cartBody').innerHTML='<div class="done"><div class="ok">✓</div><h3>Merci ! Commande reçue.</h3><p>Un e-mail de confirmation vous est envoyé et le restaurant est notifié.<br>Présentez-vous au comptoir à l’heure choisie.</p><p class="note">(Démo — aucun paiement n’a été effectué.)</p></div>';document.getElementById('cartFoot').innerHTML='<button class="btn" style="width:100%" onclick="for(const k in cart)delete cart[k];update();closeCart()">Fermer</button>'}
+function openCart(){renderCart();document.getElementById('drawer').classList.add('open')}
+function closeCart(){document.getElementById('drawer').classList.remove('open')}
+const today=(new Date().getDay()+6)%7;
+document.getElementById('hoursTable').innerHTML=HOURS.map((h,i)=>`<div class="${i===today?'today':''}"><span>${h[0]}</span><span>${h[1]}</span></div>`).join('');
+document.getElementById('todayHours').textContent=HOURS[today][1];
+renderTabs();renderMenu();update();
+</script>
+</body>
+</html>
