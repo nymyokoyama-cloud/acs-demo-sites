@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯総合法務事務所（仮）｜川西市内の司法書士・土地家屋調査士・行政書士｜トップページ試作</title>
+<meta name="description" content="ご提案用のトップページ試作。登記・相続・境界・許認可を1か所で相談できる事務所の見本を、公開情報だけで構成しました。名称・連絡先・料金・写真はすべて仮。">
+<style>
+:root{--main:#1f3a34;--main-l:#e9f1ee;--accent:#b58a3c;--accent-l:#f8f1e4;--ink:#1f2522;--ink-2:#56605b;--line:#e1e6e3;--bg:#f8f9f7;--radius:14px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:8px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(181,138,60,.3);border:0;font-size:16px;font-family:inherit;cursor:pointer}
+.btn.sub{background:#fff;color:var(--main);border:2px solid var(--main);box-shadow:none}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;color:var(--main);text-decoration:none;font-size:19px;display:flex;align-items:center;gap:10px}
+.logo i{display:inline-block;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d9b56e,var(--accent) 60%,#8a6526)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.nav .tel{display:none;font-weight:800;color:var(--main);text-decoration:none;font-size:16px;border:2px solid var(--main);border-radius:999px;padding:6px 16px}
+.hero{background:linear-gradient(135deg,#eaf2ee 0%,#f8f9f7 60%,#f8f1e4 100%);padding:56px 0 48px}
+.hero .wrap{display:grid;gap:28px}
+.hero h1{font-size:clamp(28px,4.4vw,42px);color:var(--main)}
+.hero h1 span{color:var(--accent)}
+.hero .tag{display:inline-block;background:var(--main);color:#fff;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px;letter-spacing:.05em}
+.hero p.sub{color:var(--ink-2);font-size:17px;margin:0 0 22px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .art{aspect-ratio:16/11;border-radius:20px;background:linear-gradient(160deg,#2d564c,#1f3a34 55%,#b58a3c 150%);position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(31,58,52,.25);display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:22px;align-content:end}
+.hero .art:before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;right:-15%;top:-25%;background:radial-gradient(circle,rgba(217,181,110,.45),transparent 65%)}
+.hero .art div{position:relative;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:12px;color:#fff;font-weight:700;font-size:14px;padding:14px 10px;text-align:center;backdrop-filter:blur(2px)}
+.hero .art div b{display:block;font-size:24px;margin-bottom:4px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badges span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;color:var(--main)}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card h3{font-size:19px;color:var(--main)}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--main-l);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px}
+.worry .card{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.worry .card:before{content:"✔";color:var(--accent);font-weight:800;flex:0 0 auto}
+.svc{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.svc .card{padding:20px 16px;text-align:center}
+.svc .card h3{font-size:17px;margin:8px 0 4px}.svc .card p{font-size:14px;color:var(--ink-2);margin:0}
+.svc .ico{margin:0 auto 6px}
+.svc .card em{display:inline-block;font-style:normal;font-size:12px;font-weight:700;color:var(--accent);background:var(--accent-l);border-radius:999px;padding:1px 10px;margin-top:8px}
+.steps{display:grid;gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.step b{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;align-items:center;justify-content:center;font-size:15px;margin-bottom:8px}
+.step h3{font-size:18px}
+.price .card{text-align:center}.price .num{font-size:28px;font-weight:800;color:var(--main);margin:6px 0}
+.price small{color:var(--ink-2);font-size:13px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;color:var(--main)}
+.info td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
+.info td:first-child{color:var(--ink-2);white-space:nowrap;width:6em}
+.map{aspect-ratio:4/3;border-radius:20px;background:linear-gradient(160deg,#e3ece8,#cfdcd6);display:flex;align-items:center;justify-content:center;color:var(--main);text-align:center;padding:20px;font-size:14px;font-weight:600}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd6d2;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:#152a25;color:#b9cbc4;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px}.sticky .btn{width:100%;padding:12px 10px;min-height:50px;font-size:15px}
+@media(min-width:800px){.nav ul{display:flex}.nav .tel{display:block}.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.svc{grid-template-columns:repeat(4,1fr)}.steps{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【トップページ試作】公開情報だけで構成した見本です。名称・連絡先・料金・写真はすべて仮で、実際と違う点は作り直します。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i></i>◯◯総合法務事務所（仮）</a><ul><li><a href="#service">取扱業務</a></li><li><a href="#reason">当事務所の特長</a></li><li><a href="#flow">ご相談の流れ</a></li><li><a href="#price">費用の目安</a></li><li><a href="#access">事務所案内</a></li></ul><a class="tel" href="#contact">無料見積りを依頼</a></div></header>
+<main id="top">
+
+<!-- 1 ヒーロー -->
+<section class="hero"><div class="wrap">
+<div>
+<span class="tag">川西市・猪名川町・池田市エリア（仮）</span>
+<h1>登記も、相続も、境界も。<br><span>窓口ひとつ</span>で<br>最後まで任せられる事務所</h1>
+<p class="sub">司法書士・土地家屋調査士・行政書士が同じ事務所に在籍。「どこに頼めばいいか分からない」手続きも、まず一度お話をうかがって、必要な専門家と手順を整理します。</p>
+<div class="cta"><a class="btn" href="#contact">無料でお見積りを依頼する</a><a class="btn sub" href="#service">取扱業務を見る</a></div>
+<div class="badges"><span>受託前のお見積り無料</span><span>3つの資格で一括対応</span><span>メール相談24時間受付</span><span>平日 10:00〜16:00（仮）</span></div>
+</div>
+<div class="art" role="img" aria-label="3つの資格で対応することを表すイメージ（仮）"><div><b>登記</b>司法書士</div><div><b>測量</b>土地家屋調査士</div><div><b>許認可</b>行政書士</div></div>
+</div></section>
+
+<!-- 2 お悩み -->
+<section class="worry"><div class="wrap"><h2><small>CONSULTATION</small>こんなご相談をお受けしています</h2><div class="grid grid-2">
+<div class="card">親が亡くなり、家や土地の名義をどう変えればいいか分からない</div>
+<div class="card">隣地との境界があいまいで、売却の前にはっきりさせたい</div>
+<div class="card">認知症に備えて、今のうちに財産の管理方法を決めておきたい</div>
+<div class="card">会社を子どもに継がせたいが、何から始めればいいか知りたい</div>
+</div></div></section>
+
+<!-- 3 取扱業務 -->
+<section id="service" style="background:#fff"><div class="wrap"><h2><small>SERVICE</small>取扱業務</h2><p class="lead">ひとつの事務所で、手続きの入口から完了まで。担当する資格を明記しています。</p><div class="svc">
+<div class="card"><div class="ico">🏠</div><h3>不動産登記</h3><p>売買・贈与・住宅ローン完済</p><em>司法書士</em></div>
+<div class="card"><div class="ico">📜</div><h3>相続手続き</h3><p>名義変更・遺産分割協議書</p><em>司法書士</em></div>
+<div class="card"><div class="ico">✍️</div><h3>遺言・生前対策</h3><p>遺言書作成・家族信託のご相談</p><em>司法書士・行政書士</em></div>
+<div class="card"><div class="ico">🤝</div><h3>成年後見</h3><p>認知症対策・任意後見契約</p><em>司法書士</em></div>
+<div class="card"><div class="ico">📐</div><h3>測量・境界確定</h3><p>売却前の境界確認・分筆</p><em>土地家屋調査士</em></div>
+<div class="card"><div class="ico">🏗️</div><h3>建物の登記</h3><p>新築・増築・取り壊し</p><em>土地家屋調査士</em></div>
+<div class="card"><div class="ico">🏢</div><h3>会社・事業承継</h3><p>設立・役員変更・承継対策</p><em>司法書士</em></div>
+<div class="card"><div class="ico">📋</div><h3>許認可申請</h3><p>各種営業許可・届出</p><em>行政書士</em></div>
+</div></div></section>
+
+<!-- 4 特長 -->
+<section id="reason"><div class="wrap"><h2><small>REASON</small>当事務所の特長</h2><div class="grid grid-3">
+<div class="card"><div class="ico">🔗</div><h3>たらい回しにしない</h3><p>相続登記の途中で境界の確認が必要になっても、同じ事務所内で引き継ぎます。別の事務所を探し直す手間がありません。</p></div>
+<div class="card"><div class="ico">🧮</div><h3>受託前に費用をお示し</h3><p>ご依頼いただく前に、手続きの内容と費用の見積りをお出しします。納得いただいてから着手します。</p></div>
+<div class="card"><div class="ico">🗣️</div><h3>専門用語を使わずに説明</h3><p>手続きの流れと、お客様にご用意いただくものを、紙1枚にまとめてお渡しします（仮）。</p></div>
+</div></div></section>
+
+<!-- 5 流れ -->
+<section id="flow" style="background:#fff"><div class="wrap"><h2><small>FLOW</small>ご相談の流れ</h2><div class="steps">
+<div class="step"><b>1</b><h3>お問い合わせ</h3><p>フォーム（24時間受付）またはお電話で、ご相談の概要をお知らせください。</p></div>
+<div class="step"><b>2</b><h3>ご面談</h3><p>事務所またはご指定の場所でお話をうかがい、必要な手続きを整理します。</p></div>
+<div class="step"><b>3</b><h3>お見積り（無料）</h3><p>手続きの内容・期間・費用をお示しします。ここまで費用はかかりません。</p></div>
+<div class="step"><b>4</b><h3>ご依頼・完了報告</h3><p>ご依頼後に着手し、完了時に書類一式と結果をご報告します。</p></div>
+</div></div></section>
+
+<!-- 6 費用 -->
+<section id="price" class="price"><div class="wrap"><h2><small>FEE</small>費用の目安（仮）</h2><p class="lead">本制作では実際の報酬表に差し替えます。下記はレイアウト確認用の仮の数字です。</p><div class="grid grid-3">
+<div class="card"><h3>相続登記</h3><div class="num">◯◯,◯◯◯円〜</div><small>不動産1件・登録免許税等の実費別（仮）</small></div>
+<div class="card"><h3>遺言書作成サポート</h3><div class="num">◯◯,◯◯◯円〜</div><small>公正証書遺言・実費別（仮）</small></div>
+<div class="card"><h3>境界確定測量</h3><div class="num">お見積り</div><small>土地の面積・隣地数により算定（仮）</small></div>
+</div></div></section>
+
+<!-- 7 FAQ -->
+<section id="faq" style="background:#fff"><div class="wrap"><h2><small>FAQ</small>よくある質問</h2>
+<details open><summary>相談だけでも費用はかかりますか？</summary><p>ご依頼前のお見積りは無料です。手続きの内容をうかがったうえで、費用をお示しします（仮）。</p></details>
+<details><summary>どの資格の先生に相談すればいいか分かりません。</summary><p>分からないままで大丈夫です。お話をうかがって、必要な手続きと担当を当事務所で振り分けます。</p></details>
+<details><summary>平日の日中に事務所へ行けません。</summary><p>メールでのご予約は24時間受け付けています。面談日時はご都合に合わせて調整します（仮）。</p></details>
+<details><summary>相続登記はいつまでにすればいいですか？</summary><p>相続登記は義務化されています。期限や必要書類はご事情で変わるため、早めにご相談ください。</p></details>
+</div></section>
+
+<!-- 8 事務所案内 -->
+<section id="access"><div class="wrap"><h2><small>OFFICE</small>事務所案内</h2><div class="grid grid-2">
+<div class="card"><table class="info" style="width:100%;border-collapse:collapse"><tr><td>事務所名</td><td>◯◯総合法務事務所（仮）</td></tr><tr><td>所在地</td><td>兵庫県川西市内（仮）</td></tr><tr><td>電話</td><td>072-000-0000（仮）</td></tr><tr><td>受付時間</td><td>平日 10:00〜16:00（メールは24時間）</td></tr><tr><td>取扱資格</td><td>司法書士・土地家屋調査士・行政書士</td></tr><tr><td>業務</td><td>不動産登記、相続・遺言、成年後見、商業登記・事業承継、測量・境界確定、建物登記、許認可申請</td></tr></table></div>
+<div class="map">地図（本制作でGoogleマップを埋め込み）</div>
+</div></div></section>
+
+<!-- 9 お問い合わせ -->
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#e6c98f">CONTACT</small>無料お見積り・ご予約</h2><p class="lead" style="color:#d3e1db">「どんな手続きが必要か分からない」段階でも構いません。分かる範囲でご記入ください。</p>
+<form class="form" style="color:var(--ink)" onsubmit="event.preventDefault();alert('トップページ試作のため送信はできません。');">
+<label>お名前</label><input type="text" placeholder="例）山田 太郎">
+<label>メールアドレスまたは電話番号</label><input type="text" placeholder="折り返し先">
+<label>ご相談の種類</label><select><option>相続・遺言</option><option>不動産の登記</option><option>測量・境界</option><option>会社・許認可</option><option>その他・分からない</option></select>
+<label>ご相談内容</label><textarea rows="4" placeholder="例）父名義の自宅を相続したので名義を変えたい"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">送信する（試作のため動作しません）</button>
+</form></div></section>
+</main>
+<footer><div class="wrap">◯◯総合法務事務所（仮）｜このページはご提案用のトップページ試作です。名称・連絡先・料金・写真は仮のもので、実在の事務所・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn sub" href="#service">取扱業務</a><a class="btn" href="#contact">無料お見積り</a></div>
+</body>
+</html>
