@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ドッグサロン◯◯（仮）｜豊中市内の犬の幼稚園・しつけ教室・ホテル・トリミング｜トップページ試作</title>
+<meta name="description" content="ご提案用のトップページ試作。訓練士がいるドッグサロンの見本を、公開情報だけで構成しました。名称・連絡先・料金・写真はすべて仮。">
+<style>
+:root{--main:#3d5a4c;--main-l:#eaf2ec;--accent:#e08a4f;--accent-l:#fdf0e6;--ink:#2a2622;--ink-2:#6a625a;--line:#ece4da;--bg:#fbf8f4;--radius:16px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:8px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(224,138,79,.3);border:0;font-size:16px;font-family:inherit;cursor:pointer}
+.btn.sub{background:#fff;color:var(--main);border:2px solid var(--main);box-shadow:none}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;color:var(--main);text-decoration:none;font-size:19px;display:flex;align-items:center;gap:10px}
+.logo i{display:inline-block;width:32px;height:32px;border-radius:50%;background:var(--accent-l);font-style:normal;text-align:center;line-height:32px;font-size:18px}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.nav .tel{display:none;font-weight:800;color:#fff;background:var(--main);text-decoration:none;font-size:15px;border-radius:999px;padding:8px 18px}
+.hero{background:linear-gradient(135deg,#fdf0e6 0%,#fbf8f4 55%,#eaf2ec 100%);padding:56px 0 48px}
+.hero .wrap{display:grid;gap:28px}
+.hero h1{font-size:clamp(28px,4.4vw,42px);color:var(--main)}
+.hero h1 span{color:var(--accent)}
+.hero .tag{display:inline-block;background:var(--main);color:#fff;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.hero p.sub{color:var(--ink-2);font-size:17px;margin:0 0 22px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .art{aspect-ratio:16/12;border-radius:28px;background:linear-gradient(160deg,#f5c9a3,#e08a4f 55%,#3d5a4c 140%);position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(61,90,76,.22);display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:22px;align-content:end}
+.hero .art:before{content:"🐾";position:absolute;font-size:150px;opacity:.18;right:-10px;top:-30px;transform:rotate(-18deg)}
+.hero .art div{position:relative;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:14px;color:#fff;font-weight:700;font-size:14px;padding:12px 10px;text-align:center}
+.hero .art div b{display:block;font-size:22px;margin-bottom:2px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badges span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;color:var(--main)}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card h3{font-size:19px;color:var(--main)}
+.card .ico{width:48px;height:48px;border-radius:14px;background:var(--accent-l);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px}
+.worry .card{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.worry .card:before{content:"🐶";flex:0 0 auto}
+.svc{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.svc .card{padding:22px 16px;text-align:center}
+.svc .card h3{font-size:17px;margin:8px 0 4px}.svc .card p{font-size:14px;color:var(--ink-2);margin:0}
+.svc .ico{margin:0 auto 6px}
+.svc .card em{display:inline-block;font-style:normal;font-size:12px;font-weight:700;color:var(--main);background:var(--main-l);border-radius:999px;padding:1px 10px;margin-top:8px}
+.steps{display:grid;gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.step b{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;align-items:center;justify-content:center;font-size:15px;margin-bottom:8px}
+.step h3{font-size:18px}
+.price .card{text-align:center}.price .num{font-size:28px;font-weight:800;color:var(--main);margin:6px 0}
+.price small{color:var(--ink-2);font-size:13px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;color:var(--main)}
+.info td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
+.info td:first-child{color:var(--ink-2);white-space:nowrap;width:6em}
+.map{aspect-ratio:4/3;border-radius:20px;background:linear-gradient(160deg,#f3ebe1,#e3d8cb);display:flex;align-items:center;justify-content:center;color:var(--main);text-align:center;padding:20px;font-size:14px;font-weight:600}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #ddd2c6;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:#2c4136;color:#c6d4cc;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px}.sticky .btn{width:100%;padding:12px 10px;min-height:50px;font-size:15px}
+@media(min-width:800px){.nav ul{display:flex}.nav .tel{display:block}.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.svc{grid-template-columns:repeat(5,1fr)}.steps{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【トップページ試作】公開情報だけで構成した見本です。名称・連絡先・料金・写真はすべて仮で、実際と違う点は作り直します。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i>🐾</i>ドッグサロン◯◯（仮）</a><ul><li><a href="#service">メニュー</a></li><li><a href="#reason">選ばれる理由</a></li><li><a href="#flow">ご利用の流れ</a></li><li><a href="#price">料金の目安</a></li><li><a href="#access">店舗案内</a></li></ul><a class="tel" href="#contact">予約・相談する</a></div></header>
+<main id="top">
+
+<!-- 1 ヒーロー -->
+<section class="hero"><div class="wrap">
+<div>
+<span class="tag">豊中市内・年中無休（仮）</span>
+<h1>預けるたびに、<br><span>おりこうさん</span>になって<br>帰ってくる。</h1>
+<p class="sub">訓練士がいるドッグサロンです。幼稚園・しつけ教室・ホテル・トリミングのどれを使っても、ワンちゃんのクセを見ながら過ごし方を整えます。</p>
+<div class="cta"><a class="btn" href="#contact">まずは相談してみる</a><a class="btn sub" href="#service">メニューを見る</a></div>
+<div class="badges"><span>訓練士が常駐</span><span>年中無休 9:00〜18:00（仮）</span><span>小型〜大型犬OK（仮）</span><span>歯石取りあり</span></div>
+</div>
+<div class="art" role="img" aria-label="4つのメニューを表すイメージ（仮）"><div><b>🏫</b>幼稚園</div><div><b>🎓</b>しつけ教室</div><div><b>🌙</b>ホテル</div><div><b>✂️</b>トリミング</div></div>
+</div></section>
+
+<!-- 2 お悩み -->
+<section class="worry"><div class="wrap"><h2><small>WORRY</small>こんなことで困っていませんか？</h2><div class="grid grid-2">
+<div class="card">呼んでも戻ってこない、散歩で引っぱる</div>
+<div class="card">家族や来客に噛んでしまうことがある</div>
+<div class="card">トリミング中に暴れて、断られたことがある</div>
+<div class="card">留守中の預け先で、ストレスをためないか心配</div>
+</div></div></section>
+
+<!-- 3 メニュー -->
+<section id="service" style="background:#fff"><div class="wrap"><h2><small>MENU</small>メニュー</h2><p class="lead">日中のお預かりから、しつけ・お泊り・お手入れまで。ひとつのお店で続けて任せられます。</p><div class="svc">
+<div class="card"><div class="ico">🏫</div><h3>犬の幼稚園</h3><p>ほかの子と過ごしながらマナーを覚える日中預かり</p><em>回数券あり</em></div>
+<div class="card"><div class="ico">🎓</div><h3>しつけ教室</h3><p>飼い主さんと一緒に学ぶレッスン</p><em>個別・グループ</em></div>
+<div class="card"><div class="ico">🌙</div><h3>ホテル</h3><p>旅行や出張の間のお泊り</p><em>幼稚園と併用可</em></div>
+<div class="card"><div class="ico">✂️</div><h3>トリミング</h3><p>苦手な子もペースに合わせて</p><em>訓練士が対応</em></div>
+<div class="card"><div class="ico">🦷</div><h3>歯石取り</h3><p>お口の定期メンテナンス</p><em>一押し</em></div>
+</div></div></section>
+
+<!-- 4 選ばれる理由 -->
+<section id="reason"><div class="wrap"><h2><small>REASON</small>選ばれる3つの理由</h2><div class="grid grid-3">
+<div class="card"><div class="ico">🧑‍🏫</div><h3>訓練士が見ている</h3><p>お預かり中も、吠え・噛み・引っぱりなどのクセを見て声かけを変えます。お迎え時にその日の様子をお伝えします（仮）。</p></div>
+<div class="card"><div class="ico">💛</div><h3>叱るより、ほめて教える</h3><p>「だめ」の前に「こうすればいい」を教えて、できたらほめる。ワンちゃんが自分から動けるようになる教え方です。</p></div>
+<div class="card"><div class="ico">🐕</div><h3>群れの中で学ぶ</h3><p>幼稚園ではほかの子と一緒に過ごし、犬どうしの距離感やあいさつを自然に覚えていきます。</p></div>
+</div></div></section>
+
+<!-- 5 流れ -->
+<section id="flow" style="background:#fff"><div class="wrap"><h2><small>FLOW</small>ご利用の流れ</h2><div class="steps">
+<div class="step"><b>1</b><h3>ご相談・ご予約</h3><p>フォーム（24時間受付）またはお電話で、ワンちゃんの年齢・犬種・お悩みをお知らせください。</p></div>
+<div class="step"><b>2</b><h3>カウンセリング</h3><p>初回はワンちゃんの性格やクセを見て、合うメニューをご提案します（仮）。</p></div>
+<div class="step"><b>3</b><h3>お預かり</h3><p>トイレやクレートの練習も、過ごし方の中で少しずつ進めます。</p></div>
+<div class="step"><b>4</b><h3>お迎え・ご報告</h3><p>その日の様子と、おうちで続けてほしいことをお伝えします（仮）。</p></div>
+</div></div></section>
+
+<!-- 6 料金 -->
+<section id="price" class="price"><div class="wrap"><h2><small>PRICE</small>料金の目安（仮）</h2><p class="lead">本制作では実際の料金表に差し替えます。下記はレイアウト確認用の仮の数字です。</p><div class="grid grid-3">
+<div class="card"><h3>犬の幼稚園</h3><div class="num">1回 ◯,◯◯◯円〜</div><small>小型犬・回数券あり・税込（仮）</small></div>
+<div class="card"><h3>しつけ教室</h3><div class="num">1回 ◯,◯◯◯円〜</div><small>グループ／プライベート・入会金別（仮）</small></div>
+<div class="card"><h3>ホテル・トリミング</h3><div class="num">◯,◯◯◯円〜</div><small>犬の大きさにより変わります（仮）</small></div>
+</div></div></section>
+
+<!-- 7 FAQ -->
+<section id="faq" style="background:#fff"><div class="wrap"><h2><small>FAQ</small>よくある質問</h2>
+<details open><summary>吠えたり噛んだりする子でも預けられますか？</summary><p>ご相談ください。訓練士がようすを見ながら対応します。料金が変わる場合は事前にお伝えします（仮）。</p></details>
+<details><summary>ホテルの日に持っていくものは？</summary><p>フードやおやつ、ワクチン接種の証明書の写しなどをお願いしています。詳しくはご予約時にご案内します（仮）。</p></details>
+<details><summary>大型犬も利用できますか？</summary><p>小型犬から大型犬まで対応しています。大きさにより料金が変わります（仮）。</p></details>
+<details><summary>送り迎えはお願いできますか？</summary><p>事前にご相談ください。地域や時間によって対応できる場合があります（仮）。</p></details>
+</div></section>
+
+<!-- 8 店舗案内 -->
+<section id="access"><div class="wrap"><h2><small>SHOP</small>店舗案内</h2><div class="grid grid-2">
+<div class="card"><table class="info" style="width:100%;border-collapse:collapse"><tr><td>店名</td><td>ドッグサロン◯◯（仮）</td></tr><tr><td>所在地</td><td>大阪府豊中市内（仮）</td></tr><tr><td>電話</td><td>06-0000-0000（仮）</td></tr><tr><td>営業時間</td><td>9:00〜18:00（仮）</td></tr><tr><td>定休日</td><td>年中無休（仮）</td></tr><tr><td>アクセス</td><td>バス停から徒歩すぐ・駐車場あり（仮）</td></tr><tr><td>メニュー</td><td>犬の幼稚園、しつけ教室、ホテル、トリミング、歯石取り</td></tr></table></div>
+<div class="map">地図（本制作でGoogleマップを埋め込み）</div>
+</div></div></section>
+
+<!-- 9 お問い合わせ -->
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#f5c9a3">CONTACT</small>ご予約・ご相談</h2><p class="lead" style="color:#d9e5de">「うちの子に合うメニューが分からない」段階でも大丈夫です。分かる範囲でご記入ください。</p>
+<form class="form" style="color:var(--ink)" onsubmit="event.preventDefault();alert('トップページ試作のため送信はできません。');">
+<label>お名前</label><input type="text" placeholder="例）山田 花子">
+<label>メールアドレスまたは電話番号</label><input type="text" placeholder="折り返し先">
+<label>ご希望のメニュー</label><select><option>犬の幼稚園</option><option>しつけ教室</option><option>ホテル</option><option>トリミング・歯石取り</option><option>まだ決めていない</option></select>
+<label>ワンちゃんのこと・ご相談内容</label><textarea rows="4" placeholder="例）トイプードル3歳。散歩で引っぱるのを直したい"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">送信する（試作のため動作しません）</button>
+</form></div></section>
+</main>
+<footer><div class="wrap">ドッグサロン◯◯（仮）｜このページはご提案用のトップページ試作です。名称・連絡先・料金・写真は仮のもので、実在の店舗・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn sub" href="#service">メニュー</a><a class="btn" href="#contact">予約・相談</a></div>
+</body>
+</html>
