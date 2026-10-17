@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯警備保障（仮）｜警備スタッフ募集 正社員・パート — ご提案用デモ</title>
+<meta name="description" content="警備員募集ホームページの見本。社名・電話番号・写真・文章の一部は仮です。">
+<style>
+:root{--navy:#14284b;--navy2:#1e3a6b;--yel:#ffc824;--yel2:#fff4cc;--ink:#1d2433;--sub:#5b6474;--line:#e3e7ee;--bg:#f5f7fb;--ok:#1f8a4c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:var(--ink);background:#fff;line-height:1.75;font-size:16px;padding-bottom:72px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.demo-bar{background:#2b2f38;color:#fff;font-size:13px;padding:8px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;text-align:center}
+.demo-bar button{background:var(--yel);color:#222;border:0;border-radius:999px;padding:4px 12px;font-weight:700;font-size:12px;cursor:pointer}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:17px}
+.logo i{width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,var(--navy) 0 55%,var(--yel) 55%);display:inline-block}
+.logo small{display:block;font-size:10px;color:var(--sub);font-weight:500;line-height:1.2}
+.head nav{display:none;gap:20px;font-size:14px}
+.head nav a{text-decoration:none}
+.tel-head{display:none;text-decoration:none;font-weight:800;color:var(--navy);font-size:18px}
+.tel-head small{display:block;font-size:10px;color:var(--sub);font-weight:500}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 60%,#284f8f 100%);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:repeating-linear-gradient(-45deg,var(--yel) 0 18px,#1b1b1b 18px 36px)}
+.hero-in{display:grid;gap:24px;padding:40px 16px 56px}
+.tag{display:inline-block;background:var(--yel);color:#1b1b1b;font-weight:800;font-size:13px;border-radius:4px;padding:2px 10px;margin-right:6px}
+.hero h1{font-size:clamp(28px,6vw,46px);line-height:1.3;margin:14px 0 10px;letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--yel)}
+.hero p.lead{margin:0 0 20px;color:#dbe4f5}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+.pay div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:10px 12px}
+.pay b{display:block;font-size:12px;color:#c9d6ee;font-weight:600}
+.pay span{font-size:clamp(17px,3.6vw,22px);font-weight:800}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:14px 20px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.btn-tel{background:var(--yel);color:#1b1b1b}
+.btn-form{background:#fff;color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.hero-ph{border-radius:14px;min-height:220px;background:
+ radial-gradient(circle at 70% 30%,rgba(255,200,36,.35),transparent 45%),
+ linear-gradient(135deg,#3a5a92,#1b2f57);display:flex;align-items:flex-end;padding:14px;font-size:13px;color:#dbe4f5;border:1px dashed rgba(255,255,255,.35)}
+section{padding:56px 0}
+.sec-h{font-size:clamp(22px,4.5vw,30px);margin:0 0 8px;line-height:1.4}
+.sec-h small{display:block;font-size:12px;letter-spacing:.2em;color:#b08600;font-weight:800}
+.sec-lead{color:var(--sub);margin:0 0 26px}
+.bg{background:var(--bg)}
+.points{display:grid;gap:14px}
+.point{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.point h3{margin:0 0 6px;font-size:17px;display:flex;gap:10px;align-items:center}
+.point h3 span{width:30px;height:30px;border-radius:50%;background:var(--yel2);color:#8a6a00;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none}
+.point p{margin:0;color:var(--sub);font-size:15px}
+.jobs{display:grid;gap:14px}
+.job{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.job .ph{height:130px;background:linear-gradient(135deg,#dfe6f3,#c4d0e6);display:flex;align-items:flex-end;padding:10px;font-size:12px;color:#4b5a76}
+.job div.b{padding:16px}
+.job h3{margin:0 0 4px;font-size:17px}
+.job p{margin:0;color:var(--sub);font-size:15px}
+.tabs{display:flex;gap:8px;margin-bottom:-1px;position:relative;z-index:1}
+.tabs button{flex:1;border:1px solid var(--line);border-bottom:0;background:#eef1f6;border-radius:12px 12px 0 0;padding:12px;font-weight:800;font-size:16px;cursor:pointer;color:var(--sub)}
+.tabs button[aria-selected=true]{background:#fff;color:var(--navy);box-shadow:inset 0 4px 0 var(--yel)}
+.panel{border:1px solid var(--line);border-radius:0 0 12px 12px;background:#fff;padding:6px 18px 18px}
+.panel[hidden]{display:none}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:13px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+th{width:30%;color:var(--sub);font-weight:600;white-space:nowrap}
+td strong{font-size:18px;color:var(--navy)}
+.tmp{color:#9a7300;font-size:12px;font-weight:600}
+.flow{display:grid;gap:10px;counter-reset:f}
+.flow li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 14px 14px 58px;position:relative}
+.flow li:before{counter-increment:f;content:counter(f);position:absolute;left:14px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.flow b{display:block}
+.flow span{color:var(--sub);font-size:14px}
+.day{display:grid;gap:0;border-left:3px solid var(--yel);margin-left:6px}
+.day div{padding:4px 0 14px 18px;position:relative}
+.day div:before{content:"";position:absolute;left:-8px;top:10px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.day b{color:var(--navy);margin-right:8px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary:after{content:"＋";color:var(--navy)}
+details[open] summary:after{content:"−"}
+details p{margin:0 0 14px;color:var(--sub)}
+.apply{display:grid;gap:16px}
+.card-tel{background:var(--navy);color:#fff;border-radius:14px;padding:22px;text-align:center}
+.card-tel .num{font-size:clamp(26px,6vw,34px);font-weight:800;letter-spacing:.04em;display:block;margin:6px 0;text-decoration:none;color:var(--yel)}
+.card-tel p{margin:0;color:#c9d6ee;font-size:14px}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+label .req{background:#d33;color:#fff;font-size:11px;border-radius:3px;padding:1px 6px;margin-left:6px}
+input,select,textarea{width:100%;font:inherit;padding:12px;border:1px solid #c9d0dc;border-radius:8px;background:#fff}
+textarea{min-height:90px}
+.radio{display:flex;gap:10px}
+.radio label{flex:1;margin:0;border:1px solid #c9d0dc;border-radius:8px;padding:12px;font-weight:600;display:flex;gap:8px;align-items:center}
+.radio input{width:auto}
+.note{font-size:12px;color:var(--sub)}
+.done{text-align:center;padding:24px 8px}
+.done .ok{width:56px;height:56px;border-radius:50%;background:var(--ok);color:#fff;font-size:28px;display:inline-flex;align-items:center;justify-content:center}
+.company table th{width:28%}
+footer{background:#0f1d38;color:#b9c6de;font-size:13px;padding:28px 0;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);z-index:30}
+.sticky .btn{padding:12px 8px;font-size:15px}
+/* 更新できる箇所の表示 */
+body.show-edit [data-edit]{outline:2px dashed #e0457b;outline-offset:3px;position:relative}
+body.show-edit [data-edit]:after{content:"iPhoneで更新：" attr(data-edit);position:absolute;right:0;top:-12px;background:#e0457b;color:#fff;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;white-space:nowrap;z-index:5}
+@media(min-width:800px){
+ body{padding-bottom:0}
+ .sticky{display:none}
+ .head nav{display:flex}
+ .tel-head{display:block}
+ .hero-in{grid-template-columns:1.15fr .85fr;align-items:center;padding:56px 16px 72px}
+ .hero-ph{min-height:340px}
+ .points{grid-template-columns:repeat(3,1fr)}
+ .jobs{grid-template-columns:repeat(3,1fr)}
+ .flow{grid-template-columns:repeat(3,1fr)}
+ .apply{grid-template-columns:.8fr 1.2fr;align-items:start}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span>ご提案用デモです。募集文の情報だけで作った見本で、社名・電話番号・写真・文章の一部は仮です。</span><button type="button" id="editToggle" aria-pressed="false">iPhoneで更新できる箇所を表示</button></div>
+
+<header>
+ <div class="wrap head">
+  <a class="logo" href="#top"><i aria-hidden="true"></i><span>◯◯警備保障<small>（仮・正式な社名とロゴに差し替え）</small></span></a>
+  <nav aria-label="メニュー"><a href="#about">会社について</a><a href="#work">仕事内容</a><a href="#recruit">募集要項</a><a href="#faq">よくある質問</a><a href="#apply">応募方法</a></nav>
+  <a class="tel-head" href="tel:000-0000-0000"><small>応募専用ダイヤル（仮）</small>000-0000-0000</a>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap hero-in">
+  <div>
+   <span class="tag">正社員</span><span class="tag">パート</span>
+   <h1>地域の安全を守る<br><em>警備スタッフ</em>を募集しています</h1>
+   <p class="lead" data-edit="キャッチコピー">日勤8:30〜17:30。正社員は週休2日制、パートは週2〜5日から働けます。<br>まずはお電話かフォームから、お気軽にお問い合わせください。</p>
+   <div class="pay" data-edit="給与">
+    <div><b>正社員 月給</b><span>214,000円〜278,200円</span></div>
+    <div><b>パート 時給</b><span>1,250円〜1,500円</span></div>
+   </div>
+   <div class="cta-row">
+    <a class="btn btn-tel" href="tel:000-0000-0000">📞 電話で応募する</a>
+    <a class="btn btn-form" href="#apply">フォームで問い合わせる</a>
+   </div>
+  </div>
+  <div class="hero-ph" data-edit="写真">写真：交通誘導の様子（商用利用可のフリー素材から選定して差し替え）</div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap">
+  <h2 class="sec-h"><small>ABOUT</small>◯◯警備保障の3つの働きやすさ</h2>
+  <p class="sec-lead">募集文の条件から、応募される方が気にする点を先にまとめました（文章は仮。実際の社風に合わせて書き直します）。</p>
+  <div class="points">
+   <div class="point"><h3><span>1</span>日勤中心で生活リズムが整う</h3><p>勤務は8:30〜17:30（休憩60分）。正社員・パートとも同じ時間帯です。</p></div>
+   <div class="point"><h3><span>2</span>正社員は年間休日108日</h3><p>週休2日制。長く安定して働きたい方に向けた働き方です。</p></div>
+   <div class="point"><h3><span>3</span>パートは週2日から相談OK</h3><p>週2〜5日程度。ほかのお仕事や家庭の予定に合わせて相談できます（相談範囲は仮）。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="work" class="bg">
+ <div class="wrap">
+  <h2 class="sec-h"><small>WORK</small>お仕事の内容</h2>
+  <p class="sec-lead">実際の業務内容をお聞きして差し替えます。下は警備会社で一般的な業務の例です（仮）。</p>
+  <div class="jobs">
+   <div class="job"><div class="ph">写真：交通誘導（フリー素材）</div><div class="b"><h3>交通誘導警備</h3><p>工事現場や道路で、車両と歩行者が安全に通れるよう誘導します。</p></div></div>
+   <div class="job"><div class="ph">写真：施設警備（フリー素材）</div><div class="b"><h3>施設警備</h3><p>建物の出入口での受付・巡回など、施設の安全を見守ります。</p></div></div>
+   <div class="job"><div class="ph">写真：イベント警備（フリー素材）</div><div class="b"><h3>イベント・駐車場警備</h3><p>人や車が集まる場所で、混雑や事故が起きないよう案内します。</p></div></div>
+  </div>
+  <h3 style="margin:34px 0 14px">1日の流れ（例・仮）</h3>
+  <div class="day">
+   <div><b>8:30</b>現場に集合・朝礼、その日の配置を確認</div>
+   <div><b>9:00</b>警備業務スタート</div>
+   <div><b>12:00</b>休憩（60分）</div>
+   <div><b>13:00</b>午後の業務</div>
+   <div><b>17:30</b>業務終了・報告して解散</div>
+  </div>
+ </div>
+</section>
+
+<section id="recruit">
+ <div class="wrap">
+  <h2 class="sec-h"><small>RECRUIT</small>募集要項</h2>
+  <p class="sec-lead">給与・時間・休日は募集文の内容をそのまま載せています。</p>
+  <div class="tabs" role="tablist">
+   <button role="tab" aria-selected="true" aria-controls="p1" id="t1">正社員</button>
+   <button role="tab" aria-selected="false" aria-controls="p2" id="t2">パート</button>
+  </div>
+  <div class="panel" id="p1" role="tabpanel" aria-labelledby="t1" data-edit="募集要項">
+   <table>
+    <tr><th>雇用形態</th><td>正社員</td></tr>
+    <tr><th>給与</th><td><strong>月給 214,000円〜278,200円</strong></td></tr>
+    <tr><th>勤務時間</th><td>8:30〜17:30（休憩60分）</td></tr>
+    <tr><th>休日</th><td>週休2日制／年間休日108日</td></tr>
+    <tr><th>勤務地</th><td>◯◯市内および近隣の現場 <span class="tmp">仮</span></td></tr>
+    <tr><th>応募資格</th><td>未経験の方の可否・年齢条件などをお聞きして記載 <span class="tmp">仮</span></td></tr>
+    <tr><th>待遇</th><td>社会保険・交通費・制服貸与など <span class="tmp">仮</span></td></tr>
+   </table>
+  </div>
+  <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden data-edit="募集要項">
+   <table>
+    <tr><th>雇用形態</th><td>パート</td></tr>
+    <tr><th>給与</th><td><strong>時給 1,250円〜1,500円</strong></td></tr>
+    <tr><th>勤務時間</th><td>8:30〜17:30（休憩60分）</td></tr>
+    <tr><th>勤務日数</th><td>週2〜5日程度</td></tr>
+    <tr><th>勤務地</th><td>◯◯市内および近隣の現場 <span class="tmp">仮</span></td></tr>
+    <tr><th>応募資格</th><td>未経験の方の可否・年齢条件などをお聞きして記載 <span class="tmp">仮</span></td></tr>
+    <tr><th>待遇</th><td>交通費・制服貸与など <span class="tmp">仮</span></td></tr>
+   </table>
+  </div>
+ </div>
+</section>
+
+<section id="faq" class="bg">
+ <div class="wrap">
+  <h2 class="sec-h"><small>FAQ</small>よくある質問</h2>
+  <p class="sec-lead">応募前の不安を減らすための質問例です。回答は御社の実際の内容に合わせて書きます（仮）。</p>
+  <div data-edit="よくある質問">
+  <details><summary>警備の仕事が初めてでも大丈夫ですか？</summary><p>入社後に研修があります。研修の内容と期間は実際の内容に合わせて記載します（仮）。</p></details>
+  <details><summary>パートは週何日から働けますか？</summary><p>週2〜5日程度で相談できます。曜日の希望などはお気軽にお伝えください。</p></details>
+  <details><summary>見学や話を聞くだけでもいいですか？</summary><p>お電話またはフォームからお問い合わせください（対応可否は仮）。</p></details>
+  <details><summary>履歴書は必要ですか？</summary><p>面接時の持ち物は実際の内容に合わせて記載します（仮）。</p></details>
+  </div>
+ </div>
+</section>
+
+<section id="apply">
+ <div class="wrap">
+  <h2 class="sec-h"><small>APPLY</small>応募方法</h2>
+  <ol class="flow" style="padding:0;margin:0 0 26px">
+   <li><b>お電話またはフォームで応募</b><span>「ホームページを見た」とお伝えください。</span></li>
+   <li><b>面接日のご連絡</b><span>担当者から日時をご連絡します（仮）。</span></li>
+   <li><b>面接・採用</b><span>勤務開始日などをご相談します（仮）。</span></li>
+  </ol>
+  <div class="apply">
+   <div class="card-tel" data-edit="電話番号">
+    <b>お電話での応募</b>
+    <a class="num" href="tel:000-0000-0000">000-0000-0000</a>
+    <p>受付時間 9:00〜17:00（仮）<br>スマホならタップでそのまま発信できます</p>
+   </div>
+   <form id="f" novalidate>
+    <b>電話での応募が難しい方はこちら</b>
+    <p class="note" style="margin:4px 0 0">送信内容は、ご指定のメールアドレスに届く設定にします。</p>
+    <label>希望の働き方<span class="req">必須</span></label>
+    <div class="radio"><label><input type="radio" name="type" value="正社員" checked> 正社員</label><label><input type="radio" name="type" value="パート"> パート</label></div>
+    <label for="nm">お名前<span class="req">必須</span></label><input id="nm" autocomplete="name" placeholder="例）山田 太郎">
+    <label for="tl">電話番号<span class="req">必須</span></label><input id="tl" type="tel" inputmode="tel" autocomplete="tel" placeholder="例）090-0000-0000">
+    <label for="tm">連絡がつきやすい時間帯</label><select id="tm"><option>いつでもよい</option><option>午前中</option><option>12時〜15時</option><option>15時〜18時</option><option>18時以降</option></select>
+    <label for="ms">ご質問など</label><textarea id="ms" placeholder="例）週3日で働きたいです"></textarea>
+    <p class="note" id="err" style="color:#d33" hidden>お名前と電話番号を入力してください。</p>
+    <button class="btn btn-navy" type="submit" style="width:100%;margin-top:16px">この内容で送信する</button>
+    <p class="note">デモのため、実際には送信されません。</p>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section class="bg company">
+ <div class="wrap">
+  <h2 class="sec-h"><small>COMPANY</small>会社概要</h2>
+  <table data-edit="会社概要">
+   <tr><th>会社名</th><td>◯◯警備保障（仮）</td></tr>
+   <tr><th>所在地</th><td>◯◯県◯◯市◯◯ 0-0-0（仮）</td></tr>
+   <tr><th>事業内容</th><td>交通誘導警備・施設警備など（仮）</td></tr>
+   <tr><th>認定</th><td>警備業認定番号など、掲載が必要な項目をお聞きして記載（仮）</td></tr>
+   <tr><th>地図</th><td><div style="height:150px;border-radius:10px;background:repeating-linear-gradient(0deg,#e8ecf3 0 22px,#f3f5f9 22px 44px);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:13px">Googleマップを埋め込み</div></td></tr>
+  </table>
+ </div>
+</section>
+</main>
+
+<footer>◯◯警備保障（仮）— ご提案用のデモサイトです。実在の会社とは関係ありません。</footer>
+
+<div class="sticky"><a class="btn btn-tel" href="tel:000-0000-0000">📞 電話で応募</a><a class="btn btn-navy" href="#apply">フォームで応募</a></div>
+
+<script>
+const tabs=[...document.querySelectorAll('[role=tab]')];
+tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}));
+const tg=document.getElementById('editToggle');
+tg.addEventListener('click',()=>{const on=document.body.classList.toggle('show-edit');tg.setAttribute('aria-pressed',on);tg.textContent=on?'表示をやめる':'iPhoneで更新できる箇所を表示';});
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('nm').value.trim(),p=document.getElementById('tl').value.trim();if(!n||!p){document.getElementById('err').hidden=false;return;}
+const type=document.querySelector('input[name=type]:checked').value;
+e.target.innerHTML='<div class="done"><div class="ok">✓</div><h3>送信しました（デモ）</h3><p>'+type+'のご応募ありがとうございます。<br>担当者からお電話でご連絡します。</p><p class="note">実際のサイトでは、この内容がご指定のメールアドレスに届きます。</p></div>';});
+</script>
+</body>
+</html>
