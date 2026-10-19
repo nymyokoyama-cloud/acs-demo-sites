@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯登記測量事務所（仮）｜トップページ試作</title>
+<meta name="description" content="土地家屋調査士事務所のトップページ試作。名称・連絡先・料金・写真はすべて仮です。">
+<style>
+:root{--main:#1d3557;--main-d:#13243c;--main-l:#eaf0f7;--accent:#2a9d8f;--accent-d:#1f7a6f;--warm:#f4a261;--ink:#1c2430;--ink-2:#556070;--line:#dfe5ec;--bg:#f7f9fb;--radius:14px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px;overflow-x:hidden}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:8px}
+h3{font-size:19px}p{margin:0 0 .8em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;border:0;font-size:16px;cursor:pointer}
+.btn:hover{background:var(--accent-d)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.logo{font-weight:800;color:var(--main);text-decoration:none;font-size:18px;line-height:1.3}.logo span{display:block;font-size:11px;color:var(--ink-2);font-weight:600;letter-spacing:.08em}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.nav .tel{display:none;font-weight:800;color:var(--main);text-decoration:none}
+/* hero */
+.hero{position:relative;background:linear-gradient(135deg,var(--main-d),var(--main));color:#fff;padding:64px 0 72px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:36px;align-items:center}
+.hero .tag{display:inline-block;background:rgba(42,157,143,.25);border:1px solid rgba(42,157,143,.7);color:#bff0e9;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(28px,4.8vw,48px)}
+.hero p{color:#d6e0ee;max-width:560px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.plot{position:relative;aspect-ratio:1/1;max-width:420px;width:100%;margin:0 auto}
+.plot svg{width:100%;height:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.chips span{font-size:13px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:4px 12px;border-radius:999px}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.worry .card{display:flex;gap:14px;align-items:flex-start}.worry .card b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--main-l);color:var(--main);display:flex;align-items:center;justify-content:center;font-size:15px}
+.svc .card{border-top:4px solid var(--accent)}.svc .card ul{margin:.4em 0 0;padding-left:1.2em;color:var(--ink-2);font-size:15px}
+.svc .icon{width:48px;height:48px;border-radius:12px;background:var(--main-l);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.reason .num{font-size:40px;font-weight:800;color:var(--accent);line-height:1}
+.flow{counter-reset:f}.flow .card{position:relative;padding-top:40px}.flow .card::before{counter-increment:f;content:"STEP " counter(f);position:absolute;top:14px;left:24px;font-size:12px;font-weight:800;letter-spacing:.15em;color:var(--accent)}
+.price td,.price th{padding:14px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:15px}.price table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden}.price th{background:var(--main-l);color:var(--main);width:58%}
+.note{font-size:13px;color:var(--ink-2);margin-top:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}summary{font-weight:700;cursor:pointer}details p{margin:.8em 0 0;color:var(--ink-2)}
+.area{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.area span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:15px}
+.map{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(160deg,#dfe8f2,#c9d7e6);display:flex;align-items:center;justify-content:center;color:var(--main);font-size:14px;text-align:center;padding:20px}
+.info dl{margin:0;display:grid;grid-template-columns:6.5em 1fr;gap:10px 12px;font-size:15px}.info dt{color:var(--ink-2)}.info dd{margin:0;font-weight:600}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto;color:var(--ink)}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:var(--main-d);color:#b8c6d9;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.97);border-top:1px solid var(--line);display:flex;gap:8px}.sticky .btn{flex:1;min-height:50px;padding:12px}.sticky .btn.tel{background:var(--main)}
+@media(min-width:800px){.nav ul{display:flex}.nav .tel{display:block}.hero .wrap{grid-template-columns:1.15fr .85fr}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【トップページ試作】公開情報だけで構成した見本です。名称・連絡先・料金・写真はすべて仮で、実際と違う点は作り直します。</div>
+<header><div class="wrap nav"><a class="logo" href="#top">◯◯登記測量事務所（仮）<span>土地家屋調査士｜豊中市内</span></a><ul><li><a href="#service">業務内容</a></li><li><a href="#reason">当事務所の強み</a></li><li><a href="#flow">ご依頼の流れ</a></li><li><a href="#price">費用の目安</a></li><li><a href="#access">事務所案内</a></li></ul><a class="tel" href="#contact">06-0000-0000</a></div></header>
+<main id="top">
+
+<section class="hero"><div class="wrap">
+<div>
+<span class="tag">土地・建物の登記と測量の専門家</span>
+<h1>境界のこと、登記のこと。<br>まず「早く・わかりやすく」。</h1>
+<p>相続した土地の境界確認、新築やリフォーム後の建物登記、土地の分筆まで。土地家屋調査士が測量から法務局への申請まで一貫して担当します。</p>
+<div class="cta"><a class="btn" href="#contact">無料で相談する</a><a class="btn ghost" href="#price">費用の目安を見る</a></div>
+<div class="chips"><span>関西一円に対応</span><span>開業20年（仮）</span><span>ご相談は無料</span></div>
+</div>
+<div class="plot" aria-hidden="true">
+<svg viewBox="0 0 400 400" fill="none">
+<rect x="40" y="40" width="320" height="320" rx="18" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.25)"/>
+<path d="M90 110 L250 80 L320 200 L230 320 L100 290 Z" fill="rgba(42,157,143,.28)" stroke="#7fe0d3" stroke-width="3"/>
+<path d="M250 80 L230 320" stroke="#7fe0d3" stroke-width="2" stroke-dasharray="8 7"/>
+<g fill="#f4a261"><circle cx="90" cy="110" r="8"/><circle cx="250" cy="80" r="8"/><circle cx="320" cy="200" r="8"/><circle cx="230" cy="320" r="8"/><circle cx="100" cy="290" r="8"/></g>
+<g fill="#fff" font-size="14" font-family="sans-serif"><text x="62" y="98">K1</text><text x="256" y="70">K2</text><text x="330" y="196">K3</text><text x="238" y="342">K4</text><text x="66" y="312">K5</text></g>
+<g fill="#d6e0ee" font-size="12" font-family="sans-serif"><text x="140" y="200">A 区画</text><text x="262" y="214">B 区画</text></g>
+</svg>
+</div>
+</div></section>
+
+<section class="worry"><div class="wrap"><h2><small>CONSULTATION</small>こんなときにご相談ください</h2>
+<div class="grid grid-2">
+<div class="card"><b>1</b><div>相続した土地を売りたいが、隣地との境界がはっきりしない</div></div>
+<div class="card"><b>2</b><div>家を新築・増築したので、建物の登記をしなければならない</div></div>
+<div class="card"><b>3</b><div>土地を分けて一部だけ売却・贈与したい（分筆）</div></div>
+<div class="card"><b>4</b><div>古い家を取り壊したが、登記がそのまま残っている</div></div>
+</div></div></section>
+
+<section id="service" class="svc" style="background:#fff"><div class="wrap"><h2><small>SERVICE</small>業務内容</h2>
+<p class="lead">土地家屋調査士は、不動産の「かたち」と「場所」を調べて登記する国家資格者です。</p>
+<div class="grid grid-3">
+<div class="card"><div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1d3557" stroke-width="2"><path d="M3 20 L8 4 L16 8 L21 18 Z"/><circle cx="8" cy="4" r="1.5"/></svg></div><h3>土地の測量・境界確定</h3><p>現地を測量し、お隣の方の立ち会いのもとで境界を確認します。</p><ul><li>確定測量・現況測量</li><li>境界標の設置・復元</li></ul></div>
+<div class="card"><div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1d3557" stroke-width="2"><path d="M3 11 L12 4 L21 11 V20 H3 Z"/><path d="M9 20 V14 H15 V20"/></svg></div><h3>建物の登記</h3><p>新築・増築・取り壊しのとき、建物の状態を正しく登記します。</p><ul><li>建物表題登記・変更登記</li><li>建物滅失登記</li></ul></div>
+<div class="card"><div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1d3557" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4 V20 M3 12 H12"/></svg></div><h3>土地の登記</h3><p>土地を分ける・まとめる・用途を変えるときの手続きです。</p><ul><li>分筆登記・合筆登記</li><li>地目変更登記・地積更正登記</li></ul></div>
+</div></div></section>
+
+<section id="reason" class="reason"><div class="wrap"><h2><small>STRENGTH</small>当事務所の強み</h2>
+<div class="grid grid-3">
+<div class="card"><div class="num">01</div><h3>スピード対応</h3><p>お問い合わせへの返信、現地調査の日程調整を早く。お急ぎの売却・融資の予定にも合わせます。</p></div>
+<div class="card"><div class="num">02</div><h3>専門用語を使わない説明</h3><p>何をするのか、なぜ必要か、いくらかかるか。図を使ってご説明します。</p></div>
+<div class="card"><div class="num">03</div><h3>測量から申請まで一貫</h3><p>測量・隣地との立ち会い・書類作成・法務局への申請まで、窓口はひとつです。</p></div>
+</div></div></section>
+
+<section id="flow" class="flow" style="background:#fff"><div class="wrap"><h2><small>FLOW</small>ご依頼の流れ</h2>
+<div class="grid grid-4">
+<div class="card"><h3>ご相談</h3><p>お電話・フォームでご連絡ください。ご相談は無料です。</p></div>
+<div class="card"><h3>お見積り</h3><p>資料を拝見し、費用と期間の目安をお伝えします。</p></div>
+<div class="card"><h3>調査・測量</h3><p>法務局の資料調査と現地測量、必要に応じて立ち会い。</p></div>
+<div class="card"><h3>申請・完了</h3><p>登記を申請し、完了後に書類一式をお渡しします。</p></div>
+</div></div></section>
+
+<section id="price" class="price"><div class="wrap"><h2><small>PRICE</small>費用の目安</h2>
+<table>
+<tr><th>建物表題登記（新築）</th><td>◯◯,◯◯◯円〜（仮）</td></tr>
+<tr><th>建物滅失登記（取り壊し）</th><td>◯◯,◯◯◯円〜（仮）</td></tr>
+<tr><th>土地分筆登記</th><td>◯◯◯,◯◯◯円〜（仮）</td></tr>
+<tr><th>境界確定測量</th><td>◯◯◯,◯◯◯円〜（仮）</td></tr>
+</table>
+<p class="note">※金額はすべて仮置きです。土地の広さ・隣地の数・資料の有無で変わるため、お見積りは無料でお出しします。</p>
+</div></section>
+
+<section id="faq" style="background:#fff"><div class="wrap" style="max-width:820px"><h2><small>FAQ</small>よくあるご質問</h2>
+<details open><summary>司法書士との違いは何ですか？</summary><p>土地家屋調査士は土地・建物の「物理的な状態」（場所・広さ・形）を登記します。所有者の名義変更などは司法書士の業務です。必要に応じて連携してご案内します。</p></details>
+<details><summary>隣の方と面識がなくても大丈夫ですか？</summary><p>はい。立ち会いのご依頼やご説明は当事務所からお隣の方へ丁寧に行います。</p></details>
+<details><summary>どのくらいの期間がかかりますか？</summary><p>建物の登記はおおむね数週間、境界確定は隣地の数によって数か月かかることもあります。お見積りの際に目安をお伝えします。</p></details>
+</div></section>
+
+<section id="access"><div class="wrap"><h2><small>OFFICE</small>事務所案内・対応エリア</h2>
+<div class="grid grid-2" style="margin-bottom:28px">
+<div class="card info"><dl><dt>事務所名</dt><dd>◯◯登記測量事務所（仮）</dd><dt>所在地</dt><dd>大阪府豊中市内（仮）</dd><dt>電話</dt><dd>06-0000-0000（仮）</dd><dt>受付時間</dt><dd>9:00〜18:00（定休日は仮）</dd><dt>資格</dt><dd>土地家屋調査士</dd></dl></div>
+<div class="map">地図（本制作でGoogleマップを埋め込み）</div>
+</div>
+<div class="area"><span>大阪府</span><span>兵庫県</span><span>京都府</span><span>奈良県</span><span>滋賀県</span><span>和歌山県</span></div>
+<p class="note" style="text-align:center">関西圏を中心に対応。それ以外の地域もまずはご相談ください。</p>
+</div></section>
+
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#9fe3da">CONTACT</small>無料相談・お問い合わせ</h2>
+<form class="form" onsubmit="event.preventDefault();alert('トップページ試作のため送信はできません。');">
+<label>お名前</label><input type="text" autocomplete="off">
+<label>メールアドレスまたはお電話番号</label><input type="text" autocomplete="off">
+<label>ご相談の種類</label><select><option>土地の測量・境界</option><option>建物の登記</option><option>土地の登記（分筆など）</option><option>その他</option></select>
+<label>ご相談内容</label><textarea rows="5" placeholder="わかる範囲でかまいません"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">送信する</button></form>
+</div></section>
+</main>
+<footer><div class="wrap">◯◯登記測量事務所（仮）｜このページはご提案用のトップページ試作です。名称・連絡先・料金・写真は仮のもので、実在の事務所・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn tel" href="#contact">電話（仮）</a><a class="btn" href="#contact">無料相談</a></div>
+</body>
+</html>
