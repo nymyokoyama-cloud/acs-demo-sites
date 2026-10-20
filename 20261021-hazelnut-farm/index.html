@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯ヘーゼルナッツ農園（仮）｜デモサイト</title>
+<meta name="description" content="東北のヘーゼルナッツ農園の公式サイト・デモ。挑戦と成長の記録を見せる構成。名称・写真・数値はすべて仮。">
+<style>
+:root{--ink:#1d211c;--ink-2:#565c52;--leaf:#4f8a3c;--leaf-d:#2f5a24;--leaf-l:#eaf3e3;--soil:#7a5536;--soil-d:#4a3220;--soil-l:#f3ece4;--gray:#f4f4f2;--line:#e2e2dc;--white:#fff;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.9;font-size:16px;font-feature-settings:"palt"}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.demo-bar{background:var(--soil-d);color:#f1e6d8;font-size:12.5px;text-align:center;padding:7px 12px;line-height:1.6}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.04em}
+.logo small{display:block;font-size:10px;letter-spacing:.24em;color:var(--leaf);font-weight:700}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:22px}
+.nav ul a{text-decoration:none;font-size:14px;font-weight:700}
+.nav .cta{background:var(--soil-d);color:#fff;padding:9px 16px;border-radius:4px}
+.menu-btn{border:1px solid var(--line);background:#fff;border-radius:4px;padding:8px 12px;font-weight:700;font-size:13px}
+.mnav{display:none;border-top:1px solid var(--line);background:#fff}
+.mnav.open{display:block}.mnav a{display:block;padding:14px 20px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:700}
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--gray);padding:64px 0 0}
+.hero .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--leaf-d);border:1.5px solid var(--leaf-d);padding:4px 10px;margin-bottom:22px}
+.hero h1{font-size:clamp(30px,6vw,64px);line-height:1.25;font-weight:900;letter-spacing:.02em;margin:0 0 22px}
+.hero h1 em{font-style:normal;color:var(--leaf)}
+.hero p.sub{font-size:clamp(15px,1.8vw,18px);color:var(--ink-2);max-width:640px;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:44px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:4px;font-weight:800;text-decoration:none;font-size:15px}
+.btn.dark{background:var(--soil-d);color:#fff}.btn.line{border:2px solid var(--ink);color:var(--ink)}
+.field{height:200px;background:
+ repeating-linear-gradient(100deg,transparent 0 46px,rgba(79,138,60,.18) 46px 50px),
+ linear-gradient(180deg,#dfe9d4 0%,#c9b49a 55%,#a98463 100%)}
+.counter{position:absolute;right:20px;top:64px;display:none;background:#fff;border:1px solid var(--line);padding:18px 22px;width:260px}
+.counter b{display:block;font-size:12px;letter-spacing:.16em;color:var(--leaf-d)}
+.counter .num{font-size:44px;font-weight:900;line-height:1.1}
+.counter .num span{font-size:15px;margin-left:4px}
+/* sections */
+section{padding:84px 0}
+.label{font-size:12px;font-weight:800;letter-spacing:.24em;color:var(--leaf)}
+h2{font-size:clamp(24px,3.6vw,38px);line-height:1.35;font-weight:900;margin:6px 0 18px}
+.lead{color:var(--ink-2);max-width:760px}
+.grid{display:grid;gap:20px}
+.card{background:#fff;border:1px solid var(--line);padding:26px}
+.card h3{font-size:18px;margin:0 0 8px;line-height:1.5}
+.card p{margin:0;color:var(--ink-2);font-size:15px}
+.num-label{font-size:13px;font-weight:900;color:var(--soil)}
+/* story */
+.story{background:var(--white)}
+.story .quote{border-left:6px solid var(--leaf);padding:6px 0 6px 20px;font-size:clamp(18px,2.4vw,24px);font-weight:800;line-height:1.6;margin:30px 0}
+.ph{aspect-ratio:4/3;background:linear-gradient(150deg,#577a43,#2e4a24);color:#e8f0df;display:flex;align-items:flex-end;padding:16px;font-size:13px;position:relative;overflow:hidden}
+.ph::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(95deg,transparent 0 30px,rgba(255,255,255,.06) 30px 32px)}
+.ph.soil{background:linear-gradient(150deg,#8a6444,#4a3220)}
+.ph span{position:relative;z-index:1}
+/* now / roadmap */
+.now{background:var(--soil-l)}
+.road{list-style:none;margin:30px 0 0;padding:0;position:relative}
+.road::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:#cdb8a2}
+.road li{position:relative;padding:0 0 26px 44px}
+.road li::before{content:"";position:absolute;left:4px;top:7px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--soil)}
+.road li.done::before{background:var(--leaf);border-color:var(--leaf)}
+.road li.here::before{background:#fff;border-color:var(--leaf);box-shadow:0 0 0 6px rgba(79,138,60,.2)}
+.road .when{font-size:13px;font-weight:900;color:var(--soil)}
+.road .here .when::after{content:"いまここ";margin-left:10px;background:var(--leaf);color:#fff;font-size:11px;padding:2px 8px;letter-spacing:.1em}
+.road h3{margin:2px 0 4px;font-size:18px}
+.road p{margin:0;color:var(--ink-2);font-size:15px}
+/* log */
+.log{background:var(--white)}
+.feed{display:grid;gap:16px;margin-top:26px}
+.post{display:grid;grid-template-columns:88px 1fr;gap:16px;border-top:1px solid var(--line);padding-top:16px}
+.post time{font-size:13px;font-weight:900;color:var(--leaf-d);line-height:1.4}
+.post time small{display:block;color:var(--ink-2);font-weight:700}
+.post h3{margin:0 0 4px;font-size:16px}.post p{margin:0;color:var(--ink-2);font-size:14.5px}
+.chip{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;margin-right:6px;border:1px solid var(--line)}
+.chip.g{background:var(--leaf-l);border-color:#cfe2c2;color:var(--leaf-d)}.chip.b{background:var(--soil-l);border-color:#e3d3c1;color:var(--soil-d)}
+/* variety */
+.variety{background:var(--gray)}
+.nut{width:56px;height:56px;margin-bottom:12px}
+/* partners */
+.partners{background:var(--soil-d);color:#f3ebe1}
+.partners .label{color:#c9e0b8}.partners .lead{color:#dccbb8}
+.partners .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
+.partners .card p{color:#e4d6c6}.partners .card h3{color:#fff}
+.partners .btn{background:#fff;color:var(--soil-d)}
+/* community */
+.ec{border:2px dashed #cdb8a2;background:#fff;padding:22px;margin-top:20px}
+.ec b{color:var(--soil)}
+/* sitemap */
+.sitemap{background:var(--white)}
+.sm{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);margin-top:24px}
+.sm div{border:1px solid var(--line);padding:12px 14px;font-size:14px;font-weight:700}
+.sm div small{display:block;font-weight:500;color:var(--ink-2);font-size:12px}
+.sm .top{grid-column:1/-1;background:var(--leaf-d);color:#fff;border-color:var(--leaf-d)}
+.sm .top small{color:#d6e8cb}
+/* contact */
+.contact{background:var(--leaf-l)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0}
+.tabs button{border:2px solid var(--leaf-d);background:#fff;color:var(--leaf-d);font-weight:800;padding:10px 16px;border-radius:4px;font-size:14px;cursor:pointer;font-family:inherit}
+.tabs button[aria-selected=true]{background:var(--leaf-d);color:#fff}
+.form{background:#fff;padding:24px 20px;margin-top:14px;max-width:720px}
+.form label{display:block;font-weight:800;font-size:14px;margin:14px 0 6px}
+.form input,.form textarea,.form select{width:100%;padding:13px;border:1px solid #cfd3c9;border-radius:4px;font-size:16px;font-family:inherit;background:#fff}
+.form .hint{font-size:12.5px;color:var(--ink-2);margin:6px 0 0}
+footer{background:#161a14;color:#a9b2a2;font-size:13px;padding:40px 0 110px}
+footer .fl{display:grid;gap:18px}
+footer b{color:#fff}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:8px;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line)}
+.sticky .btn{flex:1;min-height:48px;font-size:14px;padding:0 10px}
+.fade{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}.fade.on{opacity:1;transform:none}
+@media(min-width:820px){
+ .nav ul{display:flex}.menu-btn{display:none}
+ .counter{display:block}
+ .grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+ .split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+ .sm{grid-template-columns:repeat(5,1fr)}
+ .sticky{display:none}footer{padding-bottom:40px}
+ footer .fl{grid-template-columns:2fr 1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】募集文に書かれた情報だけで構成した見本です。農園名・写真・数値・日付・品種・連絡先はすべて仮です。</div>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6c7 0 12 7 12 15s-5 13-12 13S8 29 8 21 13 6 20 6z" fill="#7a5536"/><path d="M12 12c3-5 13-5 16 0-5 2-11 2-16 0z" fill="#4f8a3c"/></svg><span><small>TOHOKU HAZELNUT FARM</small>◯◯ヘーゼルナッツ農園（仮）</span></a>
+  <ul><li><a href="#story">ストーリー</a></li><li><a href="#now">栽培計画</a></li><li><a href="#log">活動報告</a></li><li><a href="#variety">品種</a></li><li><a href="#partners">法人の方へ</a></li><li><a class="cta" href="#contact">お問い合わせ</a></li></ul>
+  <button class="menu-btn" aria-expanded="false" aria-controls="mnav" onclick="const m=document.getElementById('mnav');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">MENU</button>
+ </div>
+ <nav id="mnav" class="mnav"><a href="#story">ストーリー</a><a href="#now">栽培計画と現在地</a><a href="#log">活動報告</a><a href="#variety">品種紹介</a><a href="#partners">法人のお取引</a><a href="#support">応援する</a><a href="#contact">お問い合わせ</a></nav>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+ <div class="wrap">
+  <span class="tag">村から世界へ ── 東北初の大規模農園</span>
+  <h1>ここから始まる、<br><em>日本のヘーゼルナッツ</em>物語。</h1>
+  <p class="sub">成長のストーリーを、あなたと共に。苗木を植える前の「まだ何もない」いまから、農園が育っていく過程をすべて記録して公開します。</p>
+  <div class="btns"><a class="btn dark" href="#partners">法人のお取引について</a><a class="btn line" href="#log">活動報告を見る</a></div>
+ </div>
+ <div class="counter" aria-label="定植までのカウントダウン（仮）">
+  <b>FIRST PLANTING</b>本格定植まで
+  <div class="num" id="days">--<span>日</span></div>
+  <small style="color:#565c52">目標: 2027年2月（仮の日付で計算）</small>
+ </div>
+ <div class="field" role="img" aria-label="畑の畝をイメージした抽象グラフィック（本制作では農園の写真・動画）"></div>
+</section>
+
+<section id="story" class="story">
+ <div class="wrap split">
+  <div class="fade">
+   <span class="label">OUR STORY</span>
+   <h2>なぜ東北で、<br>ヘーゼルナッツなのか。</h2>
+   <p class="lead">国内ではまだ珍しいヘーゼルナッツ。輸入に頼っている食材を、東北の土地から世界に誇れる国産ブランドへ育てる挑戦です。（本文は仮。本制作ではヒアリング内容から書き起こします）</p>
+   <p class="quote">「地域の雇用をつくり、<br>村の名前を世界へ届ける。」</p>
+   <div class="grid grid-2">
+    <div class="card"><span class="num-label">01 CHALLENGE</span><h3>東北初の大規模栽培</h3><p>前例の少ない作物に、計画とデータで挑みます。</p></div>
+    <div class="card"><span class="num-label">02 LOCAL</span><h3>地域の雇用創出</h3><p>栽培・加工・出荷まで、地元で働く場をつくります。</p></div>
+   </div>
+  </div>
+  <div class="ph fade"><span>写真枠（本制作: 農園の土地・代表の写真）</span></div>
+ </div>
+</section>
+
+<section id="now" class="now">
+ <div class="wrap">
+  <span class="label">ROADMAP</span>
+  <h2>栽培計画と、いまの現在地。</h2>
+  <p class="lead">「計画」と「実際にやったこと」を分けて見せます。実績が少ない今だからこそ、進み具合そのものが信頼の材料になります。</p>
+  <ol class="road">
+   <li class="done"><span class="when">2026年（仮）</span><h3>プロジェクト始動・圃場の準備</h3><p>土地の整備、土壌の確認、苗木の手配。</p></li>
+   <li class="here"><span class="when">2026年秋〜冬（仮）</span><h3>苗木の育成・公式サイト公開準備</h3><p>苗木の生育を記録し、活動報告で毎月お届けします。</p></li>
+   <li><span class="when">2027年2月（目標）</span><h3>本格定植・剪定シーズン</h3><p>最初の定植。公式サイトの正式公開もこの時期を予定しています。</p></li>
+   <li><span class="when">数年後（目標）</span><h3>初収穫・商品化</h3><p>法人向けの出荷と、ネットショップでの販売を目指します。</p></li>
+  </ol>
+ </div>
+</section>
+
+<section id="log" class="log">
+ <div class="wrap">
+  <span class="label">FIELD NOTES</span>
+  <h2>活動報告</h2>
+  <p class="lead">農園の「いま」をタイムラインで。更新は管理画面から写真と文章を入れるだけで、こことSNSに並びます（本制作ではInstagram連携の枠を設置）。</p>
+  <div class="feed">
+   <article class="post fade"><time>10.20<small>2026（仮）</small></time><div><span class="chip g">栽培</span><h3>苗木の第1便が届きました</h3><p>本数・品種の記録をここに。写真2〜4枚を想定したレイアウトです。（仮の投稿）</p></div></article>
+   <article class="post fade"><time>10.05<small>2026（仮）</small></time><div><span class="chip b">地域</span><h3>地元の方向けの説明会を開きました</h3><p>雇用や地域との関わりを伝える投稿の例です。（仮の投稿）</p></div></article>
+   <article class="post fade"><time>09.18<small>2026（仮）</small></time><div><span class="chip g">圃場</span><h3>土づくりを始めました</h3><p>作業の様子と、数字（面積・作業時間など）を残していく例です。（仮の投稿）</p></div></article>
+  </div>
+  <p style="margin-top:22px"><a class="btn line" href="#log">活動報告をすべて見る（一覧ページ）</a></p>
+ </div>
+</section>
+
+<section id="variety" class="variety">
+ <div class="wrap">
+  <span class="label">VARIETIES</span>
+  <h2>育てている品種</h2>
+  <p class="lead">品種名・特徴・用途はご提供情報で差し替えます。下は枠組みの見本です。</p>
+  <div class="grid grid-3" style="margin-top:24px">
+   <div class="card fade"><svg class="nut" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6c7 0 12 7 12 15s-5 13-12 13S8 29 8 21 13 6 20 6z" fill="#7a5536"/><path d="M12 12c3-5 13-5 16 0-5 2-11 2-16 0z" fill="#4f8a3c"/></svg><h3>品種A（仮）</h3><p>粒の大きさ・香り・向いている用途（製菓・ペーストなど）。</p></div>
+   <div class="card fade"><svg class="nut" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6c7 0 12 7 12 15s-5 13-12 13S8 29 8 21 13 6 20 6z" fill="#956a45"/><path d="M12 12c3-5 13-5 16 0-5 2-11 2-16 0z" fill="#6aa04f"/></svg><h3>品種B（仮）</h3><p>寒さへの強さなど、東北で選んだ理由を一言で。</p></div>
+   <div class="card fade"><svg class="nut" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6c7 0 12 7 12 15s-5 13-12 13S8 29 8 21 13 6 20 6z" fill="#5e3f27"/><path d="M12 12c3-5 13-5 16 0-5 2-11 2-16 0z" fill="#3c6f2e"/></svg><h3>受粉樹（仮）</h3><p>栽培の工夫を伝える読み物ページへのリンク枠。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="partners" class="partners">
+ <div class="wrap split">
+  <div>
+   <span class="label">FOR BUSINESS</span>
+   <h2 style="color:#fff">飲食店・食品メーカーの皆さまへ</h2>
+   <p class="lead">収穫前の段階から、試験出荷・共同開発・予約取引のご相談を受け付けます。国産ヘーゼルナッツを使った商品づくりを一緒に始めませんか。</p>
+   <a class="btn" href="#contact" onclick="pick('biz')">法人のお問い合わせ</a>
+  </div>
+  <div class="grid">
+   <div class="card"><h3>予約取引・試験出荷</h3><p>初収穫分の優先案内（条件は仮）。</p></div>
+   <div class="card"><h3>共同開発</h3><p>菓子・ペースト・オイルなどの商品企画。</p></div>
+   <div class="card"><h3>取材・行政・教育機関</h3><p>視察・取材・連携のご相談窓口。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="support">
+ <div class="wrap">
+  <span class="label">SUPPORT</span>
+  <h2>応援する</h2>
+  <p class="lead">個人の方・地域の方・ファンの方へ。成長の記録を一緒に追いかけてください。</p>
+  <div class="grid grid-3" style="margin-top:22px">
+   <div class="card"><h3>Instagramをフォロー</h3><p>畑の日常を写真で（アカウントは仮）。</p></div>
+   <div class="card"><h3>農園だよりを受け取る</h3><p>月1回の活動報告メール（登録フォームの枠）。</p></div>
+   <div class="card"><h3>農園で働く</h3><p>採用情報ページへ。地域の雇用の入口です。</p></div>
+  </div>
+  <div class="ec"><b>ONLINE SHOP ── 準備中</b><br>収穫後にネットショップを開設予定。いまは枠だけ用意しておき、商品ができた時点でECの機能を追加できる設計にします。</div>
+ </div>
+</section>
+
+<section id="sitemap" class="sitemap">
+ <div class="wrap">
+  <span class="label">SITE MAP（ご提案）</span>
+  <h2>10ページ前後の構成案</h2>
+  <p class="lead">募集文の「トップ・ブランドストーリー・農園案内・品種紹介・問い合わせ等」をもとにした案です。本制作ではヒアリングで確定します。</p>
+  <div class="sm">
+   <div class="top">トップ<small>ビジョン・現在地・最新の活動報告</small></div>
+   <div>ブランドストーリー<small>なぜ東北で挑むのか</small></div>
+   <div>農園案内<small>圃場・アクセス</small></div>
+   <div>品種紹介<small>品種と栽培の工夫</small></div>
+   <div>栽培計画<small>ロードマップ</small></div>
+   <div>活動報告<small>タイムライン一覧</small></div>
+   <div>法人のお取引<small>飲食店・メーカー</small></div>
+   <div>採用情報<small>地域の雇用</small></div>
+   <div>会社概要<small>代表あいさつ</small></div>
+   <div>お問い合わせ<small>用件別フォーム</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="contact">
+ <div class="wrap">
+  <span class="label">CONTACT</span>
+  <h2>お問い合わせ</h2>
+  <p class="lead">用件を選ぶと、必要な項目だけが表示されます。</p>
+  <div class="tabs" role="tablist">
+   <button role="tab" aria-selected="true" data-k="biz" onclick="pick('biz')">法人のお取引</button>
+   <button role="tab" aria-selected="false" data-k="press" onclick="pick('press')">取材・行政・連携</button>
+   <button role="tab" aria-selected="false" data-k="fan" onclick="pick('fan')">個人・応援</button>
+  </div>
+  <form class="form" onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');">
+   <label>お名前</label><input type="text" autocomplete="off">
+   <div data-f="biz press"><label>会社・団体名</label><input type="text" autocomplete="off"></div>
+   <div data-f="biz"><label>ご検討の内容</label><select><option>予約取引・試験出荷</option><option>共同開発</option><option>その他</option></select></div>
+   <label>メールアドレス</label><input type="email" autocomplete="off">
+   <label>ご相談内容</label><textarea rows="5"></textarea>
+   <p class="hint">※デモのため送信されません。本制作では自動返信メールと管理者通知を設定します。</p>
+   <button class="btn dark" type="submit" style="width:100%;margin-top:16px;border:0">送信内容を確認する</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap fl">
+  <div><b>◯◯ヘーゼルナッツ農園（仮）</b><br>所在地：東北地方 ◯◯県◯◯村（仮）<br>このページはご提案用のデモサイトです。実在の農園・人物とは関係ありません。</div>
+  <div><b>サイト</b><br>ストーリー／栽培計画／活動報告／品種紹介</div>
+  <div><b>お取引</b><br>法人の方へ／採用情報／お問い合わせ</div>
+ </div>
+</footer>
+<div class="sticky"><a class="btn line" href="#log">活動報告</a><a class="btn dark" href="#contact">お問い合わせ</a></div>
+
+<script>
+function pick(k){document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k===k));document.querySelectorAll('[data-f]').forEach(d=>{d.style.display=d.dataset.f.split(' ').includes(k)?'':'none'})}
+pick('biz');
+(function(){var t=new Date('2027-02-15T00:00:00+09:00'),d=Math.max(0,Math.ceil((t-new Date())/864e5));var e=document.getElementById('days');if(e)e.firstChild.nodeValue=d})();
+(function(){var els=document.querySelectorAll('.fade');if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('on'));return}var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});els.forEach(e=>io.observe(e))})();
+</script>
+</body>
+</html>
