@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯経営支援事務所（仮）｜大阪市内の中小企業診断士チーム｜トップページ試作</title>
+<meta name="description" content="ご提案用のトップページ試作。中小企業・個人事業主の経営相談、データ分析とマーケティング支援、セミナーを行う中小企業診断士チームの見本を、公開情報だけで構成しました。名称・連絡先・料金・写真はすべて仮。">
+<style>
+:root{--main:#33295f;--main-d:#1f1840;--main-l:#efecf8;--accent:#ff7a59;--accent-d:#e55f3e;--accent-l:#fff0eb;--mint:#5cc8b4;--ink:#1d1b29;--ink-2:#5b586b;--line:#e4e1ee;--bg:#faf9fd;--radius:16px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}
+h2{font-size:clamp(24px,3.2vw,34px)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.22em;color:var(--accent-d);margin-bottom:10px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:76px 0}
+.lead{color:var(--ink-2);max-width:700px}
+.center{text-align:center}.center .lead{margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:12px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;border:0;font-size:16px;font-family:inherit;cursor:pointer;box-shadow:0 8px 20px rgba(255,122,89,.3)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);box-shadow:none}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:800;color:var(--main);text-decoration:none;font-size:18px;display:flex;align-items:center;gap:10px}
+.logo i{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:28px;height:28px}
+.logo i b{border-radius:4px;background:var(--main)}.logo i b:nth-child(2){background:var(--accent)}.logo i b:nth-child(3){background:var(--mint)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.nav .cta-s{font-weight:800;color:#fff;background:var(--main);text-decoration:none;font-size:14px;border-radius:10px;padding:9px 16px}
+.hero{background:radial-gradient(1200px 500px at 85% -10%,#5a4aa0 0%,transparent 60%),linear-gradient(160deg,var(--main) 0%,var(--main-d) 100%);color:#fff;padding:60px 0 64px;overflow:hidden}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);font-size:13px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,4.6vw,46px);letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:#ffb39e}
+.hero p.sub{color:rgba(255,255,255,.82);margin:0 0 26px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.dash{background:#fff;color:var(--ink);border-radius:20px;padding:20px;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.dash .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--ink-2);margin-bottom:14px}
+.dash .top b{color:var(--main);font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpis div{background:var(--main-l);border-radius:12px;padding:10px 12px;font-size:12px;color:var(--ink-2)}
+.kpis strong{display:block;font-size:22px;color:var(--main)}
+.kpis .up{color:#1f9a83;font-weight:700}
+.chart{margin-top:14px;height:110px;display:flex;align-items:flex-end;gap:8px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.chart span{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#8f84d6,var(--main))}
+.chart span.now{background:linear-gradient(180deg,#ffb39e,var(--accent))}
+.dash .memo{margin-top:12px;font-size:13px;background:var(--accent-l);border-left:4px solid var(--accent);padding:8px 12px;border-radius:6px}
+.trust{background:#fff;border-bottom:1px solid var(--line);padding:22px 0}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;font-size:14px;font-weight:700;color:var(--main)}
+.trust span:before{content:"●";color:var(--mint);margin-right:6px;font-size:10px;vertical-align:2px}
+.grid{display:grid;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card h3{font-size:19px;color:var(--main)}
+.plan .card{position:relative;overflow:hidden}
+.plan .card .no{position:absolute;right:18px;top:8px;font-size:56px;font-weight:900;color:var(--main-l);line-height:1}
+.plan .card ul{margin:10px 0 0;padding-left:1.2em;color:var(--ink-2);font-size:15px}
+.plan .card .for{display:inline-block;font-size:12px;font-weight:700;background:var(--accent-l);color:var(--accent-d);padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.team{background:var(--main-l)}
+.team .wrap{display:grid;gap:32px;align-items:center}
+.circle{position:relative;aspect-ratio:1;max-width:380px;margin:0 auto;width:100%}
+.circle div{position:absolute;width:56%;aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:15px;color:#fff;mix-blend-mode:multiply;padding:18px}
+.circle .a{left:0;top:0;background:rgba(51,41,95,.85)}
+.circle .b{right:0;top:0;background:rgba(255,122,89,.85)}
+.circle .c{left:22%;bottom:0;background:rgba(92,200,180,.9)}
+.points{display:grid;gap:12px}
+.points div{background:#fff;border-radius:12px;padding:16px 18px;border:1px solid var(--line)}
+.points b{color:var(--main)}
+.cases .card small{display:block;font-size:13px;font-weight:700;color:var(--accent-d);margin-bottom:4px}
+.cases .card p{font-size:15px;color:var(--ink-2);margin:0}
+.flow{counter-reset:s;display:grid;gap:14px}
+.flow li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 20px 20px 70px;position:relative}
+.flow li:before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;left:20px;top:18px;font-weight:900;font-size:24px;color:var(--accent)}
+.flow h3{font-size:17px;margin:0 0 4px;color:var(--main)}.flow p{margin:0;font-size:15px;color:var(--ink-2)}
+.price .card{text-align:center}.price .num{font-size:26px;font-weight:800;color:var(--main);margin:6px 0}
+.price small{color:var(--ink-2);font-size:13px}
+.news li{list-style:none;display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.news time{color:var(--ink-2);flex:0 0 auto;font-variant-numeric:tabular-nums}
+.news .cat{flex:0 0 auto;font-size:12px;font-weight:700;background:var(--main-l);color:var(--main);border-radius:6px;padding:2px 8px;height:fit-content}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;color:var(--main)}details p{margin:10px 0 0;color:var(--ink-2);font-size:15px}
+.info td{padding:12px 8px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}.info td:first-child{width:7.5em;font-weight:700;color:var(--main)}
+.contact{background:linear-gradient(160deg,var(--main) 0%,var(--main-d) 100%);color:#fff}
+.contact .lead{color:rgba(255,255,255,.8)}
+.form{background:#fff;color:var(--ink);border-radius:18px;padding:26px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+.form input,.form textarea,.form select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:var(--bg)}
+footer{background:var(--main-d);color:rgba(255,255,255,.7);font-size:13px;text-align:center;padding:28px 20px}
+.fixed-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:flex}
+.fixed-cta .btn{flex:1}
+@media(min-width:760px){
+ .nav ul{display:flex}
+ .hero .wrap{grid-template-columns:1.1fr .9fr}
+ .grid-3{grid-template-columns:repeat(3,1fr)}
+ .grid-2{grid-template-columns:repeat(2,1fr)}
+ .team .wrap{grid-template-columns:1fr 1fr}
+ .fixed-cta{display:none}
+}
+@media(max-width:759px){body{padding-bottom:84px}section{padding:56px 0}}
+</style>
+</head>
+<body id="top">
+<div class="demo-bar">【トップページ試作】公開情報だけで構成した見本です。名称・連絡先・料金・写真はすべて仮で、実際と違う点は作り直します。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i><b></b><b></b><b></b><b></b></i>◯◯経営支援事務所（仮）</a><ul><li><a href="#plan">支援メニュー</a></li><li><a href="#team">チーム体制</a></li><li><a href="#cases">支援事例</a></li><li><a href="#flow">ご相談の流れ</a></li><li><a href="#info">事務所案内</a></li></ul><a class="cta-s" href="#contact">無料相談</a></div></header>
+
+<section class="hero"><div class="wrap">
+<div>
+<span class="tag">大阪市内の中小企業診断士チーム（仮）</span>
+<h1>数字で現状をつかみ、<br><em>次の一手</em>を<br>一緒に決める。</h1>
+<p class="sub">中小企業・個人事業主さまの経営のお悩みを、診断士とコンサルタントのチームで伴走支援。データ分析から販促・人の仕組みづくりまで、「やること」が見える計画にします。</p>
+<div class="cta"><a class="btn" href="#contact">初回相談（無料）を申し込む</a><a class="btn ghost" href="#plan">支援メニューを見る</a></div>
+</div>
+<div class="dash" role="img" aria-label="売上や客数などの数字をもとに次の打ち手を決める支援のイメージ（数字は仮）">
+<div class="top"><b>月次レビュー（イメージ）</b><span>※数字はすべて仮</span></div>
+<div class="kpis"><div>売上<strong>112%</strong><span class="up">▲ 前年比</span></div><div>新規客<strong>+38</strong><span class="up">▲ 前月比</span></div><div>粗利率<strong>41%</strong><span class="up">▲ 2pt</span></div></div>
+<div class="chart"><span style="height:42%"></span><span style="height:50%"></span><span style="height:46%"></span><span style="height:58%"></span><span style="height:64%"></span><span style="height:71%"></span><span class="now" style="height:86%"></span></div>
+<div class="memo">次の一手：リピーター向けの案内を月1回に（仮）</div>
+</div>
+</div></section>
+
+<div class="trust"><div class="wrap"><span>経営革新等支援機関（仮）</span><span>中小企業・個人事業主の相談</span><span>観光・地域団体のデータ分析</span><span>オンライン面談OK</span></div></div>
+
+<section id="plan" class="plan"><div class="wrap">
+<span class="eyebrow">SERVICE</span><h2>3つの支援メニュー</h2>
+<p class="lead">相談の段階に合わせて選べます。どれから始めればいいか分からない場合も、初回相談で一緒に整理します。</p>
+<div class="grid grid-3">
+<div class="card"><span class="no">01</span><span class="for">中小企業・個人事業主さま</span><h3>経営支援プラン</h3><p>事業計画づくりから日々の打ち手まで、定期面談で伴走します。</p><ul><li>現状の数字の見える化</li><li>事業計画・補助金の計画書づくり</li><li>業務効率化・働き方の見直し</li></ul></div>
+<div class="card"><span class="no">02</span><span class="for">観光協会・地域団体さま</span><h3>データ分析＆マーケティング支援</h3><p>来訪者や販売のデータを読み解き、施策と効果測定までつなげます。</p><ul><li>アンケート・統計データの分析</li><li>ターゲット設定と施策立案</li><li>実施後の効果検証</li></ul></div>
+<div class="card"><span class="no">03</span><span class="for">企業・団体の研修担当さま</span><h3>セミナー・ワークショップ</h3><p>業務効率化や新規事業の発想など、ご要望に合わせて内容を組み立てます。</p><ul><li>働き方改革・業務改善の研修</li><li>アイデア出しのワークショップ</li><li>オンライン開催にも対応</li></ul></div>
+</div></div></section>
+
+<section id="team" class="team"><div class="wrap">
+<div class="circle" aria-hidden="true"><div class="a">戦略・<br>事業計画</div><div class="b">数字・<br>データ分析</div><div class="c">販促・<br>マーケティング</div></div>
+<div>
+<span class="eyebrow">TEAM</span><h2>ひとりの視点で終わらせない、チーム制</h2>
+<p class="lead">中小企業診断士とコンサルタントが複数名で担当。得意分野の違うメンバーが同じ課題を見ることで、見落としの少ない提案にします。</p>
+<div class="points">
+<div><b>担当窓口はひとり</b>　ご連絡は窓口担当にまとめていただくだけでOK（仮）</div>
+<div><b>必要な専門家だけ参加</b>　テーマに応じてメンバーを組み替えます（仮）</div>
+<div><b>面談のたびに宿題を明確に</b>　次回までに「やること」を一覧でお渡しします（仮）</div>
+</div></div>
+</div></section>
+
+<section id="cases" class="cases"><div class="wrap">
+<span class="eyebrow">CASES</span><h2>支援事例</h2>
+<p class="lead">近畿エリアを中心に、業種を問わずご相談をいただいています。（本制作では、実際の事例・お客様の声に差し替えます）</p>
+<div class="grid grid-3">
+<div class="card"><small>飲食・教室業（仮）</small><h3>集客の柱を2本に</h3><p>売上データから来店の波を分析し、教室事業との組み合わせで閑散期を埋める計画を作成（仮）。</p></div>
+<div class="card"><small>農業・企画業（仮）</small><h3>新商品の売り方を設計</h3><p>販路ごとの利益を比べ、力を入れる販路と価格を決めて事業計画に落とし込み（仮）。</p></div>
+<div class="card"><small>旅行業（仮）</small><h3>データで顧客像を更新</h3><p>予約データの分析から主要な顧客層を見直し、案内文と販促の時期を調整（仮）。</p></div>
+</div></div></section>
+
+<section id="flow" style="background:#fff"><div class="wrap">
+<span class="eyebrow">FLOW</span><h2>ご相談の流れ</h2>
+<ol class="flow" style="padding:0;margin:24px 0 0">
+<li><h3>お問い合わせ</h3><p>フォームからお悩みを一言でお送りください。2営業日以内にご連絡します（仮）。</p></li>
+<li><h3>初回相談（無料・60分）</h3><p>対面またはオンラインで現状を伺い、課題を整理します。</p></li>
+<li><h3>ご提案・お見積り</h3><p>支援の範囲・期間・費用を書面でご提示します。</p></li>
+<li><h3>伴走支援スタート</h3><p>定期面談で進み具合を確認しながら、計画を実行に移します。</p></li>
+</ol></div></section>
+
+<section id="price" class="price"><div class="wrap center">
+<span class="eyebrow">FEE</span><h2>料金の目安（仮）</h2>
+<p class="lead">本制作では実際の料金表に差し替えます。下記はレイアウト確認用の仮の数字です。</p>
+<div class="grid grid-3">
+<div class="card"><h3>スポット相談</h3><div class="num">◯,◯◯◯円〜</div><small>1回60分・オンライン可（仮）</small></div>
+<div class="card"><h3>経営支援プラン</h3><div class="num">月額 ◯◯,◯◯◯円〜</div><small>月1〜2回の定期面談（仮）</small></div>
+<div class="card"><h3>分析・研修</h3><div class="num">個別見積り</div><small>内容・規模に応じて算定（仮）</small></div>
+</div></div></section>
+
+<section style="background:#fff"><div class="wrap">
+<div class="grid grid-2">
+<div><span class="eyebrow">NEWS</span><h2>お知らせ</h2>
+<ul class="news" style="padding:0;margin:0">
+<li><time>20XX.XX.XX</time><span class="cat">セミナー</span><span>業務効率化セミナーを開催します（仮）</span></li>
+<li><time>20XX.XX.XX</time><span class="cat">事例</span><span>支援事例を追加しました（仮）</span></li>
+<li><time>20XX.XX.XX</time><span class="cat">お知らせ</span><span>年末年始の休業について（仮）</span></li>
+</ul></div>
+<div><span class="eyebrow">FAQ</span><h2>よくあるご質問</h2>
+<details open><summary>まだ相談内容がまとまっていなくても大丈夫ですか？</summary><p>はい。何に困っているかを一緒に言葉にするところから始めます（仮）。</p></details>
+<details><summary>補助金の申請も相談できますか？</summary><p>事業計画書の作成を含めてご相談いただけます（仮）。</p></details>
+<details><summary>遠方でも依頼できますか？</summary><p>オンライン面談で全国対応しています（仮）。</p></details>
+</div></div></div></section>
+
+<section id="info"><div class="wrap">
+<span class="eyebrow">OFFICE</span><h2>事務所案内</h2>
+<div class="card"><table class="info" style="width:100%;border-collapse:collapse"><tr><td>事務所名</td><td>◯◯経営支援事務所（仮）</td></tr><tr><td>代表</td><td>◯◯ ◯◯（中小企業診断士）</td></tr><tr><td>所在地</td><td>大阪市内（仮）・最寄り駅から徒歩圏</td></tr><tr><td>電話</td><td>06-0000-0000（仮）</td></tr><tr><td>受付時間</td><td>平日 9:00〜18:00（仮）／フォームは24時間</td></tr><tr><td>業務</td><td>経営相談・事業計画、データ分析・マーケティング支援、セミナー・ワークショップ</td></tr></table></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap center">
+<span class="eyebrow" style="color:#ffb39e">CONTACT</span><h2>初回相談（無料）のお申し込み</h2>
+<p class="lead">「何から相談すればいいか分からない」段階でも大丈夫です。お気軽にどうぞ。</p>
+<form class="form" style="text-align:left" onsubmit="event.preventDefault();alert('トップページ試作のため送信はできません。');">
+<label>お名前</label><input type="text" placeholder="例）山田 太郎">
+<label>会社名・屋号</label><input type="text" placeholder="例）株式会社◯◯">
+<label>メールアドレス</label><input type="email" placeholder="例）info@example.com">
+<label>ご相談のテーマ</label><select><option>経営全般の相談</option><option>データ分析・マーケティング</option><option>セミナー・研修</option><option>その他</option></select>
+<label>ご相談内容</label><textarea rows="4" placeholder="いま困っていることを一言でもどうぞ"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">送信する（試作のため動作しません）</button>
+</form></div></section>
+
+<footer>© ◯◯経営支援事務所（仮）／このページはご提案用のトップページ試作です</footer>
+<div class="fixed-cta"><a class="btn" href="#contact">初回相談（無料）を申し込む</a></div>
+</body>
+</html>
