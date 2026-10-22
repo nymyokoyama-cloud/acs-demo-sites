@@ -35,8 +35,8 @@ nav a{color:var(--ink-2);text-decoration:none;font-size:14px;margin-left:18px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
 .chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.clock{aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--main) 0 150deg,#d6e6df 150deg 360deg);display:grid;place-items:center;max-width:360px;margin:0 auto;box-shadow:0 20px 50px rgba(47,107,90,.18)}
-.clock div{width:72%;aspect-ratio:1;border-radius:50%;background:var(--bg);display:grid;place-items:center;text-align:center}
+.clock{width:100%;aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--main) 0 150deg,#d6e6df 150deg 360deg);display:grid;place-items:center;max-width:360px;margin:0 auto;box-shadow:0 20px 50px rgba(47,107,90,.18)}
+.clock>div{width:72%;aspect-ratio:1;border-radius:50%;background:var(--bg);display:grid;place-items:center;text-align:center}
 .clock b{font-size:clamp(54px,9vw,84px);line-height:1;color:var(--main-d)}
 .clock small{display:block;color:var(--ink-2);font-size:13px;margin-top:6px}
 /* cards */
@@ -126,7 +126,7 @@ footer{padding:28px 0;text-align:center;font-size:13px;color:var(--ink-2)}
 <section class="hero"><div class="wrap hero-grid">
  <div>
   <span class="kicker">◯◯駅 徒歩4分（仮）のパーソナルジム</span>
-  <h1>人生に、<em>25分</em>の習慣を。</h1>
+  <h1>人生に、<br><span style="white-space:nowrap"><em>25分</em>の習慣を。</span></h1>
   <p>仕事帰りに、私服のまま。着替えもシャワーも要らない25分のマンツーマンだから、忙しい人でも「続けられる」パーソナルトレーニングです。</p>
   <ul class="chips"><li>私服・土足OK</li><li>完全個室</li><li>入会金0円</li><li>月2回 8,500円〜</li></ul>
   <div class="cta-row">
