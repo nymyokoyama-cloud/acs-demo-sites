@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯駅のパーソナルジム｜25分・私服OK・完全個室｜◯◯ジム（仮）</title>
+<meta name="description" content="【デモ】25分で終わるパーソナルジムのWixリニューアル見本。私服・土足OK、完全個室、入会金0円。名称・写真・数値の一部は仮です。">
+<style>
+:root{--ink:#1d2421;--ink-2:#55605b;--main:#2f6b5a;--main-d:#22503f;--main-l:#e8f1ed;--accent:#d9773b;--sand:#f6f2ea;--line:#e2e6e3;--bg:#fcfbf8;--r:16px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px;padding-bottom:76px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}
+h2{font-size:clamp(23px,3vw,32px);text-align:center}
+h2 small{display:block;font-size:12px;letter-spacing:.22em;color:var(--main);font-weight:700;margin-bottom:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+section{padding:68px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:700px;margin:0 auto 36px}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:12.5px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:40;background:rgba(252,251,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:800;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
+.logo span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--main);color:#fff;font-size:12px;margin-right:8px}
+nav a{color:var(--ink-2);text-decoration:none;font-size:14px;margin-left:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;min-height:52px;background:var(--accent);color:#fff;border:0;cursor:pointer;font-size:15px}
+.btn.ghost{background:#fff;color:var(--main-d);border:1.5px solid var(--main)}
+.btn.sm{min-height:40px;padding:8px 16px;font-size:14px}
+/* hero */
+.hero{padding:56px 0 64px;background:radial-gradient(1200px 500px at 85% -10%,#dfece6 0,transparent 60%),linear-gradient(180deg,var(--sand),var(--bg))}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.kicker{display:inline-block;font-size:13px;font-weight:700;color:var(--main-d);background:var(--main-l);padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.hero h1{font-size:clamp(30px,5vw,50px);letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--main)}
+.hero p{color:var(--ink-2);margin:0 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.clock{aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--main) 0 150deg,#d6e6df 150deg 360deg);display:grid;place-items:center;max-width:360px;margin:0 auto;box-shadow:0 20px 50px rgba(47,107,90,.18)}
+.clock div{width:72%;aspect-ratio:1;border-radius:50%;background:var(--bg);display:grid;place-items:center;text-align:center}
+.clock b{font-size:clamp(54px,9vw,84px);line-height:1;color:var(--main-d)}
+.clock small{display:block;color:var(--ink-2);font-size:13px;margin-top:6px}
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card .num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em}
+.card h3{font-size:18px;margin-top:4px}
+.card p{margin:0;color:var(--ink-2);font-size:15px}
+.worry{background:#fff}
+.worry ul{max-width:640px;margin:0 auto;padding:0;list-style:none;display:grid;gap:10px}
+.worry li{background:var(--sand);border-radius:12px;padding:12px 16px 12px 44px;position:relative}
+.worry li::before{content:"✓";position:absolute;left:16px;top:12px;color:var(--main);font-weight:800}
+/* price */
+.price-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;text-align:center}
+.plan.rec{border:2px solid var(--main);position:relative}
+.plan.rec::before{content:"はじめての方に";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--main);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px}
+.plan .yen{font-size:32px;font-weight:800;color:var(--main-d)}
+.plan .yen small{font-size:14px;color:var(--ink-2);font-weight:600}
+.note{font-size:13px;color:var(--ink-2);text-align:center;margin-top:16px}
+/* trainers */
+.tr-tools{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tr-tools button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
+.tr-tools button.on{background:var(--main);color:#fff;border-color:var(--main)}
+.tr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tr{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.tr .ph{aspect-ratio:4/5;display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;letter-spacing:.1em}
+.tr .bd{padding:14px}
+.tr h3{font-size:16px;margin:0}
+.tr .tag{display:inline-block;font-size:12px;background:var(--main-l);color:var(--main-d);border-radius:6px;padding:1px 8px;margin:6px 4px 0 0}
+.tr p{font-size:13.5px;color:var(--ink-2);margin:8px 0 0}
+.cms{max-width:760px;margin:26px auto 0;background:var(--sand);border:1px dashed #cdbfa6;border-radius:12px;padding:16px 18px;font-size:14px}
+.cms b{color:var(--main-d)}
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.flow div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;counter-increment:s}
+.flow div::before{content:"STEP " counter(s);display:block;font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.1em}
+.flow h3{font-size:16px;margin:4px 0}
+.flow p{font-size:14px;color:var(--ink-2);margin:0}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--ink-2)}
+/* access */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.map{border-radius:var(--r);background:repeating-linear-gradient(0deg,#eef2ef 0 38px,#e3e9e5 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,#e3e9e5 38px 40px);display:grid;place-items:center;min-height:240px;color:var(--ink-2);font-size:14px;border:1px solid var(--line)}
+dl{margin:0;display:grid;grid-template-columns:7em 1fr;gap:8px 12px}
+dt{font-weight:700;color:var(--main-d)}dd{margin:0}
+/* seo memo */
+.memo{background:#1f2a26;color:#e9efec}
+.memo h2{color:#fff}.memo h2 small{color:#9fd3bf}
+.memo .lead{color:#c3cfca}
+.memo table{width:100%;border-collapse:collapse;font-size:14px;background:#26332e;border-radius:12px;overflow:hidden}
+.memo th,.memo td{padding:12px 14px;border-bottom:1px solid #35443e;text-align:left;vertical-align:top}
+.memo th{color:#9fd3bf;white-space:nowrap;font-weight:700}
+.memo code{background:#33433c;padding:1px 6px;border-radius:4px;font-size:13px}
+.tbl{overflow-x:auto}
+/* final cta */
+.final{background:var(--main);color:#fff;text-align:center}
+.final h2{color:#fff}.final p{color:#dcebe5}
+footer{padding:28px 0;text-align:center;font-size:13px;color:var(--ink-2)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.96);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;justify-content:center}
+.sticky .btn{flex:1;max-width:340px;min-height:48px}
+@media (max-width:860px){
+ nav{display:none}
+ .hero-grid,.access{grid-template-columns:1fr}
+ .clock{max-width:220px}
+ .grid3,.price-wrap{grid-template-columns:1fr}
+ .tr-grid{grid-template-columns:repeat(2,1fr)}
+ .flow{grid-template-columns:1fr 1fr}
+ section{padding:52px 0}
+}
+@media (max-width:420px){.flow{grid-template-columns:1fr}.tr-grid{gap:10px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">ご提案用デモ：募集文の情報だけで作成した見本です。店名・写真・トレーナー・所在地・一部の料金は仮です（実際のサイトはWixで構築します）。</div>
+
+<header><div class="wrap hd">
+ <a class="logo" href="#top"><span>25</span>◯◯ジム（仮）</a>
+ <nav><a href="#reason">特徴</a><a href="#price">料金</a><a href="#trainer">トレーナー</a><a href="#flow">体験の流れ</a><a href="#access">アクセス</a></nav>
+ <a class="btn sm" href="#book" data-gtm="header_book">無料カウンセリング</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+ <div>
+  <span class="kicker">◯◯駅 徒歩4分（仮）のパーソナルジム</span>
+  <h1>人生に、<em>25分</em>の習慣を。</h1>
+  <p>仕事帰りに、私服のまま。着替えもシャワーも要らない25分のマンツーマンだから、忙しい人でも「続けられる」パーソナルトレーニングです。</p>
+  <ul class="chips"><li>私服・土足OK</li><li>完全個室</li><li>入会金0円</li><li>月2回 8,500円〜</li></ul>
+  <div class="cta-row">
+   <a class="btn" href="#book" data-gtm="hero_book">無料カウンセリングを予約</a>
+   <a class="btn ghost" href="#price">料金を見る</a>
+  </div>
+ </div>
+ <div class="clock" aria-hidden="true"><div><span><b>25</b><small>minutes / 1回</small></span></div></div>
+</div></section>
+
+<section class="worry"><div class="wrap">
+ <h2><small>FOR YOU</small>こんな方に選ばれています</h2>
+ <ul>
+  <li>ジムに通っても、着替えや移動が面倒で続かなかった</li>
+  <li>人の目が気になるので、個室でマンツーマンが良い</li>
+  <li>高額な入会金や長期契約には踏み切れない</li>
+  <li>仕事帰りや昼休みの、すき間時間で体を動かしたい</li>
+ </ul>
+ <p class="note">※実際の来店動機・お悩み（匿名化してご共有いただく分）で入れ替えます。</p>
+</div></section>
+
+<section id="reason"><div class="wrap">
+ <h2><small>REASON</small>25分だから、続けられる</h2>
+ <p class="lead">「短い・手ぶら・個室」の3つで、通う前のハードルをなくしました。</p>
+ <div class="grid3">
+  <div class="card"><span class="num">01</span><h3>着替え不要。私服・土足のまま</h3><p>ウェアもシューズも持たずに来店できます。仕事の合間や帰り道にそのまま。</p></div>
+  <div class="card"><span class="num">02</span><h3>完全個室のマンツーマン</h3><p>ほかのお客様と顔を合わせない個室で、トレーナーと1対1。初心者の方も安心です。</p></div>
+  <div class="card"><span class="num">03</span><h3>入会金0円・月2回から</h3><p>まずは月2回 8,500円〜。生活に合わせて回数を選べます。</p></div>
+ </div>
+</div></section>
+
+<section id="price" style="background:#fff"><div class="wrap">
+ <h2><small>PRICE</small>料金プラン</h2>
+ <p class="lead">入会金0円。表示はすべて税込です。</p>
+ <div class="price-wrap">
+  <div class="plan rec"><h3>月2回</h3><div class="yen">8,500<small>円〜/月</small></div><p class="note">まず習慣づくりから</p></div>
+  <div class="plan"><h3>月4回（仮）</h3><div class="yen">◯,◯◯◯<small>円/月</small></div><p class="note">週1回のペースで</p></div>
+  <div class="plan"><h3>月8回（仮）</h3><div class="yen">◯,◯◯◯<small>円/月</small></div><p class="note">しっかり変えたい方に</p></div>
+ </div>
+ <p class="note">※月2回以外の料金・回数は仮置きです（現行サイトの料金表に合わせます）。</p>
+</div></section>
+
+<section id="trainer"><div class="wrap">
+ <h2><small>TRAINER</small>トレーナー紹介</h2>
+ <p class="lead">得意分野で絞り込めます。トレーナーの追加・編集・非公開は管理画面から行えます。</p>
+ <div class="tr-tools" role="group" aria-label="得意分野で絞り込み">
+  <button class="on" data-f="all">すべて</button><button data-f="posture">姿勢改善</button><button data-f="diet">ボディメイク</button><button data-f="beginner">運動初心者</button>
+ </div>
+ <div class="tr-grid" id="trGrid"></div>
+ <div class="cms"><b>更新の仕組み（Wix CMS想定）</b>：トレーナーを「コレクション」で管理し、写真・氏名・資格・経歴・得意分野・紹介文の項目を用意。追加・編集・<b>非公開（表示ON/OFF）</b>・削除が管理画面だけで完結します。上の絞り込みも同じ「得意分野」項目から自動で反映されます。</div>
+</div></section>
+
+<section id="flow" style="background:#fff"><div class="wrap">
+ <h2><small>FLOW</small>無料カウンセリング・体験の流れ</h2>
+ <div class="flow">
+  <div><h3>Web予約</h3><p>空き枠からご希望の日時を選ぶだけ（約1分）。</p></div>
+  <div><h3>カウンセリング</h3><p>お悩みと目標、通えるペースをお聞きします。</p></div>
+  <div><h3>体験25分</h3><p>私服のまま、実際のトレーニングを体験。</p></div>
+  <div><h3>プランのご案内</h3><p>無理な勧誘はしません。持ち帰って検討もOK。</p></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2><small>FAQ</small>よくある質問</h2>
+ <div class="faq">
+  <details open><summary>本当に私服・土足のままで大丈夫ですか？</summary><p>はい。スーツやスカートでも行える内容を中心に組み立てます（仮の回答文です）。</p></details>
+  <details><summary>25分で効果はありますか？</summary><p>短時間でも、正しいフォームと継続で体は変わります。効果には個人差があります（表現は景品表示法・薬機法に配慮して調整します）。</p></details>
+  <details><summary>女性トレーナーは選べますか？</summary><p>ご予約時にご希望を伺います（仮）。</p></details>
+  <details><summary>入会金や解約金はかかりますか？</summary><p>入会金は0円です。解約条件は現行の規約に合わせて記載します（仮）。</p></details>
+ </div>
+</div></section>
+
+<section id="access" style="background:#fff"><div class="wrap">
+ <h2><small>ACCESS</small>アクセス</h2>
+ <div class="access">
+  <div class="map">Googleマップ埋め込み（仮）</div>
+  <dl>
+   <dt>店舗名</dt><dd>◯◯ジム（仮）</dd>
+   <dt>最寄り駅</dt><dd>◯◯駅 徒歩4分（仮）</dd>
+   <dt>営業時間</dt><dd>◯:◯◯〜◯◯:◯◯（仮）</dd>
+   <dt>ご予約</dt><dd>Web予約（24時間受付）</dd>
+  </dl>
+ </div>
+</div></section>
+
+<section class="memo" id="seo"><div class="wrap">
+ <h2><small>PROPOSAL MEMO</small>リニューアル設計メモ（ご提案用・公開ページには出しません）</h2>
+ <p class="lead">見た目より先に「検索で見つかる→クリックされる→予約される」の順で設計します。数値はGSC・GA4の権限をいただいてから決めます。</p>
+ <div class="tbl"><table>
+  <tr><th>キーワード</th><td>「烏丸御池 パーソナルジム」と「烏丸 パーソナルジム」は決め打ちせず、GSCのクエリ別（PC/スマホ別）表示回数・順位・CTRと競合の上位ページを比べて主軸を決定。トップは主軸、アクセス／料金ページで副軸を受ける案を第一候補にします。</td></tr>
+  <tr><th>CTR改善</th><td>順位が高いのにクリックが少ないクエリから、タイトル・説明文を差し替え。例：<code>◯◯駅のパーソナルジム｜25分・私服OK・完全個室｜入会金0円</code>（「25分」「私服」の差別化を前半に）。</td></tr>
+  <tr><th>既存資産</th><td>ブログ・既存URLは維持。変更が必要なURLだけWixの301リダイレクトで旧→新を1対1で対応させ、一覧表を納品します。</td></tr>
+  <tr><th>計測</th><td>GA4・GTMの既存設定と /lp・/book-online の計測を維持。予約ボタンはすべてクリック計測（このデモでは <code>data-gtm</code> 属性で位置別に識別）。</td></tr>
+  <tr><th>画像</th><td>AI生成画像は使用しません。店舗写真・ロゴ（ご提供）と商用利用可の素材のみ。デモは写真なしの図形で構成しています。</td></tr>
+ </table></div>
+</div></section>
+
+<section class="final" id="book"><div class="wrap">
+ <h2>まずは25分、体験してみませんか</h2>
+ <p>無料カウンセリングは私服のままでOK。<br>ご予約はWebから1分で完了します。</p>
+ <a class="btn" style="background:#fff;color:var(--main-d)" href="#book" data-gtm="footer_book">空き枠を見て予約する（デモ）</a>
+</div></section>
+</main>
+
+<footer>© ◯◯ジム（仮）／ご提案用デモ（noindex）</footer>
+<div class="sticky"><a class="btn" href="#book" data-gtm="sticky_book">無料カウンセリングを予約</a></div>
+
+<script>
+const T=[
+ {n:"トレーナーA（仮）",f:["posture","beginner"],q:"資格名（仮）",t:"デスクワークの肩こり・姿勢の悩みが得意。",c:"#2f6b5a"},
+ {n:"トレーナーB（仮）",f:["diet"],q:"資格名（仮）",t:"ボディメイクと食事の習慣づくりをサポート。",c:"#d9773b"},
+ {n:"トレーナーC（仮）",f:["beginner"],q:"資格名（仮）",t:"運動が久しぶりの方を、やさしく丁寧に。",c:"#5b7f99"},
+ {n:"トレーナーD（仮）",f:["posture","diet"],q:"資格名（仮）",t:"体幹と姿勢から、疲れにくい体へ。",c:"#7b6aa5"}];
+const L={posture:"姿勢改善",diet:"ボディメイク",beginner:"運動初心者"};
+const g=document.getElementById('trGrid');
+function draw(f){g.innerHTML=T.filter(x=>f==='all'||x.f.includes(f)).map(x=>`<div class="tr"><div class="ph" style="background:linear-gradient(160deg,${x.c},#1d2421)">PHOTO</div><div class="bd"><h3>${x.n}</h3>${x.f.map(k=>`<span class="tag">${L[k]}</span>`).join('')}<p>${x.q}<br>${x.t}</p></div></div>`).join('')}
+draw('all');
+document.querySelectorAll('.tr-tools button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tr-tools button').forEach(x=>x.classList.remove('on'));b.classList.add('on');draw(b.dataset.f)});
+</script>
+</body>
+</html>
