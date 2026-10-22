@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯建築設計事務所（仮）｜大阪市内の建築設計・リノベーション｜トップページ試作</title>
+<meta name="description" content="ご提案用のトップページ試作。住宅・店舗の設計監理、インテリア設計、リノベーション、コスト管理を行う建築設計事務所の見本を、公開情報だけで構成しました。名称・連絡先・料金・写真はすべて仮。">
+<style>
+:root{--ink:#22201c;--ink-2:#6a655c;--paper:#f6f3ee;--white:#fffdf9;--line:#dcd5c9;--wood:#a8754a;--wood-d:#83552f;--wood-l:#f1e6da;--blue:#2f4a5c;--radius:14px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-size:17px}
+h1,h2,h3{line-height:1.45;margin:0 0 .5em;font-family:"Hiragino Mincho ProN","Noto Serif JP","Yu Mincho",serif;font-weight:600}
+h2{font-size:clamp(24px,3.2vw,34px)}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:.3em;color:var(--wood-d);margin-bottom:10px;font-family:system-ui,sans-serif}
+.lead{color:var(--ink-2);max-width:680px}
+.center{text-align:center}.center .lead{margin:0 auto 44px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:54px;background:var(--wood);color:#fff;font-size:16px}
+.btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:"Hiragino Mincho ProN","Noto Serif JP",serif;font-weight:600;color:var(--ink);text-decoration:none;font-size:18px;display:flex;align-items:center;gap:10px}
+.logo i{width:26px;height:26px;border:2px solid var(--ink);position:relative}
+.logo i:after{content:"";position:absolute;left:4px;right:4px;bottom:4px;height:10px;background:var(--wood)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:28px}.nav ul a{text-decoration:none;font-size:15px;color:var(--ink)}
+.nav .cta-s{color:#fff;background:var(--ink);text-decoration:none;font-size:14px;border-radius:999px;padding:9px 18px;font-weight:700}
+.hero{padding:56px 0 70px;overflow:hidden}
+.hero .wrap{display:grid;gap:40px;align-items:center}
+.hero h1{font-size:clamp(32px,5vw,52px);letter-spacing:.04em}
+.hero p.sub{color:var(--ink-2);margin:0 0 28px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.plan-art{position:relative;aspect-ratio:4/3;background:var(--white);border:1px solid var(--line);border-radius:6px;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:28px 28px;box-shadow:0 30px 60px rgba(60,40,20,.12)}
+.plan-art svg{position:absolute;inset:8%;width:84%;height:84%}
+.plan-art .cap{position:absolute;left:14px;bottom:10px;font-size:12px;color:var(--ink-2);font-family:system-ui,sans-serif}
+.strip{background:var(--ink);color:#efe9df;padding:22px 0}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;font-size:14px;letter-spacing:.06em}
+.strip span:before{content:"―";color:var(--wood);margin-right:8px}
+.grid{display:grid;gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.card h3{font-size:20px}
+.card .num{font-family:system-ui,sans-serif;font-size:13px;font-weight:700;color:var(--wood-d);letter-spacing:.2em;display:block;margin-bottom:8px}
+.card p{color:var(--ink-2);font-size:15px;margin:0}
+.works .item{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.works .ph{aspect-ratio:3/2;position:relative}
+.works .ph.a{background:linear-gradient(180deg,#e9e1d4 0 62%,#c9a27b 62% 100%)}
+.works .ph.a:after{content:"";position:absolute;left:12%;top:22%;width:34%;height:40%;background:#fffaf2;border:6px solid #8c6a4b}
+.works .ph.b{background:linear-gradient(135deg,#dfe5e8 0 50%,#c7d0d5 50%)}
+.works .ph.b:after{content:"";position:absolute;left:18%;right:18%;bottom:0;height:58%;background:var(--blue);clip-path:polygon(0 30%,50% 0,100% 30%,100% 100%,0 100%)}
+.works .ph.c{background:linear-gradient(90deg,#efe6d8 0 70%,#a8754a 70% 74%,#efe6d8 74%)}
+.works .ph.c:after{content:"";position:absolute;left:10%;right:36%;bottom:16%;height:18%;background:#5d4a3a;border-radius:4px}
+.works .body{padding:18px 20px}
+.works small{font-size:12px;font-weight:700;color:var(--wood-d);letter-spacing:.1em}
+.works h3{font-size:17px;margin:4px 0 6px}
+.works p{font-size:14px;color:var(--ink-2);margin:0}
+.about{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .wrap{display:grid;gap:36px;align-items:center}
+.points{display:grid;gap:12px}
+.points div{border-left:3px solid var(--wood);padding:6px 0 6px 16px}
+.points b{display:block}
+.points span{color:var(--ink-2);font-size:15px}
+.flow{counter-reset:s;display:grid;gap:14px;padding:0;margin:0}
+.flow li{list-style:none;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 20px 20px 74px;position:relative}
+.flow li:before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;left:22px;top:18px;font-weight:700;font-size:24px;color:var(--wood);font-family:system-ui,sans-serif}
+.flow h3{font-size:17px;margin:0 0 2px}.flow p{margin:0;font-size:15px;color:var(--ink-2)}
+.news li{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.news ul{padding:0;margin:0}
+.news time{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.news .cat{font-size:12px;background:var(--wood-l);color:var(--wood-d);border-radius:4px;padding:2px 8px;height:fit-content}
+details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}details p{margin:10px 0 0;color:var(--ink-2);font-size:15px}
+.info table{width:100%;border-collapse:collapse}.info td{padding:12px 8px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}.info td:first-child{width:7em;font-weight:700}
+.contact{background:var(--ink);color:#efe9df}
+.contact h2{color:#fff}.contact .lead{color:rgba(239,233,223,.8)}
+.form{background:var(--white);color:var(--ink);border-radius:16px;padding:26px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+.form input,.form textarea,.form select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:var(--paper)}
+.form .btn{width:100%;margin-top:18px;border:0;cursor:pointer;font-family:inherit}
+.form small{display:block;margin-top:10px;color:var(--ink-2);font-size:12px;text-align:center}
+footer{background:#151310;color:rgba(255,255,255,.6);font-size:13px;text-align:center;padding:28px 20px}
+.fixed-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:flex}
+.fixed-cta .btn{flex:1;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+@media(min-width:760px){
+ .nav ul{display:flex}
+ .hero .wrap{grid-template-columns:1fr 1fr}
+ .grid-3{grid-template-columns:repeat(3,1fr)}
+ .grid-2{grid-template-columns:repeat(2,1fr)}
+ .about .wrap{grid-template-columns:1fr 1fr}
+ .fixed-cta{display:none}
+}
+@media(max-width:759px){body{padding-bottom:84px}section{padding:60px 0}}
+</style>
+</head>
+<body id="top">
+<div class="demo-bar">【トップページ試作】公開情報だけで構成した見本です。名称・連絡先・料金・写真はすべて仮で、実際と違う点は作り直します。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i></i>◯◯建築設計事務所（仮）</a><ul><li><a href="#service">業務内容</a></li><li><a href="#works">設計事例</a></li><li><a href="#flow">ご相談の流れ</a></li><li><a href="#faq">よくある質問</a></li><li><a href="#info">事務所案内</a></li></ul><a class="cta-s" href="#contact">相談する</a></div></header>
+
+<section class="hero"><div class="wrap">
+<div>
+<span class="eyebrow">ARCHITECTURE / INTERIOR / RENOVATION</span>
+<h1>暮らしと仕事の<br>「ちょうどいい」を、<br>図面から。</h1>
+<p class="sub">大阪市内の建築設計事務所（仮）です。住まい・店舗・事務所の新築設計からインテリア、リノベーションまで。ご予算に合わせたコストの組み立てから、工事が終わるまでの監理を一貫してお引き受けします。</p>
+<div class="cta"><a class="btn" href="#contact">設計の相談をする（無料）</a><a class="btn line" href="#works">設計事例を見る</a></div>
+</div>
+<div class="plan-art" role="img" aria-label="住まいの平面図をイメージした抽象イラスト">
+<svg viewBox="0 0 400 300" fill="none" stroke="#22201c" stroke-width="3">
+<rect x="20" y="20" width="360" height="260"/>
+<line x1="200" y1="20" x2="200" y2="170"/><line x1="20" y1="170" x2="150" y2="170"/><line x1="250" y1="170" x2="380" y2="170"/>
+<line x1="290" y1="20" x2="290" y2="110"/>
+<path d="M150 170 A50 50 0 0 1 200 120" stroke-width="1.5"/>
+<rect x="40" y="200" width="120" height="60" fill="#a8754a" fill-opacity=".18" stroke="none"/>
+<rect x="230" y="40" width="40" height="110" fill="#2f4a5c" fill-opacity=".14" stroke="none"/>
+<circle cx="110" cy="95" r="26" stroke-width="1.5"/>
+<line x1="20" y1="120" x2="20" y2="150" stroke="#fffdf9" stroke-width="6"/>
+</svg>
+<span class="cap">イメージ図（仮）</span>
+</div>
+</div></section>
+
+<div class="strip"><div class="wrap"><span>設計監理</span><span>インテリア設計</span><span>リノベーション</span><span>コストマネジメント</span><span>建築まわりのご相談</span></div></div>
+
+<section id="service"><div class="wrap">
+<div class="center"><span class="eyebrow">SERVICE</span><h2>業務内容</h2><p class="lead">「何から相談すればいいか分からない」段階からお聞きします。建物のことなら、まずは一度お話しください。</p></div>
+<div class="grid grid-3">
+<div class="card"><span class="num">01</span><h3>新築の設計・監理</h3><p>住まい・店舗・事務所の設計から、工事が図面どおりに進んでいるかの確認（監理）まで、竣工まで並走します。</p></div>
+<div class="card"><span class="num">02</span><h3>リノベーション・インテリア</h3><p>今ある建物を活かした間取り変更や内装の設計。家具・照明・素材選びまで、空間全体で整えます。</p></div>
+<div class="card"><span class="num">03</span><h3>コストマネジメント</h3><p>ご予算から逆算して仕様を組み立て、見積もりの比較・調整もお手伝い。「建ててから高くついた」を防ぎます。</p></div>
+</div>
+</div></section>
+
+<section id="works" style="padding-top:0"><div class="wrap">
+<div class="center"><span class="eyebrow">WORKS</span><h2>設計事例</h2><p class="lead">※事例名・写真は仮のイメージです。実際の事例写真に差し替えます。</p></div>
+<div class="grid grid-3 works">
+<div class="item"><div class="ph a"></div><div class="body"><small>RENOVATION</small><h3>築40年マンションの住まい再生（仮）</h3><p>壁を減らして光と風が通る一室空間に。</p></div></div>
+<div class="item"><div class="ph b"></div><div class="body"><small>HOUSE</small><h3>狭小地に建つ3階建ての家（仮）</h3><p>限られた敷地でも、明るく広く感じる工夫を。</p></div></div>
+<div class="item"><div class="ph c"></div><div class="body"><small>SHOP / INTERIOR</small><h3>街角のカフェの内装（仮）</h3><p>木の質感で、長く居たくなる店づくり。</p></div></div>
+</div>
+</div></section>
+
+<section class="about"><div class="wrap">
+<div><span class="eyebrow">POLICY</span><h2>小さな事務所だから、<br>最初から最後まで同じ設計者が。</h2><p class="lead">打ち合わせ・図面・現場確認を、同じ設計者が担当します（仮）。言ったことが伝わっていない、という行き違いが起きにくい体制です。</p></div>
+<div class="points">
+<div><b>経験豊富な一級建築士が担当（仮）</b><span>大手設計事務所出身。住宅から公共建築まで幅広く経験。</span></div>
+<div><b>予算の話を最初にします</b><span>夢を広げる前に、使えるお金の範囲を一緒に確認します。</span></div>
+<div><b>工事中も現場で確認</b><span>定期的に現場へ出向き、図面どおりかを確かめます。</span></div>
+</div>
+</div></section>
+
+<section id="flow"><div class="wrap">
+<div class="center"><span class="eyebrow">FLOW</span><h2>ご相談の流れ</h2><p class="lead">初回のご相談・現地確認は無料です（仮）。</p></div>
+<ol class="flow" style="max-width:760px;margin:0 auto">
+<li><h3>お問い合わせ</h3><p>フォーム・お電話で、ご希望やお悩みを簡単にお知らせください。</p></li>
+<li><h3>ヒアリング・現地確認</h3><p>敷地や建物を拝見し、暮らし方・使い方とご予算をお聞きします。</p></li>
+<li><h3>プランとお見積りのご提案</h3><p>ラフプランと概算費用をご提示。納得いくまで練り直します。</p></li>
+<li><h3>設計契約・実施設計</h3><p>詳細な図面を作成し、工務店の見積もりを比較・調整します。</p></li>
+<li><h3>工事監理・お引き渡し</h3><p>工事中の確認から完成検査まで立ち会い、お引き渡しします。</p></li>
+</ol>
+</div></section>
+
+<section class="news" style="padding-top:0"><div class="wrap" style="max-width:820px">
+<div class="center"><span class="eyebrow">NEWS</span><h2>お知らせ・コラム</h2></div>
+<ul>
+<li><time>2026.10.01</time><span class="cat">お知らせ</span><span>秋のリノベーション相談会のご案内（仮）</span></li>
+<li><time>2026.09.12</time><span class="cat">コラム</span><span>中古住宅を買う前に見ておきたい3つのポイント（仮）</span></li>
+<li><time>2026.08.20</time><span class="cat">事例</span><span>マンション住戸の改修が完成しました（仮）</span></li>
+</ul>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap" style="max-width:820px">
+<div class="center"><span class="eyebrow">FAQ</span><h2>よくある質問</h2></div>
+<details><summary>設計事務所に頼むと費用が高くなりませんか？</summary><p>設計料はかかりますが、仕様の整理や見積もり比較で工事費が適正になり、総額で見ると差が小さくなることも多いです（仮）。</p></details>
+<details><summary>リフォームだけの相談でも大丈夫ですか？</summary><p>はい。部分的な内装の改修から、まるごとのリノベーションまでご相談いただけます。</p></details>
+<details><summary>対応エリアはどこまでですか？</summary><p>大阪市内を中心に、近隣エリアもご相談ください（仮）。</p></details>
+</div></section>
+
+<section id="info" class="info" style="padding-top:0"><div class="wrap" style="max-width:820px">
+<div class="center"><span class="eyebrow">OFFICE</span><h2>事務所案内</h2></div>
+<table>
+<tr><td>名称</td><td>◯◯建築設計事務所（仮）</td></tr>
+<tr><td>業務内容</td><td>建築設計監理／インテリア設計／リノベーション設計／コストマネジメント／建築に関わる各種ご相談</td></tr>
+<tr><td>所在地</td><td>大阪市内（仮）</td></tr>
+<tr><td>電話</td><td>06-0000-0000（仮）</td></tr>
+<tr><td>受付</td><td>平日 10:00〜18:00（仮）</td></tr>
+</table>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div class="center"><span class="eyebrow" style="color:#d9b48f">CONTACT</span><h2>まずは、お気軽にご相談ください</h2><p class="lead">「まだ計画が固まっていない」段階でも大丈夫です。</p></div>
+<form class="form" onsubmit="alert('試作のため送信されません');return false">
+<label>お名前</label><input type="text" placeholder="山田 太郎">
+<label>メールアドレス</label><input type="email" placeholder="example@example.com">
+<label>ご相談の種類</label><select><option>新築の設計</option><option>リノベーション・リフォーム</option><option>インテリア・店舗</option><option>その他</option></select>
+<label>ご相談内容</label><textarea rows="5" placeholder="ご希望・お悩みをご自由にお書きください"></textarea>
+<button class="btn" type="submit">送信する（試作）</button>
+<small>試作ページのため、このフォームは送信されません。</small>
+</form>
+</div></section>
+
+<footer>© ◯◯建築設計事務所（仮）｜このページは提案用の試作です</footer>
+<div class="fixed-cta"><a class="btn" href="#contact">設計の相談をする（無料）</a></div>
+</body>
+</html>
