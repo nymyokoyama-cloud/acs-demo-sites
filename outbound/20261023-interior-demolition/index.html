@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯内装解体（仮）｜テナント・店舗の内装解体と原状回復</title>
+<meta name="description" content="ご提案用のトップページ試作。名称・連絡先・実績数値・写真はすべて仮です。">
+<style>
+:root{--main:#1d2b3a;--main-l:#eef2f6;--accent:#f0a020;--ink:#1f252c;--ink-2:#4b5563;--line:#e1e6ec;--bg:#f8f9fb;--radius:14px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.2em;color:#b7791f;font-weight:700;margin-bottom:8px}
+h1 span,h2 span{display:inline-block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#1d1606}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}.logo{font-weight:800;color:var(--main);text-decoration:none;font-size:18px}
+.logo i{display:inline-block;width:12px;height:12px;background:var(--accent);margin-right:8px;transform:rotate(45deg)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#16212d 0%,#24384c 60%,#2f4a63 100%);padding:64px 0 72px}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(240,160,32,.0) 0 26px,rgba(240,160,32,.12) 26px 30px);mask:linear-gradient(90deg,transparent 40%,#000);-webkit-mask:linear-gradient(90deg,transparent 40%,#000)}
+.hero .wrap{position:relative}
+.hero .tag{display:inline-block;font-size:13px;font-weight:700;background:rgba(240,160,32,.18);color:#ffd28a;border:1px solid rgba(240,160,32,.5);padding:4px 12px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(30px,5vw,52px)}.hero p{color:#d5dee8;max-width:620px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:36px;max-width:620px}
+.stats div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px;text-align:center;font-size:13px;color:#cbd6e2}
+.stats b{display:block;font-size:22px;color:#fff}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card h3{font-size:19px}.card p{margin:0;color:var(--ink-2);font-size:15.5px}
+.icon{width:46px;height:46px;border-radius:12px;background:var(--main-l);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--main);margin-bottom:12px}
+.worry .card{border-left:5px solid var(--accent)}
+.flow{counter-reset:s}.flow .card{position:relative;padding-top:40px}
+.flow .card:before{counter-increment:s;content:"STEP " counter(s);position:absolute;top:14px;left:24px;font-size:12px;font-weight:800;letter-spacing:.15em;color:#b7791f}
+.recruit{background:linear-gradient(120deg,#f0a020,#f5b84a);color:#1d1606}
+.recruit .box{display:grid;gap:20px;align-items:center}
+.recruit ul{margin:0;padding-left:1.2em}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 auto 12px;max-width:780px}summary{font-weight:700;cursor:pointer}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:#111a23;color:#9fb0c2;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:flex;gap:8px}.sticky .btn{flex:1;min-height:50px;padding:12px}
+@media(min-width:800px){.nav ul{display:flex}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.recruit .box{grid-template-columns:1.3fr 1fr}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】公開情報だけで構成したトップページの試作です。名称・連絡先・数値・写真はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i></i>◯◯内装解体（仮）</a><ul><li><a href="#service">工事内容</a></li><li><a href="#reason">選ばれる理由</a></li><li><a href="#flow">ご依頼の流れ</a></li><li><a href="#recruit">採用情報</a></li><li><a href="#contact">お見積もり</a></li></ul></div></header>
+<main id="top">
+<section class="hero"><div class="wrap">
+<span class="tag">関西一円対応｜商業施設・テナント・ホテル</span>
+<h1><span>退去も改装も、</span><span>工期どおりに</span><span>まっさらへ。</span></h1>
+<p>テナントの内装解体から原状回復まで、着工前の打ち合わせ・近隣への配慮・分別処分を含めて一貫してお引き受けします。夜間工事や営業中フロアでの作業もご相談ください。</p>
+<div class="cta"><a class="btn" href="#contact">無料でお見積もり</a><a class="btn ghost" href="#flow">ご依頼の流れを見る</a></div>
+<div class="stats"><div><b>夜間</b>工事に対応</div><div><b>関西</b>一円で施工</div><div><b>一貫</b>解体〜補修</div></div>
+</div></section>
+
+<section class="worry"><div class="wrap"><h2><small>TROUBLES</small><span>こんなご相談、</span><span>お受けしています</span></h2>
+<div class="grid grid-2">
+<div class="card">退去日が決まっていて、原状回復を短い工期で終わらせたい</div>
+<div class="card">営業中の商業施設なので、夜間・静かな時間帯に作業してほしい</div>
+<div class="card">次のテナントの工事に合わせて、どこまで解体するか相談したい</div>
+<div class="card">産業廃棄物の分別・処分まで、まとめて任せたい</div>
+</div></div></section>
+
+<section id="service" style="background:#fff"><div class="wrap"><h2><small>SERVICE</small>工事内容</h2>
+<p class="lead">店舗・事務所・百貨店・ホテルなど、商業系の内装を中心に対応します。</p>
+<div class="grid grid-3">
+<div class="card"><div class="icon">01</div><h3>内装解体</h3><p>天井・壁・床・造作・設備の撤去。スケルトン戻しから部分解体まで。</p></div>
+<div class="card"><div class="icon">02</div><h3>原状回復工事</h3><p>賃貸借契約の範囲を確認し、退去時の状態に合わせて復旧します。</p></div>
+<div class="card"><div class="icon">03</div><h3>補修・軽微な内装工事</h3><p>解体後の下地補修や、次の工事に向けた小さな手直しもまとめて。</p></div>
+</div></div></section>
+
+<section id="reason"><div class="wrap"><h2><small>REASON</small>選ばれる理由</h2>
+<div class="grid grid-3">
+<div class="card"><h3>壊す前の段取り</h3><p>着工前に管理会社・ビル側と作業時間や搬出経路をすり合わせ、当日の止まりを減らします。</p></div>
+<div class="card"><h3>近隣・周辺への配慮</h3><p>養生・騒音・粉じん対策を現場ごとに計画。営業中フロアでも周囲に迷惑をかけない進め方を選びます。</p></div>
+<div class="card"><h3>分別と処分まで一貫</h3><p>廃材を現場で分別し、適正に処分。リサイクルできるものは再資源化へ回します。</p></div>
+</div></div></section>
+
+<section id="flow" class="flow" style="background:#fff"><div class="wrap"><h2><small>FLOW</small>ご依頼の流れ</h2>
+<div class="grid grid-4">
+<div class="card"><h3>お問い合わせ</h3><p>フォームかお電話で、物件と希望時期をお知らせください。</p></div>
+<div class="card"><h3>現地調査</h3><p>範囲・搬出経路・作業可能時間を確認します。</p></div>
+<div class="card"><h3>お見積もり</h3><p>項目ごとに分けた見積書をお出しします。</p></div>
+<div class="card"><h3>施工・引き渡し</h3><p>完了後にご確認いただき、お引き渡しです。</p></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap"><h2><small>FAQ</small>よくある質問</h2>
+<details open><summary>見積もりだけでも依頼できますか？</summary><p>はい。現地調査とお見積もりは無料です（仮）。</p></details>
+<details><summary>夜間や土日の作業は可能ですか？</summary><p>建物の規定に合わせて調整します。まずはご希望の時間帯をお知らせください。</p></details>
+<details><summary>どの地域まで対応していますか？</summary><p>関西一円で施工しています。</p></details>
+</div></section>
+
+<section id="recruit" class="recruit"><div class="wrap box">
+<div><h2 style="text-align:left"><small style="color:#5a3a00">RECRUIT</small><span>一緒に現場を</span><span>つくる仲間を募集中</span></h2>
+<p style="margin:0">未経験の方も、経験者の方も歓迎します。先の予定まで仕事があるので、長く安定して働けます。</p></div>
+<div class="card"><ul><li>職種：内装解体の現場スタッフ</li><li>勤務：夜間中心（仮）</li><li>給与：◯◯万円〜（仮）</li></ul><a class="btn" href="#contact" style="width:100%;margin-top:14px;background:var(--main);color:#fff">応募・質問する</a></div>
+</div></section>
+
+<section id="access" style="background:#fff"><div class="wrap"><h2><small>COMPANY</small>会社概要</h2>
+<div class="grid grid-2">
+<div class="card">名称：◯◯内装解体（仮）<br>所在地：大阪市内（仮）<br>電話：06-0000-0000（仮）<br>受付：平日 10:00〜17:00（仮）<br>業務：内装解体・原状回復・補修工事</div>
+<div class="card" style="background:linear-gradient(160deg,#24384c,#16212d);color:#cbd6e2;display:flex;align-items:center;justify-content:center;min-height:200px">地図（本制作で埋め込み）</div>
+</div></div></section>
+
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#ffd28a">CONTACT</small>お見積もり・ご相談</h2>
+<form class="form" style="color:var(--ink)" onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');">
+<label>ご用件</label><select><option>お見積もり依頼</option><option>工事のご相談</option><option>採用への応募</option></select>
+<label>会社名・お名前</label><input type="text"><label>連絡先（メールまたは電話）</label><input type="text"><label>物件の場所・希望時期</label><textarea rows="4"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">送信する</button></form></div></section>
+</main>
+<footer><div class="wrap">◯◯内装解体（仮）｜このページはご提案用のデモサイトです。実在の会社・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn" href="#contact">お見積もり</a><a class="btn" href="#recruit" style="background:var(--main);color:#fff">採用情報</a></div>
+</body>
+</html>
