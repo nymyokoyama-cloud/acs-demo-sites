@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯リノベーション（仮）採用サイト — ご提案用デモ</title>
+<meta name="description" content="リノベーション会社の採用サイトの見本（STUDIO構築を想定）。社名・文章・数字・写真はすべて仮です。">
+<style>
+:root{
+  --ink:#23201c;--sub:#6b645b;--line:#e4ddd2;--bg:#faf7f2;--card:#fff;
+  --wood:#a8794b;--wood-d:#7d5530;--green:#4f6f52;--accent:#d9893b;
+  --r:14px;--max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.demo-bar{background:#2f2a24;color:#f3eadf;font-size:13px;padding:8px 16px;text-align:center;line-height:1.6}
+.demo-bar b{color:#ffcf8f}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:20;background:rgba(250,247,242,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:800;letter-spacing:.04em;font-size:17px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--sub);letter-spacing:.12em;line-height:1}
+nav.g{display:flex;gap:18px;font-size:14px}
+nav.g a{text-decoration:none;color:var(--sub)}
+nav.g a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:999px;border:0;cursor:pointer;font-size:15px}
+.btn.s{padding:8px 16px;font-size:13px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+@media(max-width:820px){nav.g{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:#2b2520;color:#fff}
+.hero .bg{position:absolute;inset:0;background:
+  linear-gradient(115deg,rgba(43,37,32,.92) 30%,rgba(43,37,32,.35)),
+  repeating-linear-gradient(90deg,#8a6440 0 46px,#9b7149 46px 92px,#7f5b39 92px 140px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero .eyebrow{font-size:13px;letter-spacing:.2em;color:#ffcf8f;font-weight:700}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.35;margin:.3em 0 .5em;font-weight:800}
+.hero p.lead{color:#eadfd2;max-width:30em}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero .cta .ghost{color:#fff;border-color:#fff}
+.player{aspect-ratio:16/9;border-radius:var(--r);background:linear-gradient(135deg,#5d4630,#a8794b 60%,#d9b48a);position:relative;box-shadow:0 20px 50px rgba(0,0,0,.35);cursor:pointer}
+.player::after{content:"";position:absolute;left:50%;top:50%;width:68px;height:68px;margin:-34px 0 0 -34px;border-radius:50%;background:rgba(255,255,255,.92)}
+.player::before{content:"";position:absolute;left:50%;top:50%;margin:-12px 0 0 -6px;border-left:20px solid var(--wood-d);border-top:12px solid transparent;border-bottom:12px solid transparent;z-index:1}
+.player .cap{position:absolute;left:14px;bottom:12px;font-size:12px;background:rgba(0,0,0,.45);padding:3px 10px;border-radius:99px}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:48px}}
+
+section{padding:84px 0}
+section.alt{background:#fff}
+.sec-h{margin-bottom:36px}
+.sec-h .en{font-size:12px;letter-spacing:.24em;color:var(--wood);font-weight:800}
+.sec-h h2{font-size:clamp(24px,3.4vw,32px);margin:.2em 0 .3em;line-height:1.45}
+.sec-h p{color:var(--sub);margin:0;max-width:40em}
+.cms{display:inline-block;font-size:11px;font-weight:700;color:var(--green);border:1px dashed var(--green);border-radius:6px;padding:1px 7px;margin-left:8px;vertical-align:middle;letter-spacing:0}
+
+/* message */
+.msg{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:var(--r);background:
+  radial-gradient(circle at 50% 36%,#e9d9c4 0 18%,transparent 18.5%),
+  radial-gradient(ellipse at 50% 92%,#b89572 0 38%,transparent 38.5%),
+  linear-gradient(160deg,#efe6da,#d9c6ad)}
+.msg blockquote{font-size:clamp(20px,2.6vw,26px);font-weight:800;line-height:1.6;margin:0 0 18px}
+.msg .sign{color:var(--sub);font-size:14px;margin-top:16px}
+@media(max-width:820px){.msg{grid-template-columns:1fr}.portrait{max-width:280px}}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.num{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px;text-align:center}
+.num b{display:block;font-size:34px;color:var(--wood-d);line-height:1.2}
+.num span{font-size:13px;color:var(--sub)}
+@media(max-width:820px){.nums{grid-template-columns:repeat(2,1fr)}}
+
+/* jobs */
+.jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.job .ph{height:130px}
+.job:nth-child(1) .ph{background:linear-gradient(135deg,#c9a77f,#7d5530)}
+.job:nth-child(2) .ph{background:linear-gradient(135deg,#a9bfa5,#4f6f52)}
+.job:nth-child(3) .ph{background:linear-gradient(135deg,#e8c39b,#d9893b)}
+.job .bd{padding:18px 20px 22px;flex:1}
+.job h3{margin:0 0 6px;font-size:19px}
+.job p{margin:0 0 12px;color:var(--sub);font-size:14.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:1px 10px}
+@media(max-width:820px){.jobs{grid-template-columns:1fr}}
+
+/* interviews */
+.ivs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.iv .player{box-shadow:none}
+.iv:nth-child(2) .player{background:linear-gradient(135deg,#3f5a42,#86a283)}
+.iv:nth-child(3) .player{background:linear-gradient(135deg,#7a4b23,#e0a565)}
+.iv h3{font-size:16px;margin:12px 0 4px;line-height:1.6}
+.iv p{margin:0;font-size:13px;color:var(--sub)}
+@media(max-width:820px){.ivs{grid-template-columns:1fr}}
+
+/* day */
+.day{position:relative;max-width:720px;margin:0 auto}
+.day::before{content:"";position:absolute;left:62px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.day li{list-style:none;display:grid;grid-template-columns:62px 1fr;gap:22px;padding:10px 0;position:relative}
+.day li::before{content:"";position:absolute;left:56px;top:20px;width:14px;height:14px;border-radius:50%;background:var(--wood);border:3px solid var(--bg)}
+.day time{font-weight:800;color:var(--wood-d);font-size:15px;padding-top:4px}
+.day b{display:block}
+.day span{color:var(--sub);font-size:14px}
+.day ul{padding:0;margin:0}
+
+/* env */
+.env{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.env div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.env b{display:block;margin-bottom:4px}
+.env span{font-size:13.5px;color:var(--sub)}
+@media(max-width:820px){.env{grid-template-columns:1fr 1fr}}
+
+/* requirements tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tabs button{font:inherit;font-size:14px;font-weight:700;padding:9px 18px;border-radius:99px;border:1.5px solid var(--line);background:#fff;cursor:pointer;color:var(--sub)}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+table.req{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+table.req th,table.req td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
+table.req th{width:150px;background:#f6f1ea;font-weight:700}
+table.req tr:last-child th,table.req tr:last-child td{border-bottom:0}
+@media(max-width:600px){table.req th,table.req td{display:block;width:auto}table.req th{border-bottom:0;padding-bottom:4px}}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:f}
+.flow div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;position:relative}
+.flow div::before{counter-increment:f;content:"STEP " counter(f);font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.12em}
+.flow b{display:block;margin:2px 0 4px}
+.flow span{font-size:13.5px;color:var(--sub)}
+@media(max-width:820px){.flow{grid-template-columns:1fr 1fr}}
+
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--sub);font-size:15px}
+
+/* form */
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;max-width:720px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+.form label em{font-style:normal;color:#fff;background:var(--accent);font-size:11px;padding:1px 6px;border-radius:4px;margin-left:6px}
+.form input,.form select,.form textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .note{font-size:12.5px;color:var(--sub)}
+.form .done{display:none;background:#eef4ec;border:1px solid #c9dbc5;border-radius:10px;padding:16px;margin-top:16px}
+@media(max-width:600px){.form .row{grid-template-columns:1fr}.form{padding:20px}}
+
+footer{background:#2b2520;color:#cdbfae;padding:36px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sticky-cta{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+@media(min-width:821px){.sticky-cta{display:none}}
+.fade{opacity:0;transform:translateY(18px);transition:.7s ease}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo-bar"><b>ご提案用デモ</b>｜募集文の情報だけで作った見本です（本制作はSTUDIOで構築）。社名・文章・数字・写真・募集条件はすべて仮です。<span style="white-space:nowrap">緑の点線ラベル</span>＝公開後に社内で更新できる想定の箇所。</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="logo">◯◯リノベーション<small>RECRUIT（仮）</small></div>
+    <nav class="g">
+      <a href="#message">想い</a><a href="#jobs">仕事</a><a href="#interview">インタビュー</a><a href="#env">働く環境</a><a href="#req">募集要項</a><a href="#faq">よくある質問</a>
+    </nav>
+    <a class="btn s" href="#entry">応募する</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">RECRUIT 2027（仮）</div>
+      <h1>古い家に、<br>次の30年をつくる仕事。</h1>
+      <p class="lead">住まいのリノベーションを手がける◯◯リノベーション（仮）の採用サイトです。現場のこと、人のこと、働き方のこと。入社前に知っておいてほしいことを、社員の言葉と動画でお伝えします。</p>
+      <div class="cta"><a class="btn" href="#entry">エントリーする</a><a class="btn ghost" href="#interview">社員インタビューを見る</a></div>
+    </div>
+    <div class="player" data-video="会社紹介動画（ご支給動画を埋め込み）"><span class="cap">▶ 会社紹介ムービー 2:30（仮）</span></div>
+  </div>
+</div>
+
+<section id="message">
+  <div class="wrap msg fade">
+    <div class="portrait" role="img" aria-label="代表写真（仮）"></div>
+    <div>
+      <div class="sec-h" style="margin-bottom:14px"><div class="en">MESSAGE</div></div>
+      <blockquote>「直す」ではなく、<br>暮らしを「編み直す」会社でありたい。</blockquote>
+      <p>リノベーションは、お客様の思い出が残る家に手を入れる仕事です。だからこそ、図面や見積もりの前に「この家でどう暮らしたいか」を聞くところから始めます。</p>
+      <p>経験の有無よりも、人の話を最後まで聞ける人と働きたい。現場の段取りも、提案の組み立ても、入社してから先輩と一緒に覚えていけます。（文章は仮。ご支給の下書きを流し込みます）</p>
+      <div class="sign">代表取締役　◯◯ ◯◯（仮）</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">NUMBERS</div><h2>数字で見る◯◯リノベーション <span class="cms">更新可</span></h2><p>求職者が最初に気にする点を数字で先に見せます（数値はすべて仮）。</p></div>
+    <div class="nums fade">
+      <div class="num"><b>1,200<small style="font-size:16px">件</small></b><span>累計施工件数（仮）</span></div>
+      <div class="num"><b>32<small style="font-size:16px">名</small></b><span>社員数（仮）</span></div>
+      <div class="num"><b>8.4<small style="font-size:16px">年</small></b><span>平均勤続年数（仮）</span></div>
+      <div class="num"><b>40<small style="font-size:16px">%</small></b><span>未経験入社の割合（仮）</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="jobs">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">JOBS</div><h2>仕事を知る</h2><p>職種ごとに「1件の家に、どこで関わるか」を説明します。職種名・内容は仮です。</p></div>
+    <div class="jobs fade">
+      <article class="job"><div class="ph"></div><div class="bd"><h3>施工管理</h3><p>職人さん・お客様・設計をつなぎ、工程と品質を守る現場の司令塔。解体後に見える「想定外」への判断も担います。</p><div class="tags"><span>未経験可（仮）</span><span>資格支援あり</span></div></div></article>
+      <article class="job"><div class="ph"></div><div class="bd"><h3>リノベーション設計</h3><p>既存の構造を読み解き、暮らし方に合わせた間取りと素材を提案。現場に何度も足を運ぶ設計職です。</p><div class="tags"><span>建築士歓迎（仮）</span><span>CAD使用</span></div></div></article>
+      <article class="job"><div class="ph"></div><div class="bd"><h3>営業・プランナー</h3><p>最初の相談から完成まで、お客様の一番近くで伴走。住まいの悩みを聞き、予算に合う計画に落とし込みます。</p><div class="tags"><span>ノルマなし（仮）</span><span>反響型</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="interview" class="alt">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">INTERVIEW</div><h2>社員インタビュー <span class="cms">動画・記事を追加できる</span></h2><p>ご支給のインタビュー動画を埋め込み、要点を一言で添えます。人数が増えてもSTUDIOのCMSで1件ずつ追加できる形にします。</p></div>
+    <div class="ivs fade">
+      <div class="iv"><div class="player" data-video="インタビュー動画①"><span class="cap">▶ 3:12（仮）</span></div><h3>「前職は飲食。図面が読めなくても大丈夫でした」</h3><p>施工管理／入社3年目（仮）</p></div>
+      <div class="iv"><div class="player" data-video="インタビュー動画②"><span class="cap">▶ 2:48（仮）</span></div><h3>「残す柱を決める瞬間が、いちばん面白い」</h3><p>設計／入社6年目（仮）</p></div>
+      <div class="iv"><div class="player" data-video="インタビュー動画③"><span class="cap">▶ 2:20（仮）</span></div><h3>「子育てと両立しながら、現場の声を提案に」</h3><p>プランナー／入社4年目（仮）</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-h fade" style="text-align:center"><div class="en">ONE DAY</div><h2>施工管理のある1日（仮）</h2></div>
+    <div class="day fade"><ul>
+      <li><time>8:00</time><div><b>朝礼・現場へ移動</b><span>当日の工程と職人さんの手配を確認。</span></div></li>
+      <li><time>9:00</time><div><b>解体後の現場確認</b><span>柱・配管の状態を写真で記録し、設計と共有。</span></div></li>
+      <li><time>12:00</time><div><b>昼休憩</b><span>現場近くでランチ。休憩はしっかり60分（仮）。</span></div></li>
+      <li><time>13:30</time><div><b>お客様と仕様の打ち合わせ</b><span>床材のサンプルを持って、完成イメージをすり合わせ。</span></div></li>
+      <li><time>16:00</time><div><b>帰社・翌日の段取り</b><span>写真と日報をクラウドで共有。</span></div></li>
+      <li><time>17:30</time><div><b>退社</b><span>月平均の残業は◯時間（仮）。</span></div></li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="env" class="alt">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">ENVIRONMENT</div><h2>働く環境・制度 <span class="cms">更新可</span></h2><p>制度名・内容は仮です。実際の制度に合わせて差し替えます。</p></div>
+    <div class="env fade">
+      <div><b>資格取得支援</b><span>建築士・施工管理技士の受験費用を補助（仮）</span></div>
+      <div><b>週休2日</b><span>日曜＋平日1日／年間休日◯日（仮）</span></div>
+      <div><b>社用車・端末貸与</b><span>現場移動は社用車、写真共有はタブレットで（仮）</span></div>
+      <div><b>先輩同行の研修</b><span>最初の3か月は先輩と同じ現場へ（仮）</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="req">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">REQUIREMENTS</div><h2>募集要項 <span class="cms">社内で書き換え可</span></h2><p>職種ごとにタブで切り替え。募集の追加・終了も管理画面から行える想定です（条件はすべて仮）。</p></div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-t="0">施工管理</button>
+      <button role="tab" aria-selected="false" data-t="1">設計</button>
+      <button role="tab" aria-selected="false" data-t="2">営業・プランナー</button>
+    </div>
+    <table class="req" id="reqTable"></table>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">FLOW</div><h2>選考の流れ</h2></div>
+    <div class="flow fade">
+      <div><b>エントリー</b><span>下のフォームから。履歴書は面接時でOK（仮）。</span></div>
+      <div><b>会社見学・カジュアル面談</b><span>現場見学も可能（仮）。</span></div>
+      <div><b>面接（1〜2回）</b><span>オンライン対応可（仮）。</span></div>
+      <div><b>内定</b><span>エントリーから約2〜3週間（仮）。</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:780px">
+    <div class="sec-h fade"><div class="en">FAQ</div><h2>よくある質問 <span class="cms">追加可</span></h2></div>
+    <details><summary>建築の経験がなくても応募できますか？</summary><p>はい。施工管理・営業は未経験からの入社実績があります（仮）。入社後は先輩と同じ現場で覚えていきます。</p></details>
+    <details><summary>現場見学だけでもできますか？</summary><p>選考とは別に、カジュアル面談や現場見学を受け付けています（仮）。フォームの「希望」欄で選べます。</p></details>
+    <details><summary>転勤はありますか？</summary><p>対応エリア内の勤務です（仮）。</p></details>
+  </div>
+</section>
+
+<section id="entry" class="alt">
+  <div class="wrap">
+    <div class="sec-h fade" style="text-align:center"><div class="en">ENTRY</div><h2>エントリー・お問い合わせ</h2><p style="margin:0 auto">本制作ではSTUDIOのフォーム機能で設置し、通知先メールを設定します（デモは送信されません）。</p></div>
+    <form class="form" id="f">
+      <div class="row">
+        <div><label>お名前<em>必須</em></label><input required placeholder="例）山田 太郎"></div>
+        <div><label>フリガナ<em>必須</em></label><input required placeholder="例）ヤマダ タロウ"></div>
+      </div>
+      <div class="row">
+        <div><label>メールアドレス<em>必須</em></label><input type="email" required placeholder="example@mail.com"></div>
+        <div><label>電話番号</label><input type="tel" placeholder="090-0000-0000"></div>
+      </div>
+      <label>希望職種<em>必須</em></label>
+      <select required><option value="">選択してください</option><option>施工管理</option><option>設計</option><option>営業・プランナー</option><option>まだ決めていない</option></select>
+      <label>ご希望</label>
+      <select><option>選考に応募したい</option><option>まずはカジュアル面談</option><option>現場見学をしたい</option></select>
+      <label>自己紹介・ご質問</label>
+      <textarea rows="4" placeholder="経験・資格・聞いてみたいことなど（任意）"></textarea>
+      <p class="note">送信いただいた情報は採用選考の目的にのみ使用します（文言は仮・個人情報の取扱いページへリンク）。</p>
+      <button class="btn" type="submit" style="width:100%">この内容で送信する（デモ）</button>
+      <div class="done" id="done">デモのため送信はされません。本番では自動返信メールと担当者への通知が届く設定にします。</div>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><div>◯◯リノベーション株式会社（仮）　採用サイト</div><div>コーポレートサイトへ ／ 個人情報の取扱い（仮リンク）</div></div></footer>
+<a class="btn sticky-cta" href="#entry">応募する</a>
+
+<script>
+const reqs=[
+ [["仕事内容","リノベーション工事の施工管理（工程・品質・安全・予算）"],["応募資格","普通自動車免許（AT可）／建築経験は不問（仮）"],["雇用形態","正社員（試用期間3か月・仮）"],["給与","月給◯◯万円〜◯◯万円（経験・資格を考慮・仮）"],["勤務時間","8:00〜17:30（休憩60分・仮）"],["休日休暇","週休2日（日曜＋平日1日）・夏季・年末年始（仮）"],["勤務地","本社および対応エリア内の現場（仮）"]],
+ [["仕事内容","住宅リノベーションの設計・プラン提案・図面作成"],["応募資格","建築系の学歴または実務経験（仮）／二級建築士以上歓迎"],["雇用形態","正社員（仮）"],["給与","月給◯◯万円〜（仮）"],["勤務時間","9:00〜18:00（休憩60分・仮）"],["休日休暇","週休2日・年間休日◯日（仮）"],["勤務地","本社（仮）"]],
+ [["仕事内容","来場・問い合わせのお客様への提案、見積もり、契約から引き渡しまでの伴走"],["応募資格","業界未経験歓迎（仮）"],["雇用形態","正社員（仮）"],["給与","月給◯◯万円〜＋インセンティブ（仮）"],["勤務時間","9:30〜18:30（休憩60分・仮）"],["休日休暇","週休2日（水曜＋平日1日・仮）"],["勤務地","本社・ショールーム（仮）"]]
+];
+const table=document.getElementById('reqTable');
+function show(i){table.innerHTML=reqs[i].map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('');document.querySelectorAll('.tabs button').forEach((b,j)=>b.setAttribute('aria-selected',j===i))}
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>show(+b.dataset.t)));show(0);
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('done').style.display='block'});
+document.querySelectorAll('.player').forEach(p=>p.addEventListener('click',()=>alert('本番ではここに「'+p.dataset.video+'」を埋め込みます（YouTube等）。')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
