@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯介護タクシー（仮）｜車いすのまま、通院もお出かけも</title>
+<meta name="description" content="介護タクシーのトップページ試作。名称・連絡先・料金はすべて仮です。">
+<style>
+:root{--main:#2a6f97;--main-d:#174a66;--main-l:#e8f2f8;--accent:#f08a3c;--ink:#1f2a33;--ink-2:#4e5d69;--line:#dde6ec;--bg:#fbfcfd;--radius:16px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.2em;color:var(--main);font-weight:700;margin-bottom:8px}
+h3{font-size:19px}p{margin:0 0 .6em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;border:0;font-size:17px;cursor:pointer}
+.btn.sub{background:#fff;color:var(--main-d);border:2px solid var(--main)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:800;color:var(--main-d);text-decoration:none;font-size:18px}.logo span{display:block;font-size:11px;color:var(--ink-2);font-weight:600}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.hero{background:linear-gradient(140deg,#eaf4fa 0%,#fdf3ea 100%);padding:56px 0 64px}
+.hero-in{display:grid;gap:32px;align-items:center}
+.hero h1{font-size:clamp(30px,4.8vw,48px)}.hero h1 em{font-style:normal;color:var(--main)}
+.hero p{color:var(--ink-2);margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:600;color:var(--main-d)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.art{aspect-ratio:5/4;border-radius:28px;background:radial-gradient(circle at 30% 30%,#ffd9b8 0 18%,transparent 19%),radial-gradient(circle at 72% 62%,#b9dcef 0 26%,transparent 27%),linear-gradient(160deg,#3d86b3,#1d5577);position:relative;overflow:hidden}
+.art::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-30%;height:60%;background:#fff;opacity:.18;border-radius:50%}
+.art span{position:absolute;left:20px;bottom:18px;color:#fff;font-size:13px;opacity:.9}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.icon{width:48px;height:48px;border-radius:14px;background:var(--main-l);color:var(--main);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.scene .card h3{color:var(--main-d)}
+.check{list-style:none;padding:0;margin:0}.check li{padding:10px 0 10px 32px;border-bottom:1px dashed var(--line);position:relative}
+.check li::before{content:"✓";position:absolute;left:4px;color:var(--accent);font-weight:800}
+.flow{counter-reset:f}.flow .card{position:relative;padding-top:34px}
+.flow .card::before{counter-increment:f;content:"STEP " counter(f);position:absolute;top:-12px;left:20px;background:var(--main);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px}
+.price td,.price th{padding:14px 12px;border-bottom:1px solid var(--line);text-align:left}.price{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden}
+.price th{background:var(--main-l);width:42%;font-weight:700}
+.note{font-size:14px;color:var(--ink-2);margin-top:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}summary{font-weight:700;cursor:pointer}
+.tel{background:var(--main-d);color:#fff;border-radius:var(--radius);padding:28px;text-align:center}
+.tel strong{display:block;font-size:clamp(26px,5vw,38px);letter-spacing:.04em}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto;color:var(--ink)}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:#10364c;color:#b8cfdc;font-size:13px;padding:30px 0 110px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.97);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:8px}.sticky .btn{min-height:50px;padding:10px;font-size:15px}
+@media(min-width:800px){.nav ul{display:flex}.hero-in{grid-template-columns:1.15fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【試作】公開情報だけで構成したトップページの見本です。名称・連絡先・料金はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><span>大阪市内の介護・福祉タクシー</span>◯◯介護タクシー（仮）</a><ul><li><a href="#scene">ご利用シーン</a></li><li><a href="#reason">安心の理由</a></li><li><a href="#price">料金</a></li><li><a href="#flow">ご予約の流れ</a></li><li><a href="#contact">お問い合わせ</a></li></ul></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-in">
+<div>
+<ul class="chips"><li>車いすのまま乗車</li><li>介護資格のあるドライバー</li><li>ご家族の同乗OK</li></ul>
+<h1>通院も、お墓参りも。<br><em>車いすのまま</em>お出かけを。</h1>
+<p>歩くのがつらい方、車いすの方の移動を、玄関先から目的地までお手伝いします。病院での受付や会計の付き添いもご相談ください。</p>
+<div class="cta-row"><a class="btn" href="#contact">空き状況を問い合わせる</a><a class="btn sub" href="#price">料金の目安を見る</a></div>
+</div>
+<div class="art" role="img" aria-label="イメージ"><span>写真・車両画像は本制作で差し替え</span></div>
+</div></section>
+
+<section id="worry"><div class="wrap"><h2><small>FOR YOU</small>こんな時にご相談ください</h2>
+<div class="grid grid-2">
+<div class="card"><ul class="check"><li>通院のたびに家族が仕事を休んでいる</li><li>普通のタクシーだと乗り降りが不安</li></ul></div>
+<div class="card"><ul class="check"><li>入退院や転院で荷物が多い</li><li>久しぶりに外食や買い物に行きたい</li></ul></div>
+</div></div></section>
+
+<section id="scene" class="scene" style="background:#fff"><div class="wrap"><h2><small>SCENE</small>ご利用シーン</h2><p class="lead">「病院だけ」と思われがちですが、日々のお出かけにもお使いいただけます。</p>
+<div class="grid grid-4">
+<div class="card"><div class="icon">01</div><h3>通院</h3><p>送迎に加えて、院内の受付・会計・薬の受け取りまで付き添えます。</p></div>
+<div class="card"><div class="icon">02</div><h3>入退院・転院</h3><p>荷物の積み下ろしや病棟までの移動もお手伝いします。</p></div>
+<div class="card"><div class="icon">03</div><h3>冠婚葬祭・お墓参り</h3><p>法事やお見舞いなど、大切な予定に合わせて送迎します。</p></div>
+<div class="card"><div class="icon">04</div><h3>お買い物・外出</h3><p>階段や室内の移動介助もご相談いただけます。</p></div>
+</div></div></section>
+
+<section id="reason"><div class="wrap"><h2><small>REASON</small>安心してご利用いただける理由</h2>
+<div class="grid grid-3">
+<div class="card"><div class="icon">資</div><h3>介護の資格を持つドライバー</h3><p>乗り降りや移動の介助に慣れたスタッフが担当します。</p></div>
+<div class="card"><div class="icon">車</div><h3>リフト付きの車両</h3><p>車いすのまま乗車できるので、移り替えの負担がありません。</p></div>
+<div class="card"><div class="icon">家</div><h3>付き添いの方も一緒に</h3><p>ご家族や付き添いの方も同乗いただけます。</p></div>
+</div></div></section>
+
+<section id="price" style="background:#fff"><div class="wrap"><h2><small>PRICE</small>料金の目安</h2><p class="lead">運賃と介助料の合計でお見積りします。ご予約前に総額をお伝えします。</p>
+<table class="price">
+<tr><th>運賃</th><td>距離・時間に応じて ◯,◯◯◯円〜（仮）</td></tr>
+<tr><th>乗降介助</th><td>◯◯◯円（仮）</td></tr>
+<tr><th>車いす貸出</th><td>無料（仮）</td></tr>
+<tr><th>院内付き添い</th><td>30分 ◯◯◯円（仮）</td></tr>
+</table>
+<p class="note">※料金はすべて仮の表示です。本制作では実際の料金表と計算例（「自宅→病院 片道約5km」など）を載せます。</p>
+</div></section>
+
+<section id="flow"><div class="wrap"><h2><small>FLOW</small>ご予約の流れ</h2>
+<div class="grid grid-3 flow">
+<div class="card"><h3>お電話・フォームで連絡</h3><p>日時・お迎え先・行き先・車いすの有無をお知らせください。</p></div>
+<div class="card"><h3>お見積り・ご予約確定</h3><p>総額の目安をお伝えし、ご納得いただいてから確定します。</p></div>
+<div class="card"><h3>当日お迎え</h3><p>お部屋・玄関先までお迎えにあがります。</p></div>
+</div></div></section>
+
+<section id="faq" style="background:#fff"><div class="wrap"><h2><small>FAQ</small>よくあるご質問</h2>
+<details open><summary>介護保険の認定がなくても使えますか？</summary><p>ご利用いただけます（本制作で実際の条件に合わせて記載します）。</p></details>
+<details><summary>予約は何日前までに必要ですか？</summary><p>前日までのご予約がおすすめです。当日の空き状況はお電話でご確認ください。</p></details>
+<details><summary>付き添いの家族も乗れますか？</summary><p>はい、同乗いただけます。人数はご予約時にお知らせください。</p></details>
+</div></section>
+
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#cfe6f3">CONTACT</small>ご予約・お問い合わせ</h2>
+<div class="grid grid-2">
+<div class="tel">お急ぎの方はお電話で<strong>06-0000-0000</strong>受付 8:00〜18:00（仮）／大阪市内（仮）</div>
+<form class="form" onsubmit="event.preventDefault();alert('試作ページのため送信はできません。');">
+<label>お名前</label><input type="text">
+<label>電話番号</label><input type="tel">
+<label>ご希望の日時</label><input type="text" placeholder="例：11月5日 10時ごろ">
+<label>車いす</label><select><option>使用する</option><option>使用しない</option><option>貸出を希望</option></select>
+<label>行き先・ご相談内容</label><textarea rows="3"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">この内容で問い合わせる</button>
+</form>
+</div></div></section>
+</main>
+<footer><div class="wrap">◯◯介護タクシー（仮）｜このページはご提案用の試作です。実在の事業者・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn sub" href="#contact">電話する</a><a class="btn" href="#contact">空き状況を聞く</a></div>
+</body>
+</html>
