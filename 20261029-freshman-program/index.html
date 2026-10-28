@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>はじまりの一年プログラム（仮）｜大学新入生向け講座 募集ページ デモ</title>
+<style>
+:root{
+  --bg:#fbf8f3; --paper:#ffffff; --ink:#2f3a36; --muted:#6b7570;
+  --sage:#7fa894; --sage-d:#4f7d69; --sage-l:#e6f0ea;
+  --peach:#f2b8a0; --peach-l:#fcebe3; --sun:#f5d68a;
+  --line:#e7e1d7; --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Hiragino Maru Gothic ProN","Zen Maru Gothic","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.9;font-size:16px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.demo-bar{background:#2f3a36;color:#fff;font-size:12px;text-align:center;padding:8px 16px;line-height:1.6}
+header.top{position:sticky;top:0;z-index:10;background:rgba(251,248,243,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:700;letter-spacing:.04em;font-size:15px}
+.logo small{display:block;font-size:10px;color:var(--muted);font-weight:400;letter-spacing:.08em;line-height:1}
+nav.g a{font-size:13px;text-decoration:none;margin-left:18px;color:var(--muted)}
+nav.g a.btn-s{background:var(--sage-d);color:#fff;padding:7px 16px;border-radius:99px}
+@media(max-width:760px){nav.g a:not(.btn-s){display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 88px}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.75}
+.hero .b1{width:380px;height:380px;background:var(--sage-l);right:-90px;top:-60px}
+.hero .b2{width:220px;height:220px;background:var(--peach-l);right:180px;bottom:-60px}
+.hero .b3{width:90px;height:90px;background:var(--sun);right:90px;top:200px;opacity:.55}
+.hero .wrap{position:relative}
+.eyebrow{display:inline-block;font-size:12px;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:4px 14px;color:var(--sage-d)}
+.hero h1{font-size:clamp(28px,5.4vw,46px);line-height:1.45;margin:18px 0 18px;font-weight:700}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--peach-l) 62%)}
+.hero p.lead{max-width:540px;color:var(--muted)}
+.hero .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:99px;padding:14px 28px;font-size:15px}
+.btn.main{background:var(--sage-d);color:#fff}
+.btn.sub{background:var(--paper);border:1px solid var(--line)}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.facts span{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-size:13px}
+.facts b{color:var(--sage-d)}
+
+section{padding:76px 0}
+.sec-h{text-align:center;margin-bottom:40px}
+.sec-h .en{font-size:12px;letter-spacing:.2em;color:var(--sage)}
+.sec-h h2{font-size:clamp(22px,3.6vw,30px);line-height:1.5;margin-top:6px}
+.sec-h p{color:var(--muted);margin-top:10px;font-size:15px}
+
+/* voices of worry */
+.worries{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.bubble{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;position:relative;font-size:15px}
+.bubble:after{content:"";position:absolute;left:28px;bottom:-9px;width:16px;height:16px;background:var(--paper);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg)}
+.worry-note{text-align:center;margin-top:36px;font-size:15px}
+
+/* about */
+.about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+.ph{aspect-ratio:4/3;border-radius:var(--r);background:
+  radial-gradient(circle at 30% 35%,var(--sun) 0 14%,transparent 15%),
+  radial-gradient(circle at 70% 60%,var(--peach) 0 20%,transparent 21%),
+  radial-gradient(circle at 45% 75%,var(--sage) 0 16%,transparent 17%),var(--sage-l);
+  display:flex;align-items:flex-end;justify-content:flex-start;padding:14px;font-size:12px;color:var(--muted)}
+.points{list-style:none;margin-top:18px}
+.points li{padding:12px 0 12px 34px;border-bottom:1px dashed var(--line);position:relative}
+.points li:before{content:"";position:absolute;left:4px;top:20px;width:14px;height:14px;border-radius:50%;background:var(--sage-l);border:3px solid var(--sage)}
+
+/* values */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.values{grid-template-columns:1fr}}
+.val{background:var(--paper);border-radius:var(--r);padding:26px 24px;border-top:5px solid var(--sage)}
+.val:nth-child(2){border-top-color:var(--peach)}
+.val:nth-child(3){border-top-color:var(--sun)}
+.val h3{font-size:18px;margin-bottom:8px}
+.val p{font-size:14.5px;color:var(--muted)}
+.not{margin-top:26px;text-align:center;font-size:14px;color:var(--muted)}
+
+/* timeline */
+.year{position:relative;max-width:720px;margin:0 auto}
+.year:before{content:"";position:absolute;left:21px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.step{display:flex;gap:18px;margin-bottom:26px;position:relative}
+.dot{flex:0 0 44px;height:44px;border-radius:50%;background:var(--paper);border:2px solid var(--sage);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--sage-d)}
+.step .body{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 20px;flex:1}
+.step h4{font-size:16px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* voices */
+.voices{background:var(--sage-l)}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.vcard{background:var(--paper);border-radius:var(--r);padding:22px}
+.vcard .who{font-size:12px;color:var(--muted);margin-top:10px}
+.phase2{margin-top:22px;text-align:center;font-size:13px;color:var(--sage-d);background:var(--paper);border:1px dashed var(--sage);border-radius:12px;padding:12px}
+
+/* parents */
+.parents{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:var(--paper);border-radius:var(--r);padding:30px;border:1px solid var(--line)}
+@media(max-width:760px){.parents{grid-template-columns:1fr}}
+.parents .ic{width:84px;height:84px;border-radius:50%;background:var(--peach-l);display:flex;align-items:center;justify-content:center;font-size:30px}
+
+/* outline table */
+table.outline{width:100%;border-collapse:collapse;background:var(--paper);border-radius:var(--r);overflow:hidden}
+.outline th,.outline td{padding:16px 18px;border-bottom:1px solid var(--line);text-align:left;font-size:15px;vertical-align:top}
+.outline th{width:28%;background:#f6f2ea;font-weight:700;white-space:nowrap}
+.tmp{display:inline-block;font-size:11px;background:var(--peach-l);color:#a65a3a;border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:2px}
+@media(max-width:600px){.outline th,.outline td{display:block;width:100%}.outline th{border-bottom:none;padding-bottom:4px}}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+details{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:0 20px}
+summary{cursor:pointer;padding:18px 0;font-weight:700;list-style:none;position:relative;padding-right:28px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"＋";position:absolute;right:0;color:var(--sage-d)}
+details[open] summary:after{content:"−"}
+details p{padding-bottom:18px;color:var(--muted);font-size:15px}
+
+/* final */
+.final{text-align:center;background:linear-gradient(160deg,var(--sage-l),var(--peach-l));border-radius:28px;padding:56px 24px;margin:0 20px}
+.final h2{font-size:clamp(22px,3.6vw,30px);line-height:1.6}
+.final p{color:var(--muted);margin:12px 0 26px}
+.flyer{font-size:12px;color:var(--muted);margin-top:18px}
+footer{padding:40px 0;text-align:center;font-size:12px;color:var(--muted)}
+.fade{opacity:0;transform:translateY(14px);transition:.7s ease}
+.fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="demo-bar">このページは募集文の公開情報だけで作った提案用デモです。プログラム名・日程・定員・参加費・写真・声はすべて仮のものです。</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="logo">はじまりの一年プログラム（仮）<small>FOR FIRST-YEAR STUDENTS</small></div>
+    <nav class="g">
+      <a href="#about">プログラムについて</a>
+      <a href="#year">1年の流れ</a>
+      <a href="#outline">開催要項</a>
+      <a href="#faq">よくある質問</a>
+      <a class="btn-s" href="#entry">申し込む</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="wrap">
+    <span class="eyebrow">2027年度 参加者募集（仮）</span>
+    <h1>大学1年目を、<br><em>自分のペースで</em>はじめてみる。</h1>
+    <p class="lead">他大学の学生や企業の人といっしょに、約1年かけて「自分はどう感じるのか」を確かめていくキャリア講座です。速く走れる人を育てる場ではなく、ひとりひとりの感じ方を大切にする場所です。</p>
+    <div class="cta">
+      <a class="btn main" href="#entry">参加を申し込む</a>
+      <a class="btn sub" href="#outline">開催要項を見る</a>
+    </div>
+    <div class="facts">
+      <span>対象 <b>大学1年生</b></span>
+      <span>期間 <b>約1年間</b></span>
+      <span>仲間 <b>他大学の学生・企業の方</b></span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">YOUR FIRST SPRING</div><h2>入学したばかりの今、<br>こんな気持ちはありませんか。</h2></div>
+    <div class="worries fade">
+      <div class="bubble">「やりたいこと」を聞かれても、まだうまく答えられない。</div>
+      <div class="bubble">授業とサークル以外の場所にも、知り合いがほしい。</div>
+      <div class="bubble">キャリアの話は、なんだか意識の高い人向けに聞こえる。</div>
+      <div class="bubble">何かはじめたいけど、ひとりで飛び込むのは少しこわい。</div>
+    </div>
+    <p class="worry-note fade">答えが決まっていなくて大丈夫です。<br>このプログラムは、その「まだ分からない」から始まります。</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="ph fade">写真エリア（実際の講座の様子に差し替え）</div>
+    <div class="fade">
+      <div class="sec-h" style="text-align:left;margin-bottom:10px"><div class="en">ABOUT</div><h2>どんなプログラム？</h2></div>
+      <p>大学1年生を対象に、約1年間かけて行う有料のキャリア講座です。ワークや対話を重ねながら、自分が何に心を動かされるのかを少しずつ言葉にしていきます。</p>
+      <ul class="points">
+        <li>他大学の学生といっしょに活動します</li>
+        <li>企業の方と話す・いっしょに取り組む機会があります</li>
+        <li>運営には、これまでの参加者だった学生も関わっています</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">OUR WAY</div><h2>大切にしていること</h2><p>「成長」や「チャレンジ」の前に、まず安心して話せることを。</p></div>
+    <div class="values fade">
+      <div class="val"><h3>受けとめる</h3><p>どんな意見や迷いも、まず「そう感じたんだね」から。正解を急がない対話を続けます。</p></div>
+      <div class="val"><h3>感じ方を尊重する</h3><p>同じ体験でも感じ方は人それぞれ。比べるより、自分の感じ方に気づくことを大事にします。</p></div>
+      <div class="val"><h3>笑顔で続ける</h3><p>楽しく参加できることは前提。でも遊びとは少しちがう、落ち着いて向き合える時間です。</p></div>
+    </div>
+    <p class="not fade">※ いわゆる「熱い自己啓発」の雰囲気とは、少し距離のある場です。</p>
+  </div>
+</section>
+
+<section id="year" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">ONE YEAR</div><h2>1年の流れ<span class="tmp">仮</span></h2><p>実際のカリキュラムに合わせて差し替えます。</p></div>
+    <div class="year fade">
+      <div class="step"><div class="dot">春</div><div class="body"><h4>出会う・話してみる</h4><p>他大学の仲間と顔を合わせ、自分のことを少しずつ話すところから。</p></div></div>
+      <div class="step"><div class="dot">夏</div><div class="body"><h4>外の人とふれる</h4><p>企業の方の話を聞いたり、いっしょにワークに取り組んだりします。</p></div></div>
+      <div class="step"><div class="dot">秋</div><div class="body"><h4>チームで取り組む</h4><p>大学をこえたチームで、ひとつのテーマにじっくり向き合います。</p></div></div>
+      <div class="step"><div class="dot">冬</div><div class="body"><h4>ふり返り・言葉にする</h4><p>1年で感じたことをふり返り、次の一歩を自分の言葉で考えます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">VOICES</div><h2>参加した学生の声<span class="tmp">仮</span></h2></div>
+    <div class="vgrid fade">
+      <div class="vcard"><p>最初はうまく話せなかったけど、急かされなかったのがよかった。春の自分と比べると、言葉にできることが増えました。</p><div class="who">— 参加者（例）</div></div>
+      <div class="vcard"><p>他の大学の友だちができて、自分の大学だけでは出会えない考え方にたくさん触れました。</p><div class="who">— 参加者（例）</div></div>
+      <div class="vcard"><p>今は運営側として関わっています。去年の自分みたいに迷っている人と話せるのがうれしいです。</p><div class="who">— 運営学生（例）</div></div>
+    </div>
+    <div class="phase2 fade">第2段階（1月中旬公開）で、本年度の参加者の感想・アンケート結果をここに掲載する想定です。</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="parents fade">
+      <div class="ic">◎</div>
+      <div>
+        <h3 style="font-size:19px;margin-bottom:6px">保護者の方へ</h3>
+        <p style="color:var(--muted);font-size:15px">大学生活の最初の1年を、学内外の人とのつながりの中で過ごすプログラムです。参加費・活動場所・安全面の取り組みは、下の開催要項とよくある質問にまとめています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="outline" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">OUTLINE</div><h2>開催要項</h2><p>※ 内容はすべて仮です。お手元のフライヤーの内容に差し替えます。</p></div>
+    <table class="outline fade">
+      <tr><th>対象</th><td>大学1年生（2027年4月入学）</td></tr>
+      <tr><th>期間</th><td>2027年5月〜2028年2月（約1年間）<span class="tmp">仮</span></td></tr>
+      <tr><th>活動の頻度</th><td>月1〜2回の講座＋チーム活動<span class="tmp">仮</span></td></tr>
+      <tr><th>会場</th><td>◯◯会場（仮）／一部オンライン<span class="tmp">仮</span></td></tr>
+      <tr><th>定員</th><td>◯◯名<span class="tmp">仮</span></td></tr>
+      <tr><th>参加費</th><td>◯◯,◯◯◯円（税込）<span class="tmp">仮</span></td></tr>
+      <tr><th>申込締切</th><td>2027年◯月◯日<span class="tmp">仮</span></td></tr>
+      <tr><th>主催</th><td>◯◯会（仮）</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-h fade"><div class="en">FAQ</div><h2>よくある質問</h2></div>
+    <div class="faq fade">
+      <details><summary>やりたいことが決まっていなくても参加できますか？</summary><p>はい。決まっていない人のためのプログラムです。最初の数回は、自分のことを話す練習から始めます。（回答は仮）</p></details>
+      <details><summary>大学の授業やサークルと両立できますか？</summary><p>月1〜2回のペースを想定しています。日程は年間予定として事前にお知らせします。（回答は仮）</p></details>
+      <details><summary>人前で話すのが苦手です。</summary><p>無理に発表を求めることはありません。少人数の対話から、自分のペースで参加できます。（回答は仮）</p></details>
+      <details><summary>参加費の支払い方法を教えてください。</summary><p>申込後にご案内します。（支払い方法は確認のうえ記載）</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="entry" style="padding-top:20px">
+  <div class="final fade">
+    <h2>まずは、話を聞いてみるところから。</h2>
+    <p>説明会・申込フォームへのリンクをここに置きます。</p>
+    <a class="btn main" href="#entry">参加を申し込む（デモ）</a>
+    <div class="flyer">フライヤーの配色・書体に合わせて、全体のトーンを調整します。</div>
+  </div>
+</section>
+
+<footer>© ◯◯会（仮）｜提案用デモページ（noindex）</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
