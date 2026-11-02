@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯工芸（仮）｜看板・展示会ブース・イベント装飾をデザインから施工まで</title>
+<meta name="description" content="看板・展示装飾会社のトップページ試作。名称・連絡先はすべて仮です。">
+<style>
+:root{--main:#1f3b57;--main-d:#13263a;--main-l:#eaf0f6;--accent:#e2531f;--ink:#1d232b;--ink-2:#55606c;--line:#dfe4ea;--bg:#fbfbfa;--radius:14px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:8px}
+h3{font-size:19px}p{margin:0 0 .6em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;border:0;font-size:17px;cursor:pointer}
+.btn.sub{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:800;color:var(--main-d);text-decoration:none;font-size:19px}.logo span{display:block;font-size:11px;color:var(--ink-2);font-weight:600}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.hero{background:linear-gradient(135deg,#13263a 0%,#1f3b57 55%,#2d5476 100%);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;border:60px solid rgba(226,83,31,.18);border-radius:50%}
+.hero-in{display:grid;gap:32px;align-items:center;position:relative}
+.hero h1{font-size:clamp(30px,4.8vw,50px)}.hero h1 em{font-style:normal;color:#ffb38f}
+.hero p{color:#d5dee8;margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.chips li{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.art{aspect-ratio:5/4;border-radius:22px;background:linear-gradient(90deg,transparent 0 46%,rgba(255,255,255,.08) 46% 54%,transparent 54%),linear-gradient(160deg,#f3e9dc 0 30%,#e2531f 30% 34%,#2d5476 34% 100%);position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.art::before{content:"SIGN";position:absolute;left:12%;top:12%;font-size:clamp(36px,6vw,64px);font-weight:900;letter-spacing:.12em;color:#13263a}
+.art span{position:absolute;left:20px;bottom:18px;color:#fff;font-size:13px;opacity:.9}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.icon{width:48px;height:48px;border-radius:12px;background:var(--main-l);color:var(--main);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.svc .card h3{color:var(--main-d)}.svc ul{margin:.4em 0 0;padding-left:1.2em;color:var(--ink-2);font-size:15px}
+.flow{counter-reset:f}.flow .card{position:relative;padding-top:34px}
+.flow .card::before{counter-increment:f;content:"STEP " counter(f);position:absolute;top:-12px;left:20px;background:var(--main);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px}
+.works .ph{aspect-ratio:4/3;border-radius:10px;margin-bottom:12px;background:linear-gradient(135deg,var(--main-l),#f6e3d8)}
+.works .ph.b{background:linear-gradient(135deg,#dde7f0,#c9d7e4)}.works .ph.c{background:linear-gradient(135deg,#f6e3d8,#f0c6ad)}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.spec td,.spec th{padding:14px 12px;border-bottom:1px solid var(--line);text-align:left}.spec{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden}
+.spec th{background:var(--main-l);width:40%;font-weight:700}
+.note{font-size:14px;color:var(--ink-2);margin-top:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}summary{font-weight:700;cursor:pointer}
+.contact{background:var(--main-d);color:#fff}
+.tel{background:rgba(255,255,255,.08);border-radius:var(--radius);padding:24px;text-align:center;margin-bottom:24px}
+.tel strong{display:block;font-size:clamp(26px,5vw,36px);letter-spacing:.04em}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto;color:var(--ink)}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:#0c1a28;color:#a9b8c7;font-size:13px;padding:30px 0 110px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.97);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:8px}.sticky .btn{min-height:50px;padding:10px;font-size:15px}.sticky .btn.sub{color:var(--main-d);border-color:var(--main)}
+@media(min-width:800px){.nav ul{display:flex}.hero-in{grid-template-columns:1.15fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【試作】公開情報だけで構成したトップページの見本です。名称・連絡先・実績はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><span>吹田市の看板・展示装飾</span>◯◯工芸（仮）</a><ul><li><a href="#service">できること</a></li><li><a href="#works">施工例</a></li><li><a href="#flow">ご依頼の流れ</a></li><li><a href="#faq">よくある質問</a></li><li><a href="#contact">お問い合わせ</a></li></ul></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-in">
+<div>
+<ul class="chips"><li>デザインから施工まで一括</li><li>1点物・特注サイズ</li><li>大判インクジェット出力</li></ul>
+<h1>看板も、展示会ブースも。<br><em>「ちょうどいい」</em>を自社でつくる。</h1>
+<p>店舗の看板、ガラス面のサイン、展示会の企業ブース、ホテルの吊看板まで。木工の工房を持つから、既製品やレンタルで合わないサイズ・デザインもご相談いただけます。</p>
+<div class="cta-row"><a class="btn" href="#contact">見積りを相談する</a><a class="btn sub" href="#works">施工例を見る</a></div>
+</div>
+<div class="art" role="img" aria-label="イメージ"><span>施工写真は本制作で差し替え</span></div>
+</div></section>
+
+<section id="service" class="svc"><div class="wrap"><h2><small>SERVICE</small>できること</h2><p class="lead">デザイン・製作・取り付け・撤去まで、窓口ひとつでお受けします。</p>
+<div class="grid grid-4">
+<div class="card"><div class="icon">店</div><h3>店舗の看板・サイン</h3><p>立て看板・電飾看板から、ガラス面の切り文字まで。</p><ul><li>立て看板／ハチマキ看板</li><li>カッティングシート</li><li>什器・ポップ</li></ul></div>
+<div class="card"><div class="icon">展</div><h3>展示会ブース</h3><p>1小間から複数小間まで、図面作成から施工・撤去まで。</p><ul><li>企業ブースのデザイン</li><li>受付カウンター・パネル</li></ul></div>
+<div class="card"><div class="icon">催</div><h3>イベント・セミナー設営</h3><p>会場に合わせた設計で、屋内外のステージや看板を用意します。</p><ul><li>ステージ施工</li><li>横断幕・のぼり・プラカード</li></ul></div>
+<div class="card"><div class="icon">印</div><h3>大判出力・ステッカー</h3><p>幅1m超の大判インクジェットに対応。小ロットもOK。</p><ul><li>ポスター・懸垂幕・フラッグ</li><li>車両用ステッカー</li></ul></div>
+</div></div></section>
+
+<section id="works" class="works" style="background:#fff"><div class="wrap"><h2><small>WORKS</small>施工例</h2><p class="lead">業種・用途ごとに写真で探せるようにすると、問い合わせ前のイメージ合わせが早くなります。</p>
+<div class="grid grid-3">
+<div class="card"><div class="ph"></div><span class="tag">展示会</span><h3>機械メーカー様 2小間ブース</h3><p>製品展示台と商談スペースを一体で設計。</p></div>
+<div class="card"><div class="ph b"></div><span class="tag">店舗</span><h3>飲食店様 ファサード看板</h3><p>電飾看板とガラス面の切り文字をセットで。</p></div>
+<div class="card"><div class="ph c"></div><span class="tag">ホテル宴会</span><h3>式典の吊看板・式次第</h3><p>会場の寸法に合わせて製作・取付・撤去。</p></div>
+</div><p class="note" style="text-align:center">※事例はすべて仮のものです。</p></div></section>
+
+<section id="flow" class="flow"><div class="wrap"><h2><small>FLOW</small>ご依頼の流れ</h2>
+<div class="grid grid-4">
+<div class="card"><h3>ご相談</h3><p>用途・サイズ・設置場所・日程をお聞かせください。ラフ画や写真だけでも大丈夫です。</p></div>
+<div class="card"><h3>現地確認・お見積り</h3><p>必要に応じて現地を採寸し、内容と費用をご提示します。</p></div>
+<div class="card"><h3>デザイン・製作</h3><p>デザイン案をご確認いただいてから、自社工房で製作します。</p></div>
+<div class="card"><h3>施工・撤去</h3><p>取り付けから、イベント後の撤去までお任せください。</p></div>
+</div></div></section>
+
+<section style="background:#fff"><div class="wrap"><h2><small>SPEC</small>対応の目安</h2>
+<table class="spec">
+<tr><th>大判インクジェット出力</th><td>幅1,300mmまで</td></tr>
+<tr><th>ホテル用吊看板</th><td>W3,600〜7,200mm 程度</td></tr>
+<tr><th>展示会ブース</th><td>1小間〜6小間</td></tr>
+<tr><th>対応エリア</th><td>大阪府内を中心に近隣府県もご相談ください</td></tr>
+</table><p class="note">※数値は試作用の目安です。</p></div></section>
+
+<section id="faq"><div class="wrap" style="max-width:820px"><h2><small>FAQ</small>よくある質問</h2>
+<details><summary>看板1枚だけでも頼めますか？</summary><p>はい、1点からお受けしています。サイズや素材のご相談からどうぞ。</p></details>
+<details><summary>デザインデータが無くても大丈夫ですか？</summary><p>手書きのラフや参考写真があれば、こちらでデザインを起こします。</p></details>
+<details><summary>展示会の撤去までお願いできますか？</summary><p>設営から撤去・保管のご相談まで対応します。</p></details>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap"><h2 style="color:#fff"><small>CONTACT</small>お見積り・ご相談</h2>
+<div class="tel">お電話でのご相談<strong>06-0000-0000</strong>平日 9:00〜18:00（仮）</div>
+<form class="form" onsubmit="alert('試作のため送信されません');return false;">
+<label>ご用件</label><select><option>店舗の看板・サイン</option><option>展示会ブース</option><option>イベント・セミナー設営</option><option>大判出力・ステッカー</option><option>その他</option></select>
+<label>お名前</label><input type="text" placeholder="例）山田 太郎">
+<label>メールアドレス</label><input type="email" placeholder="例）info@example.com">
+<label>ご希望の内容・サイズ・日程</label><textarea rows="5" placeholder="例）展示会（来年2月・1小間）のブースを相談したい"></textarea>
+<div style="text-align:center;margin-top:20px"><button class="btn" type="submit">この内容で相談する</button></div>
+</form></div></section>
+</main>
+<footer>◯◯工芸（仮）｜大阪府吹田市内<br>※このページは公開情報をもとにした試作です。</footer>
+<div class="sticky"><a class="btn sub" href="tel:0600000000">電話する</a><a class="btn" href="#contact">見積り相談</a></div>
+</body>
+</html>
