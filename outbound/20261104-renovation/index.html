@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯工務店（仮）｜大工直営の住まいリフォーム・増改築</title>
+<meta name="description" content="大工直営の工務店のトップページ試作。名称・連絡先はすべて仮です。">
+<style>
+:root{--main:#6b4a2b;--main-d:#3f2a17;--main-l:#f4ece2;--accent:#2f7a5b;--ink:#2a241e;--ink-2:#6a6159;--line:#e6ddd2;--bg:#fcfaf7;--radius:14px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin-bottom:8px}
+h3{font-size:19px}p{margin:0 0 .6em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;border:0;font-size:17px}
+.btn.sub{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:800;color:var(--main-d);text-decoration:none;font-size:19px}.logo span{display:block;font-size:11px;color:var(--ink-2);font-weight:600}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.nav .tel{font-weight:800;color:var(--main);text-decoration:none;font-size:15px}
+.hero{background:linear-gradient(135deg,#3f2a17 0%,#6b4a2b 60%,#8a6440 100%);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
+.hero-in{display:grid;gap:32px;align-items:center}
+.hero h1{font-size:clamp(30px,4.8vw,50px)}.hero h1 em{font-style:normal;color:#f2d3a6}
+.hero p{color:#eadccb;margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.chips li{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.art{aspect-ratio:5/4;border-radius:22px;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3);
+background:repeating-linear-gradient(90deg,#d9b98f 0 38px,#cfae84 38px 40px,#e0c39c 40px 78px,#c9a77c 78px 80px)}
+.art::before{content:"";position:absolute;left:12%;right:12%;top:18%;bottom:0;background:#fbf5ec;clip-path:polygon(50% 0,100% 32%,100% 100%,0 100%,0 32%)}
+.art::after{content:"";position:absolute;left:42%;width:16%;bottom:0;height:34%;background:#6b4a2b;border-radius:6px 6px 0 0}
+.art span{position:absolute;left:18px;bottom:14px;color:#3f2a17;font-size:13px;background:rgba(255,255,255,.8);padding:2px 10px;border-radius:999px;z-index:2}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.icon{width:48px;height:48px;border-radius:12px;background:var(--main-l);color:var(--main);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.svc .card h3{color:var(--main-d)}.svc p{color:var(--ink-2);font-size:15px}
+.strength{background:var(--main-l)}
+.strength .card{border:0}
+.num{font-size:40px;font-weight:900;color:var(--accent);line-height:1}
+.flow{counter-reset:f}.flow .card{position:relative;padding-top:34px}
+.flow .card::before{counter-increment:f;content:"STEP " counter(f);position:absolute;top:-12px;left:20px;background:var(--main);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px}
+.works .ph{aspect-ratio:4/3;border-radius:10px;margin-bottom:12px;background:linear-gradient(135deg,#efe3d3,#d8c2a4)}
+.works .ph.b{background:linear-gradient(135deg,#e3ece6,#b9d0c2)}.works .ph.c{background:linear-gradient(135deg,#f0e8df,#cbb8a4)}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 10px;margin-bottom:6px}
+.voice blockquote{margin:0;font-size:15px;color:var(--ink-2)}.voice cite{display:block;margin-top:10px;font-style:normal;font-size:13px;color:var(--ink-2)}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+summary{font-weight:700;cursor:pointer}details p{margin:.6em 0 0;color:var(--ink-2)}
+.contact{background:var(--main-d);color:#fff;text-align:center}
+.contact .lead{color:#eadccb}.contact .tel-big{font-size:clamp(28px,5vw,40px);font-weight:900;color:#fff;text-decoration:none;display:block;margin:8px 0 4px}
+.contact small{color:#cdbba5}
+footer{background:#2b1d10;color:#bfae99;font-size:13px;padding:28px 0;text-align:center}
+.fixed-cta{position:fixed;left:0;right:0;bottom:0;display:flex;z-index:60}
+.fixed-cta a{flex:1;text-align:center;padding:14px 8px;font-weight:700;color:#fff;text-decoration:none;font-size:15px}
+.fixed-cta a:first-child{background:var(--main)}.fixed-cta a:last-child{background:var(--accent)}
+body{padding-bottom:52px}
+@media(min-width:760px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}.hero-in{grid-template-columns:1.1fr .9fr}}
+@media(min-width:960px){.nav ul{display:flex}.fixed-cta{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="demo-bar">これは公開情報をもとに作成したトップページの試作です。名称・電話番号・所在地・お客様の声はすべて仮のものです。</div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">◯◯工務店（仮）<span>大工直営のリフォーム・増改築</span></a>
+    <ul>
+      <li><a href="#service">リフォーム内容</a></li>
+      <li><a href="#strength">私たちの強み</a></li>
+      <li><a href="#works">施工例</a></li>
+      <li><a href="#flow">ご依頼の流れ</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ul>
+    <a class="tel" href="#contact">06-0000-0000</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <ul class="chips"><li>大阪市内</li><li>創業50年以上</li><li>大工直営</li></ul>
+      <h1>大工が直接うかがう、<br><em>手ざわりのいい</em>リフォーム。</h1>
+      <p>キッチン・お風呂などの水まわりから、耐震補強、介護のための手すり・段差解消、増改築まで。ご相談から仕上げまで、同じ大工が責任をもって担当します。</p>
+      <div class="cta-row">
+        <a class="btn" href="#contact">無料で相談する</a>
+        <a class="btn sub" href="#works">施工例を見る</a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true"><span>イメージ画像（仮）</span></div>
+  </div>
+</section>
+
+<section id="service" class="svc">
+  <div class="wrap">
+    <h2><small>SERVICE</small>リフォーム内容</h2>
+    <p class="lead">小さな修繕から間取り変更まで。「どこに頼めばいいか分からない」工事もまずはご相談ください。</p>
+    <div class="grid c3">
+      <div class="card"><div class="icon">水</div><h3>水まわり</h3><p>キッチン・浴室・洗面・トイレの入れ替えや、配管まわりの不具合の修理。</p></div>
+      <div class="card"><div class="icon">室</div><h3>室内・増改築</h3><p>和室から洋室へ、壁を抜いて広いLDKへ。暮らしの変化に合わせた間取りの見直し。</p></div>
+      <div class="card"><div class="icon">耐</div><h3>耐震補強</h3><p>壁や柱・金物の補強で、古い木造住宅も安心して住み続けられる住まいに。</p></div>
+      <div class="card"><div class="icon">介</div><h3>介護リフォーム</h3><p>手すりの取り付け、段差の解消、引き戸への交換など、ご家族の負担を軽くする工事。</p></div>
+      <div class="card"><div class="icon">外</div><h3>外装・外構</h3><p>屋根・外壁の補修から、門まわり・フェンス・防犯対策まで。</p></div>
+      <div class="card"><div class="icon">造</div><h3>造作家具・収納</h3><p>寸法に合わせて大工がつくる棚・収納。木を加工する仕事がいちばんの得意分野です。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="strength" class="strength">
+  <div class="wrap">
+    <h2><small>STRENGTH</small>私たちの強み</h2>
+    <div class="grid c3">
+      <div class="card"><div class="num">01</div><h3>中間マージンのない価格</h3><p>職人が経営する工務店なので、下請けを重ねる費用がかかりません。「ついでにここも」のご相談も気軽にどうぞ。</p></div>
+      <div class="card"><div class="num">02</div><h3>開けてからの対応力</h3><p>リフォームは壁や床を開けて初めて分かることがあります。長年の現場経験で、想定外にも落ち着いて対応します。</p></div>
+      <div class="card"><div class="num">03</div><h3>10年先を見た提案</h3><p>その場しのぎにせず、将来の手直しが減る方法をご提案。結果としてご負担もごみも減らせます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="works">
+  <div class="wrap">
+    <h2><small>WORKS</small>施工例</h2>
+    <p class="lead">写真はイメージです。実際の施工例に差し替えて掲載します。</p>
+    <div class="grid c3">
+      <div class="card"><div class="ph"></div><span class="tag">室内</span><h3>和室をつなげて明るいLDKに</h3><p>築40年・木造2階建て／工期 約3週間</p></div>
+      <div class="card"><div class="ph b"></div><span class="tag">水まわり</span><h3>冬も寒くない浴室へ</h3><p>マンション／工期 約5日</p></div>
+      <div class="card"><div class="ph c"></div><span class="tag">介護</span><h3>玄関と廊下の段差をなくす</h3><p>木造平屋／工期 約4日</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow" class="flow">
+  <div class="wrap">
+    <h2><small>FLOW</small>ご依頼の流れ</h2>
+    <div class="grid c2" style="row-gap:30px">
+      <div class="card"><h3>お問い合わせ</h3><p>お電話かフォームで、困っていることをそのままお聞かせください。</p></div>
+      <div class="card"><h3>現地調査（無料）</h3><p>大工が直接うかがい、寸法や傷み具合を確認します。</p></div>
+      <div class="card"><h3>お見積り・ご提案</h3><p>工事内容ごとの金額が分かるお見積りをお出しします。</p></div>
+      <div class="card"><h3>施工・お引き渡し</h3><p>ご近所へのごあいさつから片づけまで。完成後のご相談もお受けします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="wrap">
+    <h2><small>VOICE</small>お客様の声</h2>
+    <div class="grid c2">
+      <div class="card"><blockquote>「相談した大工さんがそのまま工事に来てくれたので、話が早くて安心でした。」</blockquote><cite>（サンプル）70代・水まわりリフォーム</cite></div>
+      <div class="card"><blockquote>「床を開けたら傷みが見つかりましたが、その場で説明と追加のお見積りをもらえました。」</blockquote><cite>（サンプル）50代・室内リフォーム</cite></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:800px">
+    <h2><small>FAQ</small>よくある質問</h2>
+    <details><summary>小さな修理だけでもお願いできますか？</summary><p>はい。建具の調整や棚の取り付けなど、小さな工事からお受けしています。</p></details>
+    <details><summary>見積りだけでも大丈夫ですか？</summary><p>現地調査とお見積りは無料です。内容をご確認のうえでご検討ください。</p></details>
+    <details><summary>住みながら工事できますか？</summary><p>多くの工事は住みながら進められます。工程は事前にご説明します。</p></details>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2><small>CONTACT</small>ご相談・お見積りは無料です</h2>
+    <p class="lead">大阪市内とその周辺に対応しています。</p>
+    <a class="tel-big" href="#contact">06-0000-0000</a>
+    <small>受付 8:00〜18:00（日曜・祝日を除く）※仮</small>
+    <div style="margin-top:24px"><a class="btn" href="#contact">フォームで相談する</a></div>
+  </div>
+</section>
+
+<footer>◯◯工務店（仮）｜大阪市内　※このページは試作です</footer>
+<div class="fixed-cta"><a href="#contact">電話で相談</a><a href="#contact">フォームで相談</a></div>
+</body>
+</html>
