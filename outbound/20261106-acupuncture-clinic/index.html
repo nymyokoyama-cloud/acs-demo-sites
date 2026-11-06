@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯鍼灸接骨院（仮）｜トップページ試作</title>
+<meta name="description" content="ご提案用のトップページ試作。名称・連絡先・写真はすべて仮です。">
+<style>
+:root{--main:#2d6a7a;--main-l:#e7f2f4;--accent:#e0794a;--ink:#23292f;--ink-2:#55606b;--line:#e2e8ec;--bg:#fbfaf7;--radius:16px;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:13px;letter-spacing:.2em;color:var(--main);font-weight:700;margin-bottom:8px}
+h3{font-size:19px}p{margin:0 0 .6em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}section{padding:72px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:56px;background:var(--accent);color:#fff;border:0;font-size:16px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--main);border:2px solid var(--main)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}.logo{font-weight:800;color:var(--main);text-decoration:none;font-size:18px}
+.logo span{display:block;font-size:11px;color:var(--ink-2);font-weight:500;letter-spacing:.05em}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.hero{background:linear-gradient(135deg,#eef5f3 0%,#e3eff3 55%,#f6efe6 100%);padding:56px 0 64px}
+.hero-in{display:grid;gap:32px;align-items:center}
+.hero h1{font-size:clamp(28px,4.6vw,46px)}.hero h1 em{font-style:normal;color:var(--main)}
+.hero p{color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px;padding:0;list-style:none}.tags li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:14px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.visual{aspect-ratio:4/3;border-radius:24px;background:radial-gradient(circle at 30% 30%,#9cc9cf 0,#4f8f9c 45%,#2d6a7a 100%);display:flex;align-items:flex-end;justify-content:flex-start;color:#fff;padding:22px;font-size:14px;position:relative;overflow:hidden}
+.visual:before{content:"";position:absolute;width:70%;height:70%;right:-10%;top:-10%;border-radius:50%;background:rgba(255,255,255,.14)}
+.visual:after{content:"";position:absolute;width:40%;height:40%;left:8%;bottom:-12%;border-radius:50%;background:rgba(255,255,255,.10)}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--main-l);color:var(--main);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.worry .card{display:flex;gap:12px;align-items:flex-start}.worry .card:before{content:"✓";color:var(--accent);font-weight:800}
+.hours{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;font-size:15px;text-align:center}
+.hours th,.hours td{border:1px solid var(--line);padding:10px 6px}.hours th{background:var(--main-l);color:var(--main)}
+.news li{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);list-style:none}.news{padding:0;margin:0}.news time{color:var(--main);font-weight:700;white-space:nowrap}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}summary{font-weight:700;cursor:pointer}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd6dd;border-radius:10px;font-size:16px;font-family:inherit}
+footer{background:#1d3f48;color:#bdd3d8;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:8px}.sticky .btn{width:100%;min-height:50px;padding:10px}
+.scroll-x{overflow-x:auto}
+@media(min-width:800px){.nav ul{display:flex}.hero-in{grid-template-columns:1.1fr .9fr}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【トップページ試作】公開情報だけで構成した見本です。名称・連絡先・時間・写真はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top">◯◯鍼灸接骨院（仮）<span>箕面市内の鍼灸・接骨院</span></a><ul><li><a href="#symptom">症状別</a></li><li><a href="#menu">施術メニュー</a></li><li><a href="#hours">診療時間</a></li><li><a href="#faq">よくある質問</a></li><li><a href="#contact">ご予約・お問い合わせ</a></li></ul></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-in">
+<div>
+<h1>力を抜いて、<br><em>体が回復しやすい状態</em>へ。</h1>
+<p>肩こり・腰痛などの日常の痛みから、交通事故後のケア、美容鍼まで。お一人おひとりの状態をうかがってから施術を組み立てます。</p>
+<ul class="tags"><li>各種保険取り扱い</li><li>交通事故・労災</li><li>予約優先制</li><li>駐車場あり（仮）</li></ul>
+<div class="cta-row"><a class="btn" href="#contact">Webで相談・予約</a><a class="btn ghost" href="#hours">診療時間を見る</a></div>
+</div>
+<div class="visual">院内のやわらかな雰囲気の写真（本制作で差し替え）</div>
+</div></section>
+
+<section id="symptom" class="worry"><div class="wrap"><h2><small>SYMPTOMS</small>こんなお悩みはありませんか？</h2>
+<div class="grid grid-2"><div class="card">デスクワークで肩や首が常に重い</div><div class="card">朝起きると腰が痛く、動き出しがつらい</div><div class="card">交通事故のあと、首や背中の違和感が続いている</div><div class="card">冷えやむくみなど、体の不調がなかなか抜けない</div></div></div></section>
+
+<section id="menu" style="background:#fff"><div class="wrap"><h2><small>MENU</small>施術メニュー</h2><p class="lead">症状やご希望に合わせて、組み合わせをご提案します。</p>
+<div class="grid grid-4">
+<div class="card"><div class="ico">鍼</div><h3>鍼灸</h3><p>肩・腰・膝などの痛みや、冷え・不調のご相談に。</p></div>
+<div class="card"><div class="ico">骨</div><h3>接骨・整体</h3><p>ねんざ・打撲や体のゆがみが気になる方に。</p></div>
+<div class="card"><div class="ico">車</div><h3>交通事故・労災</h3><p>保険の手続きもふくめてご相談いただけます。</p></div>
+<div class="card"><div class="ico">美</div><h3>美容鍼</h3><p>お顔まわりのケアを、体の調子とあわせて。</p></div>
+</div></div></section>
+
+<section id="reason"><div class="wrap"><h2><small>REASON</small>当院の特長</h2>
+<div class="grid grid-3">
+<div class="card"><h3>脱力を重視した施術</h3><p>体の緊張をゆるめた状態をつくってから、必要な施術を行います。</p></div>
+<div class="card"><h3>電気が苦手な方にも</h3><p>機器に頼りすぎず、お一人おひとりに合わせて手技を選びます。</p></div>
+<div class="card"><h3>保険・事故対応</h3><p>各種保険・交通事故・労災に対応。はじめての方も手順をご説明します。</p></div>
+</div></div></section>
+
+<section id="hours" style="background:#fff"><div class="wrap"><h2><small>HOURS</small>診療時間</h2>
+<div class="scroll-x"><table class="hours"><tr><th>時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
+<tr><td>0:00〜0:00（仮）</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>／</td></tr>
+<tr><td>0:00〜0:00（仮）</td><td>●</td><td>●</td><td>▲</td><td>●</td><td>●</td><td>／</td><td>／</td></tr></table></div>
+<p style="margin-top:14px;color:var(--ink-2);font-size:15px">予約優先制です。ご予約なしでもご来院いただけます（同じ時間帯のご予約の方が優先となります）。</p></div></section>
+
+<section id="news"><div class="wrap"><h2><small>NEWS</small>お知らせ</h2>
+<ul class="news"><li><time>20XX.XX.XX</time><span>年末年始の休診について（仮）</span></li><li><time>20XX.XX.XX</time><span>LINEからのご予約を受け付けています（仮）</span></li><li><time>20XX.XX.XX</time><span>季節のキャンペーンのご案内（仮）</span></li></ul>
+<p style="text-align:center;margin-top:18px;font-size:15px;color:var(--ink-2)">新しい順に3件だけ表示し、過去分は一覧ページへまとめます。</p></div></section>
+
+<section id="faq" style="background:#fff"><div class="wrap" style="max-width:820px"><h2><small>FAQ</small>よくある質問</h2>
+<details open><summary>予約なしでも行けますか？</summary><p>はい。予約優先制のため、ご予約の方がいる時間帯は少しお待ちいただく場合があります。</p></details>
+<details><summary>保険は使えますか？</summary><p>症状によって各種保険が使えます。詳しくは受付でおたずねください。</p></details>
+<details><summary>交通事故のあと、いつ来院すればいいですか？</summary><p>違和感がある時は早めのご相談をおすすめします。手続きの流れもご説明します。</p></details>
+</div></section>
+
+<section id="access"><div class="wrap"><h2><small>ACCESS</small>アクセス</h2>
+<div class="grid grid-2"><div class="card">名称：◯◯鍼灸接骨院（仮）<br>所在地：箕面市内 0-0-0（仮）<br>電話：072-000-0000（仮）<br>駐車場：あり（台数は仮）</div><div class="visual" style="aspect-ratio:16/10">地図（本制作で埋め込み）</div></div></div></section>
+
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#cfe6ea">CONTACT</small>ご予約・お問い合わせ</h2>
+<form class="form" style="color:var(--ink)" onsubmit="event.preventDefault();alert('試作ページのため送信はできません。');">
+<label>お名前</label><input type="text"><label>ご連絡先（電話またはメール）</label><input type="text">
+<label>ご用件</label><select><option>ご予約の相談</option><option>症状について</option><option>交通事故・労災</option><option>その他</option></select>
+<label>内容</label><textarea rows="4"></textarea><button class="btn" type="submit" style="width:100%;margin-top:18px">送信する</button></form></div></section>
+</main>
+<footer><div class="wrap">◯◯鍼灸接骨院（仮）｜このページはご提案用の試作です。実在の院・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn ghost" href="#hours">診療時間</a><a class="btn" href="#contact">Web予約</a></div>
+</body>
+</html>
