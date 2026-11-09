@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯サイン（仮）｜店頭看板・スタンド看板の企画から施工まで</title>
+<meta name="description" content="ご提案用のトップページ試作。名称・連絡先・写真はすべて仮です。">
+<style>
+:root{--ink:#16181d;--ink-2:#545b66;--navy:#1b2440;--navy-2:#26325a;--red:#e2412f;--cream:#fbf7ef;--line:#e6e1d6;--radius:16px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.85;font-size:17px}
+a{color:inherit}h1,h2,h3{line-height:1.35;margin:0 0 .5em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}section{padding:72px 0}
+h2{font-size:clamp(24px,3.4vw,36px)}h2 small{display:block;font-size:12px;letter-spacing:.24em;color:var(--red);font-weight:800;margin-bottom:6px}
+.lead{color:var(--ink-2);max-width:700px;margin:0 0 36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font-weight:800;text-decoration:none;min-height:54px;background:var(--red);color:#fff;border:2px solid var(--red)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.demo-bar{background:#fff1d6;color:#6b4a10;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(27,36,64,.97);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;text-decoration:none;letter-spacing:.06em;display:flex;align-items:center;gap:10px}
+.logo i{display:inline-block;width:26px;height:26px;border-radius:6px;background:var(--red);position:relative}
+.logo i::after{content:"";position:absolute;left:11px;top:22px;width:4px;height:10px;background:#fff}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:14px;font-weight:600;opacity:.9}
+.hero{background:var(--navy);color:#fff;padding:56px 0 72px;overflow:hidden}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.12);border-radius:999px;padding:4px 14px;font-size:13px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,5vw,52px);letter-spacing:.02em}.hero h1 em{font-style:normal;color:#ffb4a8}
+.hero p{color:#cfd5e6;margin:0 0 26px}.cta{display:flex;flex-wrap:wrap;gap:12px}
+.board{position:relative;aspect-ratio:4/3;max-width:460px;margin:0 auto;width:100%}
+.board .panel{position:absolute;left:12%;right:12%;top:4%;bottom:26%;background:#fff;border-radius:14px;border:8px solid #d9dde8;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--navy);text-align:center;padding:16px}
+.board .panel b{font-size:clamp(20px,3vw,30px);color:var(--red)}.board .panel span{font-size:13px;color:var(--ink-2)}
+.board .leg{position:absolute;bottom:4%;width:6px;height:26%;background:#c7ccd8}.board .l1{left:24%;transform:rotate(8deg)}.board .l2{right:24%;transform:rotate(-8deg)}
+.board .base{position:absolute;left:18%;right:18%;bottom:2%;height:10px;border-radius:6px;background:#9aa2b8}
+.strip{background:var(--red);color:#fff;font-weight:700;font-size:15px}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;padding:14px 16px}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card h3{font-size:19px}.card p{margin:0;color:var(--ink-2);font-size:15px}
+.scene .card{border-top:6px solid var(--red)}.scene .ico{font-size:13px;font-weight:800;color:var(--red);letter-spacing:.14em}
+.cat{display:flex;gap:16px;align-items:flex-start}.cat .sw{flex:0 0 64px;height:64px;border-radius:12px;background:linear-gradient(140deg,var(--navy-2),var(--navy));position:relative}
+.cat .sw::after{content:"";position:absolute;inset:16px 20px;border-radius:4px;background:#fff;opacity:.9}
+.cat:nth-child(2) .sw{background:linear-gradient(140deg,#e2412f,#a82718)}.cat:nth-child(3) .sw{background:linear-gradient(140deg,#3d8a73,#1f5a49)}.cat:nth-child(4) .sw{background:linear-gradient(140deg,#d39b2a,#9a6c12)}
+.in-house{background:#fff}
+.num{display:grid;gap:14px}.num div{background:var(--cream);border-radius:var(--radius);padding:20px;text-align:center}
+.num b{display:block;font-size:30px;color:var(--navy)}.num span{font-size:14px;color:var(--ink-2)}
+.flow{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.flow li{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px 20px 72px;position:relative}
+.flow li::before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:18px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.flow b{display:block}.flow span{color:var(--ink-2);font-size:15px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}summary{font-weight:700;cursor:pointer}details p{margin:10px 0 0;color:var(--ink-2);font-size:15px}
+.contact{background:var(--navy);color:#fff}.contact .lead{color:#cfd5e6}
+.form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:24px 20px;max-width:640px}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}
+.form input,.form textarea,.form select{width:100%;padding:13px;border:1px solid #cfd3db;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+.tel{font-size:26px;font-weight:900;letter-spacing:.04em}
+footer{background:#0f1529;color:#9aa3bd;font-size:13px;padding:28px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:flex;gap:8px}.sticky .btn{flex:1;min-height:50px;padding:10px}
+.sticky .btn.sub{background:var(--navy);border-color:var(--navy)}
+@media(min-width:820px){.nav ul{display:flex}.hero-grid{grid-template-columns:1.1fr .9fr}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.num{grid-template-columns:repeat(3,1fr)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}.sticky{display:none}footer{padding-bottom:28px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【試作】公開情報だけで構成したトップページの見本です。名称・連絡先・料金・写真はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i></i>◯◯サイン（仮）</a>
+<ul><li><a href="#scene">用途から選ぶ</a></li><li><a href="#lineup">看板の種類</a></li><li><a href="#inhouse">自社制作</a></li><li><a href="#flow">ご依頼の流れ</a></li><li><a href="#contact">お見積もり</a></li></ul></div></header>
+<main id="top">
+
+<section class="hero"><div class="wrap hero-grid">
+<div><span class="tag">大阪・関西エリア中心／全国対応</span>
+<h1>お店の前を通る人を、<br><em>お客様</em>に変える看板を。</h1>
+<p>不動産・飲食店・路面店のスタンド看板、店頭サイン、ディスプレイまで。デザインから制作・施工まで一社でお受けします。お見積もりと現地調査は無料です。</p>
+<div class="cta"><a class="btn" href="#contact">無料で見積もりを相談する</a><a class="btn ghost" href="#lineup">看板の種類を見る</a></div></div>
+<div class="board" aria-hidden="true"><div class="panel"><span>OPEN 11:00–22:00</span><b>本日のおすすめ</b><span>ここに、お店の一番の魅力を。</span></div><div class="leg l1"></div><div class="leg l2"></div><div class="base"></div></div>
+</div></section>
+
+<div class="strip"><div class="wrap"><span>見積もり・現地調査 無料</span><span>デザインから施工まで一括</span><span>1枚からご相談OK</span></div></div>
+
+<section id="scene" class="scene"><div class="wrap">
+<h2><small>BY SCENE</small>どんなお店の看板ですか？</h2>
+<p class="lead">業種ごとに「見られる場所」と「伝えるべきこと」は違います。用途に合わせて形・サイズ・素材をご提案します。</p>
+<div class="grid g3">
+<div class="card"><div class="ico">REAL ESTATE</div><h3>不動産会社さま</h3><p>物件情報を差し替えやすいスタンド看板やポスターパネル。現地案内の誘導サインにも。</p></div>
+<div class="card"><div class="ico">RESTAURANT</div><h3>飲食店さま</h3><p>メニューやランチ情報を伝えるA型看板、黒板風ボード、夜も目立つ電飾サイン。</p></div>
+<div class="card"><div class="ico">STORE FRONT</div><h3>路面店・美容室さま</h3><p>通りから一目で分かるタワーサイン、袖看板、ウィンドウのシート施工まで。</p></div>
+</div></div></section>
+
+<section id="lineup" style="background:#fff"><div class="wrap">
+<h2><small>LINE UP</small>看板の種類</h2>
+<p class="lead">屋外用から屋内用、ちょっとしたPOPまで。迷ったら「どこに置くか」だけ教えてください。</p>
+<div class="grid g2">
+<div class="card cat"><div class="sw"></div><div><h3>屋外スタンド看板</h3><p>A型サイン・タワーサイン・バリケードサインなど。風に強い脚や差し替え式も。</p></div></div>
+<div class="card cat"><div class="sw"></div><div><h3>電飾・袖看板</h3><p>夜間も目立つ内照式やLED。ビルの外壁・袖の取り付けは施工までお任せください。</p></div></div>
+<div class="card cat"><div class="sw"></div><div><h3>屋内サイン・ディスプレイ</h3><p>フロアーサイン、ポールサイン、卓上スタンド、ポスターパネルなど店内の案内に。</p></div></div>
+<div class="card cat"><div class="sw"></div><div><h3>シート・パネル印刷</h3><p>ウィンドウシート、フォトパネル、バナースタンド。展示会やイベントにも。</p></div></div>
+</div></div></section>
+
+<section id="inhouse" class="in-house"><div class="wrap">
+<h2><small>IN HOUSE</small>自社の設備で、早く・きれいに</h2>
+<p class="lead">大判の印刷機と加工設備を自社に持っているので、デザインの修正や急ぎの案件にも小回りが利きます。</p>
+<div class="num"><div><b>1枚〜</b><span>小ロットから制作</span></div><div><b>最短◯日</b><span>デザイン確定後の目安（仮）</span></div><div><b>無料</b><span>お見積もり・現地調査</span></div></div>
+</div></section>
+
+<section id="flow"><div class="wrap">
+<h2><small>FLOW</small>ご依頼の流れ</h2>
+<ol class="flow">
+<li><b>お問い合わせ</b><span>フォームかお電話で、置きたい場所と用途をお知らせください。</span></li>
+<li><b>現地調査・お見積もり（無料）</b><span>設置場所を拝見し、サイズや素材の候補と費用をお出しします。</span></li>
+<li><b>デザイン提案</b><span>文字の大きさ・色・遠くからの見え方まで確認しながら仕上げます。</span></li>
+<li><b>制作・施工</b><span>自社で制作し、取り付けまで担当します。</span></li>
+</ol></div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+<h2><small>FAQ</small>よくあるご質問</h2>
+<details><summary>1枚だけでも頼めますか？</summary><p>はい。スタンド看板1台、POP1枚からご相談いただけます。</p></details>
+<details><summary>デザインデータがなくても大丈夫ですか？</summary><p>ロゴや写真がなくても、お店の雰囲気を伺ってゼロからデザインします。</p></details>
+<details><summary>大阪以外でも対応できますか？</summary><p>関西エリアを中心に、全国の施工実績があります（※内容は仮）。</p></details>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap contact-grid">
+<div><h2 style="color:#fff"><small>CONTACT</small>まずは無料でお見積もり</h2>
+<p class="lead">「こんな看板できる？」の段階で大丈夫です。3営業日以内にお返事します。</p>
+<p class="tel">TEL 06-0000-0000</p><p style="color:#cfd5e6;font-size:14px">受付 平日 9:00〜18:00（仮）</p></div>
+<form class="form" onsubmit="alert('試作のため送信されません');return false">
+<label>会社名・屋号</label><input type="text" placeholder="例）◯◯不動産">
+<label>ご担当者名</label><input type="text">
+<label>メールアドレス</label><input type="email">
+<label>ご希望の看板</label><select><option>スタンド看板</option><option>電飾・袖看板</option><option>屋内サイン</option><option>まだ決まっていない</option></select>
+<label>ご相談内容</label><textarea rows="4" placeholder="設置場所・サイズ・ご予算など、分かる範囲で"></textarea>
+<p style="margin-top:18px"><button class="btn" type="submit" style="width:100%">この内容で相談する</button></p>
+</form></div></section>
+</main>
+<footer>© ◯◯サイン（仮）　大阪市内　※この試作は公開情報だけで作った見本です</footer>
+<div class="sticky"><a class="btn sub" href="tel:0600000000">電話する</a><a class="btn" href="#contact">無料見積もり</a></div>
+</body>
+</html>
