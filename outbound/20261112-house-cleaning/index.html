@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯ハウスサービス（仮）｜ハウスクリーニング・リフォーム・原状回復（デモ）</title>
+<meta name="description" content="ご提案用のトップページ試作です。名称・連絡先・料金・写真はすべて仮です。">
+<style>
+:root{--main:#0f5e78;--main-d:#0a3f52;--main-l:#e5f3f7;--accent:#f2a33a;--ink:#1f2933;--ink-2:#52606d;--line:#dde6ea;--bg:#f8fbfc;--radius:16px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-size:16px}
+h1,h2,h3{line-height:1.4;margin:0 0 .5em}h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-size:12px;letter-spacing:.24em;color:var(--main);font-weight:700;margin-bottom:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}section{padding:68px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:54px;background:var(--accent);color:#1f2933;border:0;font-size:16px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--main);border:2px solid #fff}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:12px;text-align:center;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:800;color:var(--main);text-decoration:none;display:flex;align-items:center;gap:8px;font-size:17px}
+.logo i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--main),#3aa7c4);display:inline-block}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink)}
+.tel{display:none;font-weight:800;color:var(--main);text-decoration:none;font-size:15px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(140deg,#0f5e78 0%,#1b86a4 55%,#7cc9db 100%);color:#fff;padding:64px 0 72px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.12)}
+.hero::before{width:420px;height:420px;right:-120px;top:-140px}.hero::after{width:220px;height:220px;right:18%;bottom:-90px}
+.hero .wrap{position:relative;z-index:1}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.18);border-radius:999px;padding:4px 14px;font-size:13px;margin-bottom:16px}
+.hero h1{font-size:clamp(28px,5vw,48px);margin-bottom:16px}
+.hero p{max-width:560px;margin:0 0 26px;color:#e8f6fa}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.chips span{background:#fff;color:var(--main);font-size:13px;font-weight:700;border-radius:8px;padding:6px 12px}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.worry .card{display:flex;gap:12px;align-items:flex-start}.worry .card b{color:var(--main);font-size:20px;line-height:1.4}
+.svc{overflow:hidden;padding:0}.svc .ph{aspect-ratio:16/9;display:flex;align-items:flex-end;padding:16px;color:#fff;font-weight:800;font-size:20px}
+.svc .body{padding:20px 22px 24px}.svc ul{margin:8px 0 0;padding-left:1.2em;color:var(--ink-2);font-size:15px}
+.ph1{background:linear-gradient(150deg,#3aa7c4,#0f5e78)}.ph2{background:linear-gradient(150deg,#f2c46d,#d9822b)}.ph3{background:linear-gradient(150deg,#7fb9a2,#2f6f5a)}
+.num{display:inline-flex;width:40px;height:40px;border-radius:50%;background:var(--main-l);color:var(--main);font-weight:800;align-items:center;justify-content:center;margin-bottom:10px}
+.case{display:grid;gap:12px}.case .ba{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.case .ba div{aspect-ratio:1/1;border-radius:12px;display:flex;align-items:flex-end;justify-content:flex-start;padding:10px;font-size:12px;font-weight:700;color:#fff}
+.before{background:repeating-linear-gradient(45deg,#9aa5ad,#9aa5ad 10px,#8a959d 10px,#8a959d 20px)}.after{background:linear-gradient(150deg,#bfe6f0,#3aa7c4)}
+.case p{margin:0;font-size:14px;color:var(--ink-2)}
+.news{max-width:760px;margin:0 auto;list-style:none;padding:0}.news li{display:flex;gap:16px;padding:14px 4px;border-bottom:1px solid var(--line);font-size:15px}.news time{color:var(--main);font-weight:700;white-space:nowrap}
+.area{background:var(--main-l);border-radius:var(--radius);padding:24px;text-align:center;font-weight:700;color:var(--main-d)}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 auto 10px;max-width:760px}summary{font-weight:700;cursor:pointer}details p{margin:10px 0 0;color:var(--ink-2)}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto;color:var(--ink)}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfd8de;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:var(--main-d);color:#bcd6df;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:flex;gap:8px}.sticky .btn{flex:1;min-height:50px;padding:10px}
+.sticky .btn.t{background:var(--main);color:#fff}
+@media(min-width:800px){.nav ul{display:flex}.tel{display:inline}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}section{padding:84px 0}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】公開情報だけで構成したトップページの試作です。名称・連絡先・料金・写真はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i></i>◯◯ハウスサービス（仮）</a><ul><li><a href="#service">サービス</a></li><li><a href="#reason">選ばれる理由</a></li><li><a href="#case">施工例</a></li><li><a href="#flow">ご依頼の流れ</a></li><li><a href="#faq">よくある質問</a></li></ul><a class="tel" href="#contact">☎ 06-0000-0000</a></div></header>
+<main id="top">
+
+<section class="hero"><div class="wrap">
+<span class="tag">大阪府内・近畿エリア対応</span>
+<h1>おそうじから<br>リフォームまで、<br>住まいのことを1社で。</h1>
+<p>ハウスクリーニング、水まわりや内装のリフォーム、賃貸物件の原状回復まで。現地を見たうえで、必要な作業だけをご提案します。</p>
+<div class="btns"><a class="btn" href="#contact">無料で見積もりを依頼する</a><a class="btn ghost" href="#service">サービスを見る</a></div>
+<div class="chips"><span>見積もり無料</span><span>個人・法人どちらも</span><span>空室の原状回復</span><span>小さな補修から</span></div>
+</div></section>
+
+<section class="worry"><div class="wrap"><h2><small>TROUBLES</small>こんなことでお困りではありませんか？</h2>
+<div class="grid grid-2">
+<div class="card"><b>✓</b><div>キッチンや浴室の汚れが、自分では落としきれない</div></div>
+<div class="card"><b>✓</b><div>掃除を頼むか、いっそ交換するか判断がつかない</div></div>
+<div class="card"><b>✓</b><div>退去後の部屋を、早く・費用を抑えて次の入居に間に合わせたい</div></div>
+<div class="card"><b>✓</b><div>小さな傷や不具合を、どこに頼めばいいか分からない</div></div>
+</div></div></section>
+
+<section id="service" style="background:#fff"><div class="wrap"><h2><small>SERVICE</small>サービス内容</h2>
+<p class="lead">おそうじ・補修・リフォームを分けずに相談できるので、窓口が1つで済みます。</p>
+<div class="grid grid-3">
+<div class="card svc"><div class="ph ph1">ハウスクリーニング</div><div class="body">住まいの汚れを、場所ごとの専用の道具と洗剤で。<ul><li>キッチン・換気扇</li><li>浴室・トイレ・洗面所</li><li>エアコン・窓まわり</li></ul></div></div>
+<div class="card svc"><div class="ph ph2">リフォーム</div><div class="body">部分補修から間取りの見直しまで、暮らし方に合わせて。<ul><li>水まわり設備の交換</li><li>クロス・床の張り替え</li><li>外壁・屋根の塗装</li></ul></div></div>
+<div class="card svc"><div class="ph ph3">賃貸の原状回復</div><div class="body">オーナー様・管理会社様向けに、退去後の部屋を次の入居へ。<ul><li>退去後の一括清掃</li><li>補修・交換の範囲を整理</li><li>写真つきの完了報告</li></ul></div></div>
+</div></div></section>
+
+<section id="reason"><div class="wrap"><h2><small>REASON</small>選ばれる理由</h2>
+<div class="grid grid-3">
+<div class="card"><span class="num">1</span><h3>そうじと工事を1社で</h3><p>「掃除で足りるか、交換が必要か」をその場で判断できるので、ムダな工事を勧めません。</p></div>
+<div class="card"><span class="num">2</span><h3>丁寧な仕上がり</h3><p>見えにくい隅や継ぎ目まで確認してから作業を終えます。ご依頼の多くがくり返しのご利用です。</p></div>
+<div class="card"><span class="num">3</span><h3>物件に合わせた提案</h3><p>同じ間取りでも使われ方はさまざま。現地を見て、予算と優先順位に合わせたプランを作ります。</p></div>
+</div></div></section>
+
+<section id="case" style="background:#fff"><div class="wrap"><h2><small>WORKS</small>施工例</h2>
+<p class="lead">ビフォー・アフターの写真と、かかった日数・費用の目安を載せる欄です（本制作で実際の写真に差し替えます）。</p>
+<div class="grid grid-3">
+<div class="card case"><div class="ba"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>浴室クリーニング</h3><p>作業時間 約3時間（例）</p></div>
+<div class="card case"><div class="ba"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>キッチン交換</h3><p>工期 約2日（例）</p></div>
+<div class="card case"><div class="ba"><div class="before">BEFORE</div><div class="after">AFTER</div></div><h3>1Kの原状回復</h3><p>退去から約5日で完了（例）</p></div>
+</div></div></section>
+
+<section id="flow"><div class="wrap"><h2><small>FLOW</small>ご依頼の流れ</h2>
+<div class="grid grid-4">
+<div class="card"><span class="num">1</span><h3>お問い合わせ</h3><p>フォームかお電話で、場所と気になる点をお知らせください。</p></div>
+<div class="card"><span class="num">2</span><h3>現地確認</h3><p>実際に拝見して、作業の範囲を一緒に決めます。</p></div>
+<div class="card"><span class="num">3</span><h3>お見積もり</h3><p>内訳つきでお出しします。ご納得いただいてから着手します。</p></div>
+<div class="card"><span class="num">4</span><h3>作業・完了確認</h3><p>仕上がりを一緒に確認して完了です。</p></div>
+</div></div></section>
+
+<section style="background:#fff"><div class="wrap"><h2><small>NEWS</small>お知らせ・ブログ</h2>
+<ul class="news">
+<li><time>20XX.XX.XX</time><span>年末の大そうじのご予約受付を始めました（例）</span></li>
+<li><time>20XX.XX.XX</time><span>施工例：マンションの水まわりリフォーム（例）</span></li>
+<li><time>20XX.XX.XX</time><span>エアコンクリーニングの時期について（例）</span></li>
+</ul></div></section>
+
+<section id="faq"><div class="wrap"><h2><small>FAQ</small>よくある質問</h2>
+<details open><summary>見積もりだけでも大丈夫ですか？</summary><p>はい、無料です。お見積もり後のお断りも問題ありません。</p></details>
+<details><summary>対応エリアはどこまでですか？</summary><p>大阪府内を中心に、近畿エリアでご相談ください。</p></details>
+<details><summary>立ち会いは必要ですか？</summary><p>空室の場合は鍵のお預かりで対応できます。ご相談ください。</p></details>
+<details><summary>小さな補修1か所だけでも頼めますか？</summary><p>はい、1か所からお受けしています。</p></details>
+<div class="area" style="max-width:760px;margin:24px auto 0">対応エリア：大阪府内・近畿エリア（仮）／定休日：日・祝（仮）</div>
+</div></section>
+
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#bfe6f0">CONTACT</small>無料見積もり・ご相談</h2>
+<p class="lead" style="color:#e2f2f7">お電話 06-0000-0000（仮・9:00〜18:00）またはフォームから。</p>
+<form class="form" onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');">
+<label>ご相談の種類</label><select><option>ハウスクリーニング</option><option>リフォーム</option><option>賃貸の原状回復</option><option>その他</option></select>
+<label>お名前</label><input type="text"><label>メールアドレス または 電話番号</label><input type="text"><label>ご相談内容</label><textarea rows="4"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">この内容で相談する</button></form></div></section>
+</main>
+<footer><div class="wrap">◯◯ハウスサービス（仮）｜このページはご提案用のデモサイトです。実在の会社・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn t" href="#contact">☎ 電話</a><a class="btn" href="#contact">無料見積もり</a></div>
+</body>
+</html>
