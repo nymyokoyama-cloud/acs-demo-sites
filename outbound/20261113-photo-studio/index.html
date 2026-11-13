@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯写真館（仮）｜お宮参り・七五三・家族写真の写真スタジオ（デモ）</title>
+<meta name="description" content="ご提案用のトップページ試作です。名称・連絡先・料金・写真はすべて仮です。">
+<style>
+:root{--main:#8a5a44;--main-d:#4e3328;--main-l:#f6ede6;--accent:#d98c6c;--ink:#2b2522;--ink-2:#6b5f58;--line:#ece2da;--bg:#fcf9f6;--radius:18px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.9;font-size:16px}
+h1,h2,h3{line-height:1.45;margin:0 0 .5em}h1,h2{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif}
+h2{font-size:clamp(24px,3.2vw,34px);text-align:center}
+h2 small{display:block;font-family:"Hiragino Sans",system-ui,sans-serif;font-size:12px;letter-spacing:.28em;color:var(--accent);font-weight:700;margin-bottom:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}section{padding:68px 0}
+.lead{text-align:center;color:var(--ink-2);max-width:720px;margin:0 auto 36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:54px;background:var(--main);color:#fff;border:0;font-size:16px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--main);border:2px solid var(--main)}
+.demo-bar{background:#fff4e5;color:#7a4b12;font-size:12px;text-align:center;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(252,249,246,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:700;color:var(--main-d);text-decoration:none;display:flex;align-items:center;gap:10px;font-size:18px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.logo i{width:30px;height:30px;border-radius:50%;border:2px solid var(--main);display:inline-block;position:relative}.logo i::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--accent)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink)}
+.tel{display:none;font-weight:800;color:var(--main);text-decoration:none;font-size:15px}
+.hero{padding:40px 0 64px}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero .visual{aspect-ratio:4/3;border-radius:28px;background:radial-gradient(circle at 30% 30%,#fff 0 14%,transparent 15%),radial-gradient(circle at 72% 62%,rgba(255,255,255,.55) 0 22%,transparent 23%),linear-gradient(145deg,#f3d9c9 0%,#e7b9a1 45%,#c98f74 100%);position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(138,90,68,.18)}
+.hero .visual span{position:absolute;left:18px;bottom:16px;background:rgba(255,255,255,.85);border-radius:999px;padding:4px 14px;font-size:12px;color:var(--main-d)}
+.hero .tag{display:inline-block;background:var(--main-l);color:var(--main);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:clamp(30px,5vw,50px);margin-bottom:16px;color:var(--main-d)}
+.hero p{max-width:540px;margin:0 0 26px;color:var(--ink-2)}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.chips span{background:#fff;border:1px solid var(--line);color:var(--main);font-size:13px;font-weight:700;border-radius:8px;padding:6px 12px}
+.grid{display:grid;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.menu .card{padding:0;overflow:hidden;text-decoration:none;color:inherit}
+.menu .ph{aspect-ratio:4/3;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:700;font-size:13px;letter-spacing:.12em}
+.menu .body{padding:16px 18px 20px}.menu h3{font-size:18px;margin:0 0 4px}.menu p{margin:0;font-size:14px;color:var(--ink-2)}
+.p1{background:linear-gradient(150deg,#f6e3d6,#e2b49b)}.p2{background:linear-gradient(150deg,#f2c9c3,#c9767a)}.p3{background:linear-gradient(150deg,#d9cbe6,#8f78a8)}.p4{background:linear-gradient(150deg,#d4e5d6,#6f9b7c)}.p5{background:linear-gradient(150deg,#d6e2ef,#6b8bb0)}.p6{background:linear-gradient(150deg,#ece3cf,#b39a6a)}
+.num{display:inline-flex;width:40px;height:40px;border-radius:50%;background:var(--main-l);color:var(--main);font-weight:800;align-items:center;justify-content:center;margin-bottom:10px}
+.price{display:grid;gap:14px}.price .card{text-align:center}.price .yen{font-size:28px;font-weight:800;color:var(--main);font-family:"Hiragino Mincho ProN",serif}.price small{color:var(--ink-2)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gallery div{aspect-ratio:1/1;border-radius:12px}
+.news{max-width:760px;margin:0 auto;list-style:none;padding:0}.news li{display:flex;gap:16px;padding:14px 4px;border-bottom:1px solid var(--line);font-size:15px}.news time{color:var(--main);font-weight:700;white-space:nowrap}
+.access{display:grid;gap:18px}.map{aspect-ratio:16/10;border-radius:var(--radius);background:repeating-linear-gradient(0deg,#efe7df 0 1px,transparent 1px 34px),repeating-linear-gradient(90deg,#efe7df 0 1px,transparent 1px 34px),#f8f3ee;display:flex;align-items:center;justify-content:center;color:var(--ink-2);font-size:14px}
+dl{margin:0}dl div{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}dt{width:6em;font-weight:700;color:var(--main);flex-shrink:0}dd{margin:0}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 auto 10px;max-width:760px}summary{font-weight:700;cursor:pointer}details p{margin:10px 0 0;color:var(--ink-2)}
+.form{background:#fff;border-radius:var(--radius);padding:26px 22px;max-width:640px;margin:0 auto;color:var(--ink)}
+.form label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #ddd0c6;border-radius:10px;font-size:16px;font-family:inherit;background:#fff}
+.form .btn{background:var(--accent)}
+footer{background:var(--main-d);color:#e3d3c8;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:flex;gap:8px}.sticky .btn{flex:1;min-height:50px;padding:10px}
+.sticky .btn.t{background:#fff;color:var(--main);border:2px solid var(--main)}
+@media(min-width:800px){.nav ul{display:flex}.tel{display:inline}.hero .wrap{grid-template-columns:1.05fr 1fr}.hero{padding:64px 0 84px}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.price{grid-template-columns:repeat(3,1fr)}.access{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(6,1fr)}.sticky{display:none}footer{padding-bottom:30px}section{padding:84px 0}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【デモサイト】公開情報だけで構成したトップページの試作です。名称・連絡先・料金・写真はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i></i>◯◯写真館（仮）</a><ul><li><a href="#menu">撮影メニュー</a></li><li><a href="#reason">こだわり</a></li><li><a href="#price">料金</a></li><li><a href="#flow">撮影の流れ</a></li><li><a href="#access">アクセス</a></li></ul><a class="tel" href="#contact">☎ 072-000-0000</a></div></header>
+<main id="top">
+
+<section class="hero"><div class="wrap">
+<div>
+<span class="tag">伊丹市の写真スタジオ</span>
+<h1>家族の「今」を、<br>何年先も見返したくなる<br>一枚に。</h1>
+<p>お宮参り・七五三・成人式から、家族写真、証明写真まで。地域の写真館として、一人ひとりの雰囲気に合わせてゆっくり撮影します。</p>
+<div class="btns"><a class="btn" href="#contact">撮影のご予約・ご相談</a><a class="btn ghost" href="#menu">撮影メニューを見る</a></div>
+<div class="chips"><span>キャッシュレス決済OK</span><span>出張撮影</span><span>写真の修復・復元</span></div>
+</div>
+<div class="visual"><span>メインビジュアル（本制作でお店の写真に差し替え）</span></div>
+</div></section>
+
+<section id="menu" style="background:#fff"><div class="wrap"><h2><small>PHOTO MENU</small>撮影メニュー</h2>
+<p class="lead">人生の節目の記念写真から、お仕事で使う写真まで。</p>
+<div class="grid grid-3 menu">
+<a class="card" href="#contact"><div class="ph p1">BABY</div><div class="body"><h3>お宮参り・マタニティ</h3><p>生まれる前と、生まれてすぐの大切な時間を。</p></div></a>
+<a class="card" href="#contact"><div class="ph p2">753</div><div class="body"><h3>七五三</h3><p>着物でもドレスでも。小さなお子さまのペースで。</p></div></a>
+<a class="card" href="#contact"><div class="ph p3">COMING OF AGE</div><div class="body"><h3>成人式</h3><p>振袖・袴の晴れ姿を、上品な仕上がりで。</p></div></a>
+<a class="card" href="#contact"><div class="ph p4">FAMILY</div><div class="body"><h3>家族写真・お誕生日</h3><p>毎年同じ場所で撮る、家族の記録に。</p></div></a>
+<a class="card" href="#contact"><div class="ph p5">SCHOOL</div><div class="body"><h3>入園・入学・卒業</h3><p>制服姿の今だけの表情を残します。</p></div></a>
+<a class="card" href="#contact"><div class="ph p6">BUSINESS</div><div class="body"><h3>証明写真・肖像・商品撮影</h3><p>就職・オーディション・店舗やお仕事用にも。</p></div></a>
+</div></div></section>
+
+<section id="reason"><div class="wrap"><h2><small>OUR STYLE</small>当館のこだわり</h2>
+<div class="grid grid-3">
+<div class="card"><span class="num">1</span><h3>雰囲気に合わせた撮影</h3><p>カジュアルからクラシックまで。ご家族の好みを伺ってから、撮り方を決めます。</p></div>
+<div class="card"><span class="num">2</span><h3>撮影からプリントまで</h3><p>撮って終わりではなく、長く飾れるプリントの仕上がりまで責任を持ちます。</p></div>
+<div class="card"><span class="num">3</span><h3>地域に根ざした写真館</h3><p>お子さまの成長を毎年撮らせていただくご家族も。近くで相談できる写真館です。</p></div>
+</div></div></section>
+
+<section id="price" style="background:#fff"><div class="wrap"><h2><small>PRICE</small>料金の目安</h2>
+<p class="lead">撮影料とプリント・データの組み合わせを、分かりやすくまとめる欄です（金額はすべて仮）。</p>
+<div class="price">
+<div class="card"><h3>撮影料</h3><div class="yen">¥0,000〜</div><small>衣装・ヘアセットは別途（例）</small></div>
+<div class="card"><h3>プリント</h3><div class="yen">¥0,000〜</div><small>台紙つき・サイズ選択（例）</small></div>
+<div class="card"><h3>データ</h3><div class="yen">¥0,000〜</div><small>SNS用の小サイズも（例）</small></div>
+</div></div></section>
+
+<section><div class="wrap"><h2><small>GALLERY</small>撮影例</h2>
+<p class="lead">シーン別の作品を並べる欄です（本制作でお客様の許可を得た写真に差し替え）。</p>
+<div class="gallery"><div class="p1"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><div class="p6"></div></div>
+</div></section>
+
+<section id="flow" style="background:#fff"><div class="wrap"><h2><small>FLOW</small>撮影の流れ</h2>
+<div class="grid grid-4">
+<div class="card"><span class="num">1</span><h3>ご予約</h3><p>フォームかお電話で、ご希望の日と撮影の種類をお知らせください。</p></div>
+<div class="card"><span class="num">2</span><h3>ご来店・準備</h3><p>衣装やポーズのご希望を伺いながら準備します。</p></div>
+<div class="card"><span class="num">3</span><h3>撮影</h3><p>お子さまが疲れないよう、休憩を挟みながら撮影します。</p></div>
+<div class="card"><span class="num">4</span><h3>写真選び・お渡し</h3><p>一緒に写真を選び、仕上がり後にお渡しします。</p></div>
+</div></div></section>
+
+<section><div class="wrap"><h2><small>NEWS</small>お知らせ・ブログ</h2>
+<ul class="news">
+<li><time>20XX.XX.XX</time><span>七五三の撮影予約を受け付けています（例）</span></li>
+<li><time>20XX.XX.XX</time><span>家族写真キャンペーンのお知らせ（例）</span></li>
+<li><time>20XX.XX.XX</time><span>撮影ブログ：お宮参りの準備で気をつけたいこと（例）</span></li>
+</ul></div></section>
+
+<section id="access" style="background:#fff"><div class="wrap"><h2><small>ACCESS</small>スタジオ・アクセス</h2>
+<div class="access">
+<div class="map">地図（本制作で埋め込み）</div>
+<dl>
+<div><dt>所在地</dt><dd>兵庫県伊丹市内（仮）</dd></div>
+<div><dt>営業時間</dt><dd>10:00〜18:00（仮）</dd></div>
+<div><dt>定休日</dt><dd>火曜日 ほか（仮）</dd></div>
+<div><dt>お支払い</dt><dd>現金・カード・キャッシュレス決済</dd></div>
+<div><dt>お電話</dt><dd>072-000-0000（仮）</dd></div>
+</dl>
+</div></div></section>
+
+<section id="faq"><div class="wrap"><h2><small>FAQ</small>よくある質問</h2>
+<details open><summary>予約なしでも撮影できますか？</summary><p>証明写真はご来店当日も承ります。記念写真はご予約をおすすめしています（例）。</p></details>
+<details><summary>衣装は借りられますか？</summary><p>七五三・お宮参り用の衣装をご用意しています（例）。</p></details>
+<details><summary>小さな子どもが泣いてしまっても大丈夫？</summary><p>もちろんです。休憩をとりながら、お子さまのペースで撮影します。</p></details>
+<details><summary>古い写真の修復もお願いできますか？</summary><p>色あせや傷のある写真の修復・復元を承っています。</p></details>
+</div></section>
+
+<section id="contact" style="background:var(--main);color:#fff"><div class="wrap"><h2 style="color:#fff"><small style="color:#f3d9c9">CONTACT</small>撮影のご予約・ご相談</h2>
+<p class="lead" style="color:#f6ede6">お電話 072-000-0000（仮）またはフォームから。</p>
+<form class="form" onsubmit="event.preventDefault();alert('デモサイトのため送信はできません。');">
+<label>撮影の種類</label><select><option>お宮参り・マタニティ</option><option>七五三</option><option>成人式</option><option>家族写真・お誕生日</option><option>入園・入学・卒業</option><option>証明写真・その他</option></select>
+<label>ご希望日</label><input type="text" placeholder="例）11月の土曜日"><label>お名前</label><input type="text"><label>メールアドレス または 電話番号</label><input type="text"><label>ご相談内容</label><textarea rows="4"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">この内容で送る</button></form></div></section>
+</main>
+<footer><div class="wrap">◯◯写真館（仮）｜このページはご提案用のデモサイトです。実在の会社・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn t" href="#contact">☎ 電話</a><a class="btn" href="#contact">撮影を予約</a></div>
+</body>
+</html>
