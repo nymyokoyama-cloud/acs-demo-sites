@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯彫刻製作所（仮）｜看板・銘板・ステッカーを自社工場で一貫製作</title>
+<meta name="description" content="ご提案用のトップページ試作。名称・連絡先・写真・料金はすべて仮です。">
+<style>
+:root{--ink:#1c1b19;--ink-2:#55524c;--char:#2a2926;--char-2:#3a3833;--yel:#f2b705;--yel-l:#fff6d6;--paper:#f7f5f0;--line:#e4e0d6;--radius:12px;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.85;font-size:17px}
+img{max-width:100%}a{color:inherit}
+h1,h2,h3{line-height:1.35;margin:0 0 .5em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:76px 0}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.24em;font-weight:800;color:var(--char);background:var(--yel);padding:3px 10px;border-radius:4px;margin-bottom:14px}
+h2{font-size:clamp(24px,3.4vw,36px)}
+.lead{color:var(--ink-2);max-width:720px;margin:0 0 36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:8px;font-weight:800;text-decoration:none;min-height:56px;background:var(--yel);color:var(--char);border:2px solid var(--yel)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.demo-bar{background:var(--yel-l);color:#6b5200;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(28,27,25,.96);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;color:#fff;letter-spacing:.04em}
+.logo i{width:30px;height:30px;border-radius:6px;background:var(--yel);display:block;position:relative}
+.logo i:after{content:"";position:absolute;inset:8px;border:2px solid var(--char);border-radius:2px}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:24px}.nav ul a{text-decoration:none;font-size:14px;font-weight:700;opacity:.9}
+.hero{background:var(--char);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;background:repeating-linear-gradient(45deg,rgba(242,183,5,.13) 0 14px,transparent 14px 28px);transform:rotate(8deg)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(30px,5vw,54px);letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--yel)}
+.hero p{color:#d8d4ca;max-width:620px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.plates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:40px;max-width:560px}
+.plate{border-radius:8px;padding:14px 10px;text-align:center;font-weight:800;font-size:13px;letter-spacing:.08em}
+.plate.a{background:var(--yel);color:var(--char)}.plate.b{background:#d9d6cf;color:var(--char);box-shadow:inset 0 0 0 3px #b7b2a7}.plate.c{background:#fff;color:#c23a1d;border:3px solid #c23a1d}
+.grid{display:grid;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card h3{font-size:20px}
+.card .tag{font-size:12px;font-weight:800;color:#8a6a00;letter-spacing:.12em}
+.svc .card{border-top:6px solid var(--yel)}
+.svc .card p{color:var(--ink-2);font-size:15px;margin:0}
+.strength{background:#fff}
+.num{font-size:44px;font-weight:900;color:var(--yel);line-height:1;-webkit-text-stroke:1px #b58a00}
+.flow ol{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.flow li{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+.flow li b{flex:0 0 40px;height:40px;border-radius:50%;background:var(--char);color:var(--yel);display:flex;align-items:center;justify-content:center}
+.flow li span{color:var(--ink-2);font-size:15px;display:block}
+.works .ph{aspect-ratio:4/3;border-radius:10px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:800;font-size:14px}
+.ph1{background:linear-gradient(150deg,#3a3833,#1c1b19)}.ph2{background:linear-gradient(150deg,#c99a06,#7a5d00)}.ph3{background:linear-gradient(150deg,#6d6a63,#3a3833)}.ph4{background:linear-gradient(150deg,#a83a20,#5e1f10)}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:800;cursor:pointer}.faq p{color:var(--ink-2);margin:10px 0 0}
+.info dl{display:grid;grid-template-columns:7em 1fr;gap:8px 12px;margin:0}.info dt{font-weight:800}.info dd{margin:0;color:var(--ink-2)}
+.map{aspect-ratio:4/3;border-radius:12px;background:repeating-linear-gradient(0deg,#e9e5dc 0 1px,transparent 1px 34px),repeating-linear-gradient(90deg,#e9e5dc 0 1px,#f3f0e9 1px 34px);display:flex;align-items:center;justify-content:center;color:var(--ink-2);font-size:14px}
+.contact{background:var(--char);color:#fff}
+.contact .lead{color:#d8d4ca}
+.form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:26px 22px;max-width:640px}
+.form label{display:block;font-weight:800;font-size:15px;margin:14px 0 6px}
+.form input,.form textarea,.form select{width:100%;padding:14px;border:1px solid #cfcabd;border-radius:8px;font-size:16px;font-family:inherit;background:#fff}
+footer{background:#121110;color:#a9a497;font-size:13px;padding:30px 0 100px;text-align:center}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px;background:rgba(28,27,25,.96)}.sticky .btn{width:100%}
+@media(min-width:820px){.nav ul{display:flex}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.sticky{display:none}footer{padding-bottom:30px}.contact .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【試作】公開情報だけで作ったトップページの見本です。名称・連絡先・写真・料金はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i></i>◯◯彫刻製作所（仮）</a><ul><li><a href="#service">製作品目</a></li><li><a href="#strength">強み</a></li><li><a href="#works">施工事例</a></li><li><a href="#flow">制作の流れ</a></li><li><a href="#company">会社案内</a></li><li><a href="#contact">お問い合わせ</a></li></ul></div></header>
+<main id="top">
+<section class="hero"><div class="wrap">
+<span class="eyebrow">SIGN &amp; NAMEPLATE</span>
+<h1>店の顔になる看板から、<br>機械に付く<em>小さな銘板</em>まで。</h1>
+<p>企画・デザイン・製作・施工・メンテナンスを自社で一貫対応。兵庫県内を中心に、近畿圏から全国まで承ります。「こんなものは作れる？」の段階からご相談ください。</p>
+<div class="cta"><a class="btn" href="#contact">見積もりを相談する</a><a class="btn ghost" href="#works">施工事例を見る</a></div>
+<div class="plates"><div class="plate a">屋外サイン</div><div class="plate b">工業銘板</div><div class="plate c">ステッカー</div></div>
+</div></section>
+
+<section id="service" class="svc"><div class="wrap">
+<span class="eyebrow">SERVICE</span><h2>製作品目</h2>
+<p class="lead">用途と設置場所に合わせて、素材とサイズから一緒に考えます。</p>
+<div class="grid g3">
+<div class="card"><span class="tag">OUTDOOR</span><h3>屋外サイン</h3><p>壁面看板・スタンド看板・シャッター・窓面・テント・のぼり。安全性とメンテナンス性まで考えて設置します。</p></div>
+<div class="card"><span class="tag">INDOOR</span><h3>屋内サイン</h3><p>受付サイン・フロア案内・ピクトサイン・展示ディスプレイ。来客を迎える空間を整えます。</p></div>
+<div class="card"><span class="tag">NAMEPLATE</span><h3>工業銘板・ラベル・名札</h3><p>機械・設備に付ける銘板や管理ラベル、社員名札まで。小ロットのご相談も可能です。</p></div>
+<div class="card"><span class="tag">FILM</span><h3>カッティングシート・フィルム</h3><p>店舗ガラスの文字・目隠しや遮熱のウインドウフィルム、車両のマーキング。</p></div>
+<div class="card"><span class="tag">PRINT</span><h3>インクジェット・シルク印刷</h3><p>大判のインクジェット出力から、オリジナルシール・ステッカーのシルクスクリーン印刷まで。</p></div>
+<div class="card"><span class="tag">CARE</span><h3>補修・メンテナンス</h3><p>色あせ・破損・照明切れの看板の点検と補修。古い看板の掛け替えもお任せください。</p></div>
+</div></div></section>
+
+<section id="strength" class="strength"><div class="wrap">
+<span class="eyebrow">STRENGTH</span><h2>選ばれる3つの理由</h2>
+<div class="grid g3" style="margin-top:28px">
+<div class="card"><div class="num">01</div><h3>自社工場で一貫製作</h3><p>デザインから施工まで社内でつなぐので、話が早く、修正にも素早く対応できます。</p></div>
+<div class="card"><div class="num">02</div><h3>彫刻・銘板の技術</h3><p>社名の由来でもある彫刻の技術を、看板の文字や工業銘板の精度に生かしています。</p></div>
+<div class="card"><div class="num">03</div><h3>付けた後も地元で見守る</h3><p>設置後の点検・補修も同じ担当が対応。長く使える看板を一緒に育てます。</p></div>
+</div></div></section>
+
+<section id="works" class="works"><div class="wrap">
+<span class="eyebrow">WORKS</span><h2>施工事例</h2>
+<p class="lead">本制作では、実際の施工写真と「どんな課題をどう解決したか」を1件ずつ掲載します。</p>
+<div class="grid g4">
+<div class="ph ph1">店舗の壁面サイン（例）</div><div class="ph ph2">工場の設備銘板（例）</div><div class="ph ph3">オフィス受付サイン（例）</div><div class="ph ph4">車両マーキング（例）</div>
+</div></div></section>
+
+<section id="flow" class="flow" style="background:#fff"><div class="wrap">
+<span class="eyebrow">FLOW</span><h2>制作の流れ</h2>
+<ol style="margin-top:24px">
+<li><b>1</b><div><strong>お問い合わせ</strong><span>電話・フォームから。写真やラフ案があれば添えてください。</span></div></li>
+<li><b>2</b><div><strong>現地調査・お見積もり</strong><span>設置場所を確認し、素材・サイズ・費用をご提案します。</span></div></li>
+<li><b>3</b><div><strong>デザイン確認</strong><span>完成イメージをお見せして、納得いただくまで調整します。</span></div></li>
+<li><b>4</b><div><strong>製作・施工</strong><span>自社工場で製作し、安全第一で取り付けます。</span></div></li>
+<li><b>5</b><div><strong>アフターメンテナンス</strong><span>点検・補修・掛け替えも継続してご相談いただけます。</span></div></li>
+</ol></div></section>
+
+<section class="faq"><div class="wrap">
+<span class="eyebrow">FAQ</span><h2>よくあるご質問</h2>
+<details open><summary>1枚だけ、小さなものでも頼めますか？</summary><p>はい。銘板1枚・ステッカー少量からご相談いただけます。</p></details>
+<details><summary>デザインが決まっていなくても大丈夫ですか？</summary><p>大丈夫です。手書きのメモや参考写真から一緒に形にします。</p></details>
+<details><summary>古い看板の撤去や交換もできますか？</summary><p>撤去・掛け替え・面板だけの交換など、状態に合わせてご提案します。</p></details>
+</div></section>
+
+<section id="company" class="info" style="background:#fff"><div class="wrap">
+<span class="eyebrow">COMPANY</span><h2>会社案内</h2>
+<div class="grid g2" style="margin-top:24px">
+<div class="card"><dl><dt>社名</dt><dd>◯◯彫刻製作所（仮）</dd><dt>所在地</dt><dd>兵庫県内（本社・工場）／大阪府内（営業所）※仮</dd><dt>電話</dt><dd>000-000-0000（仮）</dd><dt>事業内容</dt><dd>屋外・屋内サインの製作・施工・補修、工業銘板、カッティングシート、各種印刷</dd><dt>対応エリア</dt><dd>兵庫県内・近畿圏ほか全国</dd></dl></div>
+<div class="map">地図（本制作で埋め込み）</div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div><span class="eyebrow">CONTACT</span><h2 style="color:#fff">お見積もり・ご相談</h2><p class="lead">「こんなものは作れる？」「だいたいいくら？」だけでもお気軽に。お急ぎの方はお電話（000-000-0000・仮）でも承ります。</p></div>
+<form class="form" onsubmit="event.preventDefault();alert('試作ページのため送信はできません。');">
+<label>お名前</label><input type="text">
+<label>会社名</label><input type="text">
+<label>メールアドレス</label><input type="email">
+<label>ご相談の種類</label><select><option>屋外サイン</option><option>屋内サイン</option><option>銘板・ラベル・名札</option><option>シート・フィルム</option><option>補修・その他</option></select>
+<label>ご相談内容</label><textarea rows="4"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">送信する</button></form>
+</div></section>
+</main>
+<footer><div class="wrap">◯◯彫刻製作所（仮）｜このページはご提案用の試作です。実在の企業・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn" href="#contact">見積もりを相談する</a></div>
+</body>
+</html>
