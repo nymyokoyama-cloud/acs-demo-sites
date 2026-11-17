@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>◯◯建築設計事務所（仮）｜北摂・吹田で住まいと店舗の設計監理</title>
+<meta name="description" content="ご提案用のトップページ試作。名称・連絡先・写真・料金はすべて仮です。">
+<style>
+:root{--ink:#1d2221;--ink-2:#58615f;--wood:#a8754a;--wood-l:#f3ebe2;--sky:#dfe7ea;--paper:#fbfaf7;--line:#e3e0d9;--radius:14px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-size:17px}
+a{color:inherit}h1,h2,h3{line-height:1.4;margin:0 0 .5em;font-weight:700}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.eyebrow{display:block;font-size:12px;letter-spacing:.3em;color:var(--wood);font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(24px,3.4vw,34px);letter-spacing:.04em}
+.lead{color:var(--ink-2);max-width:720px;margin:0 0 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:999px;font-weight:700;text-decoration:none;min-height:54px;background:var(--ink);color:#fff;border:1px solid var(--ink)}
+.btn.line{background:transparent;color:var(--ink)}
+.demo-bar{background:var(--wood-l);color:#6d4a2b;font-size:13px;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:.06em}
+.logo i{width:30px;height:30px;display:grid;grid-template-columns:1fr 1fr;gap:3px}.logo i b{background:var(--ink)}.logo i b:nth-child(2){background:var(--wood)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}.nav ul a{text-decoration:none;font-size:14px;color:var(--ink-2)}
+.hero{padding:56px 0 72px}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(30px,5vw,52px);letter-spacing:.05em}
+.hero h1 span{color:var(--wood)}
+.hero p{color:var(--ink-2);max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.drawing{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(180deg,var(--sky) 0 62%,#e9e4da 62%);position:relative;overflow:hidden;border:1px solid var(--line)}
+.drawing .house{position:absolute;left:14%;bottom:20%;width:54%;height:46%;background:#3b3f3e;clip-path:polygon(0 30%,62% 0,100% 18%,100% 100%,0 100%)}
+.drawing .louver{position:absolute;left:38%;bottom:30%;width:24%;height:34%;background:repeating-linear-gradient(170deg,var(--wood) 0 9px,#7d5333 9px 13px);clip-path:polygon(0 10%,100% 0,100% 100%,0 100%)}
+.drawing .annex{position:absolute;left:66%;bottom:20%;width:20%;height:30%;background:#f5f3ee;border:1px solid #cfcac0}
+.drawing .tree{position:absolute;left:4%;bottom:18%;width:18%;height:52%;background:radial-gradient(circle at 50% 35%,#6f8f62 0 45%,transparent 46%)}
+.drawing .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(29,34,33,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(29,34,33,.06) 1px,transparent 1px);background-size:28px 28px}
+.drawing small{position:absolute;right:12px;bottom:8px;font-size:11px;color:var(--ink-2)}
+.entry{display:grid;gap:16px}
+.entry a{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:border-color .2s}
+.entry a:hover{border-color:var(--wood)}
+.entry b{display:block;font-size:20px;margin-bottom:4px}.entry span{color:var(--ink-2);font-size:15px}
+.entry em{font-style:normal;color:var(--wood);font-weight:700;font-size:14px}
+.concept{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.points{display:grid;gap:18px}
+.point{padding:24px 0;border-top:1px solid var(--line)}
+.point .no{font-size:13px;color:var(--wood);font-weight:700;letter-spacing:.2em}
+.point h3{font-size:20px}.point p{color:var(--ink-2);margin:0}
+.works{display:grid;gap:18px}
+.work{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.work .ph{aspect-ratio:3/2}
+.w1 .ph{background:linear-gradient(135deg,#d7dfe1,#b9c4c7)}
+.w2 .ph{background:linear-gradient(135deg,#efe5d8,#cfb79c)}
+.w3 .ph{background:linear-gradient(135deg,#e2e4dc,#a9b39e)}
+.work div{padding:18px 20px}.work b{display:block}.work span{font-size:14px;color:var(--ink-2)}
+.flow{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:f}
+.flow li{counter-increment:f;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px 18px 66px;position:relative}
+.flow li:before{content:counter(f,decimal-leading-zero);position:absolute;left:20px;top:18px;font-weight:700;color:var(--wood)}
+.flow b{display:block}.flow span{font-size:15px;color:var(--ink-2)}
+.fee{background:var(--wood-l)}
+.fee-box{background:#fff;border-radius:var(--radius);padding:30px;display:grid;gap:20px}
+.fee-box dl{margin:0;display:grid;gap:12px}.fee-box dt{font-weight:700}.fee-box dd{margin:0;color:var(--ink-2)}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.faq summary{font-weight:700;cursor:pointer}.faq p{color:var(--ink-2);margin:10px 0 0}
+.news{list-style:none;margin:0;padding:0}.news li{display:flex;flex-wrap:wrap;gap:6px 18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.news time{color:var(--wood);font-weight:700;font-size:14px;min-width:90px}
+.contact{background:var(--ink);color:#fff;text-align:center}
+.contact p{color:#c9cfcd}.contact .btn{background:#fff;color:var(--ink);border-color:#fff}
+.contact .btn.line{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.contact .cta{justify-content:center}
+footer{padding:28px 0;font-size:13px;color:var(--ink-2);text-align:center}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:60}.sticky .btn{width:100%;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+@media(min-width:760px){
+ .nav ul{display:flex}.sticky{display:none}
+ .hero-grid{grid-template-columns:1.05fr 1fr}
+ .entry{grid-template-columns:repeat(3,1fr)}
+ .points{grid-template-columns:repeat(3,1fr)}
+ .works{grid-template-columns:repeat(3,1fr)}
+ .flow{grid-template-columns:repeat(2,1fr)}
+ .fee-box{grid-template-columns:1fr 1fr}
+}
+@media(max-width:759px){body{padding-bottom:84px}section{padding:60px 0}}
+</style>
+</head>
+<body>
+<div class="demo-bar">【試作】公開情報だけで作ったトップページの見本です。名称・連絡先・写真・料金はすべて仮です。</div>
+<header><div class="wrap nav"><a class="logo" href="#top"><i><b></b><b></b><b></b><b></b></i>◯◯建築設計事務所（仮）</a><ul><li><a href="#entry">ご相談の種類</a></li><li><a href="#concept">設計の考え方</a></li><li><a href="#works">設計事例</a></li><li><a href="#flow">設計監理の流れ</a></li><li><a href="#fee">設計監理料</a></li><li><a href="#faq">よくあるご質問</a></li><li><a href="#contact">お問い合わせ</a></li></ul></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+<div>
+<span class="eyebrow">ARCHITECT OFFICE ｜ 北摂・吹田市内</span>
+<h1>言葉にしきれない思いを、<br><span>図面</span>にしていく。</h1>
+<p>住まいの新築・リフォームから、共同住宅・店舗・事務所まで。土地や周りの景色を読み取り、暮らし方に合ったプランを一つずつ組み立てる設計事務所です。工事が終わるまで、設計者として現場を見守ります。</p>
+<div class="cta"><a class="btn" href="#contact">設計の相談をする（無料）</a><a class="btn line" href="#works">設計事例を見る</a></div>
+</div>
+<div class="drawing" aria-hidden="true"><div class="grid"></div><div class="tree"></div><div class="house"></div><div class="louver"></div><div class="annex"></div><small>イメージ（写真は差し替え予定）</small></div>
+</div></section>
+
+<section id="entry" style="padding-top:0"><div class="wrap">
+<span class="eyebrow">CONSULTATION</span>
+<h2>どんなご相談ですか？</h2>
+<p class="lead">入口を3つに分けました。それぞれの進め方と、よくある疑問をまとめています。</p>
+<div class="entry">
+<a href="#flow"><em>NEW HOUSE</em><b>新築の住宅</b><span>土地探しの段階から。敷地の条件と家族の暮らし方を整理するところから始めます。</span></a>
+<a href="#flow"><em>RENOVATION</em><b>リフォーム・改修</b><span>今の家の良さを残しながら、間取り・断熱・使い勝手を見直します。</span></a>
+<a href="#flow"><em>BUILDING</em><b>共同住宅・店舗・事務所</b><span>事業として成り立つ計画と、使う人が心地よい空間の両立を考えます。</span></a>
+</div>
+</div></section>
+
+<section id="concept" class="concept"><div class="wrap">
+<span class="eyebrow">CONCEPT</span>
+<h2>設計で大切にしていること</h2>
+<p class="lead">ハウスメーカーの規格プランではなく、その敷地とその家族のための1案を。設計事務所に頼む理由は、ここにあります。</p>
+<div class="points">
+<div class="point"><div class="no">01</div><h3>話を聞くことから</h3><p>要望の一覧より、「休日はどう過ごしたいか」のような話を大事にします。</p></div>
+<div class="point"><div class="no">02</div><h3>プランで解く</h3><p>光・風・視線・動線。限られた条件の中で、間取りの工夫で解決策を探します。</p></div>
+<div class="point"><div class="no">03</div><h3>工事まで見届ける</h3><p>図面どおりに建つかを第三者の立場で確認。施主の代わりに現場をチェックします。</p></div>
+</div>
+</div></section>
+
+<section id="works"><div class="wrap">
+<span class="eyebrow">WORKS</span>
+<h2>設計事例</h2>
+<p class="lead">トップから最近の事例が見えるように。写真・建物名は仮です。</p>
+<div class="works">
+<div class="work w1"><div class="ph"></div><div><b>木のルーバーの家（仮）</b><span>新築住宅｜吹田市内</span></div></div>
+<div class="work w2"><div class="ph"></div><div><b>築40年の住まいの再生（仮）</b><span>リフォーム｜北摂エリア</span></div></div>
+<div class="work w3"><div class="ph"></div><div><b>1階に店舗のある住まい（仮）</b><span>店舗併用住宅｜豊中市内</span></div></div>
+</div>
+</div></section>
+
+<section id="flow" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+<span class="eyebrow">WORKS FLOW</span>
+<h2>設計監理の流れ</h2>
+<p class="lead">初めての方でも先が見えるように、完成までの段取りを順にご説明します。</p>
+<ol class="flow">
+<li><b>ご相談・ヒアリング</b><span>ご要望や予算、敷地の状況を伺います。</span></li>
+<li><b>敷地調査・プラン提案</b><span>現地を確認し、最初のプランと概算をご提示します。</span></li>
+<li><b>設計契約・基本設計</b><span>間取りや外観、仕様の方向性を一緒に固めます。</span></li>
+<li><b>実施設計・見積調整</b><span>詳細な図面をもとに工務店の見積もりを比較・調整します。</span></li>
+<li><b>工事監理</b><span>図面どおりに進んでいるか、現場で定期的に確認します。</span></li>
+<li><b>お引き渡し・その後</b><span>完成後の点検や小さなご相談にも対応します。</span></li>
+</ol>
+</div></section>
+
+<section id="fee" class="fee"><div class="wrap">
+<span class="eyebrow">DESIGN FEE</span>
+<h2>設計監理料の目安</h2>
+<p class="lead">費用の考え方を先に知っておけると、相談のハードルが下がります。金額はすべて仮です。</p>
+<div class="fee-box">
+<dl><dt>新築住宅</dt><dd>工事費の◯%〜（仮）。規模と内容に応じてお見積もりします。</dd><dt>リフォーム</dt><dd>内容により個別にお見積もり（仮）。</dd></dl>
+<dl><dt>初回のご相談</dt><dd>無料（仮）。プラン提案の前に費用をご説明します。</dd><dt>お支払い</dt><dd>設計・監理の各段階に分けてお支払い（仮）。</dd></dl>
+</div>
+</div></section>
+
+<section id="faq" class="faq"><div class="wrap">
+<span class="eyebrow">FAQ</span>
+<h2>よくあるご質問</h2>
+<details><summary>土地が決まっていなくても相談できますか？</summary><p>はい。候補地にどんな建物が建てられるかの確認からお手伝いできます（仮）。</p></details>
+<details><summary>工務店は自分で選べますか？</summary><p>ご紹介も、ご指定の工務店との進行も可能です（仮）。</p></details>
+<details><summary>対応エリアはどこまでですか？</summary><p>北摂・吹田市内を中心に、近隣エリアもご相談ください（仮）。</p></details>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<span class="eyebrow">NEWS / BLOG</span>
+<h2>お知らせ・ブログ</h2>
+<ul class="news">
+<li><time>2026.11.00</time><span>現場レポート：上棟しました（仮）</span></li>
+<li><time>2026.10.00</time><span>リフォーム相談会のお知らせ（仮）</span></li>
+<li><time>2026.09.00</time><span>設計事例「木のルーバーの家」を追加しました（仮）</span></li>
+</ul>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<span class="eyebrow" style="color:#d9b48f">CONTACT</span>
+<h2>まずは、お話を聞かせてください</h2>
+<p>まだ何も決まっていない段階でも大丈夫です。<br>TEL 06-0000-0000（仮）／ 平日 ◯:◯◯〜◯:◯◯（仮）</p>
+<div class="cta"><a class="btn" href="#contact">フォームで相談する</a><a class="btn line" href="#contact">電話で相談する</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">◯◯建築設計事務所（仮）｜このページはご提案用の試作です。実在の企業・人物とは関係ありません。</div></footer>
+<div class="sticky"><a class="btn" href="#contact">設計の相談をする（無料）</a></div>
+</body>
+</html>
